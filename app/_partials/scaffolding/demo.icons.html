@@ -1,0 +1,11 @@
+<div>
+
+    <h1>Full Iconset</h1>
+
+    {{ for(var prop in ftf.icons) { }}
+        <div class="icon-{{= ftf.icons[prop]}}">
+            Icon-Klasse = ".icon-{{= ftf.icons[prop]}}"
+        </div>
+    {{ } }}
+
+</div>

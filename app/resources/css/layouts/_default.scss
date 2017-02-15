@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    min-width: $body-min-width;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: $body-font-family;
+    background-color: $body-bg;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    color: $black;
+    min-width: $body-min-width;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.layout {
+    &--default {
+        margin: 0;
+    }
+}
+
+.content {
+    @include clearfix();
+}

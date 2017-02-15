@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"module": "UMD",
+		"target": "ES5",
+		"sourceMap": true
+	},
+	"types": [
+		"jquery"
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"project": "VIGulpFrontendBoilerplate",
+	"global": {
+		"resources": [
+			"/resources"
+		],
+		"tasks": {
+			"linting": true,
+			"iconfont": true,
+			"angular": true,
+			"handlebars": true,
+			"uglify": true,
+			"cleanCss": true,
+			"favicons": true,
+			"cssStats": true,
+			"typescript": true,
+			"webpack": true,
+			"image": true
+		},
+		"externalResources": {
+			"vi-css-helper": ["helper.css", "print.css"],
+			"jQuery.DebouncedResize": "js/jquery.debouncedresize.js",
+			"media-match": "media.match.js",
+			"conditional-resource-loader": "src/resourceLoader.js",
+			"jquery": "dist/jquery.js",
+			"enquire": "dist/enquire.js",
+			"jquery-debouncedwidth": "js/jquery.debouncedwidth.js",
+			"normalize.css": "normalize.css",
+			"handlebars": "dist/handlebars.runtime.js",
+			"react-lite": "dist/react-lite.js"
+		}
+	}
+}

@@ -1,0 +1,48 @@
+/* Global heading styles */
+h1, h2, h3, h4 ,h5 {
+	font-weight: $font-weight-bold;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: (45/40);
+}
+
+h2 {
+	font-size: 22px;
+	line-height: (28/22);
+}
+
+h3 {
+	font-size: 20px;
+	line-height: (27/20);
+}
+
+h4 {
+	font-size: 17px;
+	line-height: (25/17);
+}
+
+
+/* Global link styles */
+a {
+}
+
+/* Global sup element */
+sup {
+	font-size: 75%;
+}
+
+/* Screen reader only */
+.sr-only {
+	border: 0 none;
+	clip: rect(0px, 0px, 0px, 0px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}

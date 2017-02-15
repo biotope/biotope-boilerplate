@@ -1,0 +1,14 @@
+<!-- All JavaScript at the bottom, except for Modernizr / ConditionalLoader and Configuration Class.
+	 Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries  -->
+
+<script type="text/javascript">
+	var global = global || {};
+	global.configuration = {data: {page: {},global: {}}};
+	global.configuration.data.staticResourcesBase = 'resources/';
+	global.configuration.data.staticResourcesContentRepoBase = 'resources-content/';
+</script>
+
+<!-- build:js(.tmp) resources/js/scripts.head.all.min.js  -->
+<script src="resources/js/vendor/modernizr.js"></script>
+<script src="resources/js/head.configuration.js"></script>
+<!-- endbuild -->

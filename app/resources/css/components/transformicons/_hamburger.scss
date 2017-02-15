@@ -1,0 +1,102 @@
+// Modified from https://github.com/callmenick/Animating-Hamburger-Icons
+
+$hamburger-width: 48px;                  // The width of the button area
+$hamburger-height: 48px;                 // The height of the button area
+$hamburger-bar-thickness: 8px;           // The thickness of the button bars
+$hamburger-pad: 0px;                     // The left/right padding between button area and bars.
+$hamburger-bar-space: 12px;              // The spacing between button bars
+$hamburger-transition-duration: 400ms;   // The transition duration
+$hamburger-bar-color: $black;            // The bar color
+$hamburger-transition-timing: ease-in-out;
+
+/**
+ * ToDos
+ * - javascript erstellen (toggle is-active)
+ * - offcanvas auf data umstellen
+ */
+
+.hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: $hamburger-width;
+    height: $hamburger-height;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    &__bar {
+        display: block;
+        position: absolute;
+        top: ($hamburger-height / 2) - ($hamburger-bar-thickness / 2);
+        left: $hamburger-pad;
+        right: $hamburger-pad;
+        height: $hamburger-bar-thickness;
+        background-color: $hamburger-bar-color;
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: $hamburger-bar-thickness;
+            background-color: $hamburger-bar-color;
+            content: "";
+            transform: rotate(0deg);
+        }
+
+        &:before {
+            top: -$hamburger-bar-thickness - $hamburger-bar-space;
+        }
+
+        &:after {
+            bottom: -$hamburger-bar-thickness - $hamburger-bar-space;
+        }
+    }
+
+    &--htx {
+        .hamburger__bar {
+            transition: background-color 0s $hamburger-transition-timing $hamburger-transition-duration;
+
+            &:before {
+                transition: top $hamburger-transition-duration $hamburger-transition-timing $hamburger-transition-duration, transform $hamburger-transition-duration $hamburger-transition-timing;
+            }
+
+            &:after {
+                transition: bottom $hamburger-transition-duration $hamburger-transition-timing $hamburger-transition-duration, transform $hamburger-transition-duration $hamburger-transition-timing;
+            }
+        }
+
+        &.is-active {
+            .hamburger__bar {
+                background-color: transparent;
+
+                &:before {
+                    top: 0;
+
+                    transition: top $hamburger-transition-duration $hamburger-transition-timing, transform $hamburger-transition-duration $hamburger-transition-timing $hamburger-transition-duration;
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    bottom: 0;
+
+                    transition: bottom $hamburger-transition-duration $hamburger-transition-timing, transform $hamburger-transition-duration $hamburger-transition-timing $hamburger-transition-duration;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

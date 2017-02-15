@@ -1,0 +1,34 @@
+{
+  "name": "VIGulpFrontendBoilerplate",
+  "version": "0.0.0",
+  "description": "A gulp frontend boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/virtualidentityag/gulp-frontend-boilerplate"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/jquery": "2.0.39",
+    "breakpoint-sass": "2.7.1",
+    "conditional-resource-loader": "git+https://github.com/virtualidentityag/conditional-resource-loader#1.2.1",
+    "enquire": "git+https://github.com/WickyNilliams/enquire.js#v2.1.2",
+    "handlebars": "4.0.5",
+    "jQuery.DebouncedResize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize#1.0.2",
+    "jquery": "3.1.0",
+    "jquery-debouncedwidth": "git+https://github.com/janrembold/jquery-debouncedwidth#v1.1.3",
+    "media-match": "git+https://github.com/virtualidentityag/media-match#2.0.3",
+    "normalize.css": "4.2.0",
+    "react-lite": "0.15.30",
+    "susy": "2.2.12",
+    "vi-css-helper": "virtualidentityag/vi-css-helper#1.1.1"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git",
+    "require-dir": "0.3.1"
+  },
+  "engines": {
+    "node": ">=5.9.0",
+    "npm": ">=3.0.0"
+  }
+}
