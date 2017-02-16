@@ -1,4 +1,4 @@
-var config = require('../../gulp/config.js');
+var config = require('../../node_modules/gulp-build-framework/gulp/config.js');
 var chai = require('chai');
 var expect = chai.expect;
 var fs = require('fs');
