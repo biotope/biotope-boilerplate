@@ -3,7 +3,7 @@
 ##Introduction
 
 This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
-It depends heavily on the (gulp-build-framework)[https://github.com/virtualidentityag/gulp-build-framework]
+It depends heavily on the [gulp-build-framework](https://github.com/virtualidentityag/gulp-build-framework)
 
 ##Setup
 
