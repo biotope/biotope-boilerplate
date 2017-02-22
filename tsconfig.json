@@ -1,12 +1,23 @@
 {
 	"compilerOptions": {
+		"moduleResolution": "Node",
 		"noImplicitAny": true,
-		"suppressImplicitAnyIndexErrors": true,
-		"module": "UMD",
+		"removeComments": true,
+		"declaration": false,
 		"target": "ES5",
+		"module": "UMD",
 		"sourceMap": true
 	},
+	"typeRoots": [
+		"node_modules/@types"
+	],
 	"types": [
 		"jquery"
+	],
+	"exclude": [
+		"dist",
+		"example",
+		"node_modules",
+		"test"
 	]
 }
