@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#0.0.10",
+    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git",
     "require-dir": "0.3.1"
   },
   "engines": {
