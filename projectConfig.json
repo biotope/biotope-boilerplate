@@ -5,17 +5,18 @@
 			"/resources"
 		],
 		"tasks": {
-			"linting": true,
-			"iconfont": true,
 			"angular": true,
-			"handlebars": true,
-			"uglify": true,
 			"cleanCss": true,
-			"favicons": true,
 			"cssStats": true,
+			"favicons": true,
+			"handlebars": true,
+			"iconfont": true,
+			"image": true,
+			"linting": true,
+			"markdown": false,
 			"typescript": true,
-			"webpack": true,
-			"image": true
+			"uglify": true,
+			"webpack": true
 		},
 		"externalResources": {
 			"vi-css-helper": ["helper.css", "print.css"],

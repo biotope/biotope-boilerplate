@@ -1,3 +1,5 @@
+///<reference types="jquery"/>
+
 (function ($: JQueryStatic, window: any, document: any) {
 
 	/**

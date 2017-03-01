@@ -1,4 +1,4 @@
-/// <reference path="../typings/globals/jquery/index.d.ts" />
+///<reference types="jquery"/>
 
 (function($: JQueryStatic, window: any, document: any) {
 
@@ -24,16 +24,14 @@
 		 */
 		constructor(element: Element, options: any)
 		{
-			var self = this;
-
-			self.element = element;
-			self.$element = $(element);
+			this.element = element;
+			this.$element = $(element);
 
 			// extend default options
-			self.options = $.extend({}, self.defaults, options);
+			this.options = $.extend({}, this.defaults, options);
 
 			// init plugin
-			self.init();
+			this.init();
 		}
 
 		/**
@@ -41,11 +39,9 @@
 		 */
 		public init() : void
 		{
-			var self = this;
-
 			console.log('init typescript boilerplate plugin');
 
-			self.$element.on('click', () => {
+			this.$element.on('click', () => {
 				console.log('clicked element');
 			});
 		}
