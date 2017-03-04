@@ -1,9 +1,10 @@
 /* initialization of configuration getter and setter methods, use this methods to get and set configuration values */
+
+var global = global || {};
 (function (allowPredefinedData) {
 	'use strict';
 
 	/*jshint -W020 */
-	global = global || {};
 	global.configuration = global.configuration || {};
 	if (typeof global.configuration.data === 'undefined') {
 		global.configuration.data = {};
