@@ -28,7 +28,8 @@
 			"jquery-debouncedwidth": "js/jquery.debouncedwidth.js",
 			"normalize.css": "normalize.css",
 			"handlebars": "dist/handlebars.runtime.js",
-			"react-lite": "dist/react-lite.js"
+			"react": "dist/react.js",
+			"react-dom": "dist/react-dom.js"
 		}
 	}
 }
