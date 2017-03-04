@@ -1,9 +1,5 @@
-<!-- NOT working...
-	data-resources="[{paths: ['react/jsxDemo.js']}, {paths: ['js/vendor/react-dom.js'], dependsOn: ['js/vendor/react.js']}, {paths: ['js/vendor/react.js']}]"
-	data-init="(function($elm) { $elm.jsxDemo(); })"
--->
 <div
-	data-resources="[{paths: ['react/jsxDemo.js']}]"
+	data-resources="[{paths: ['react/jsxDemo.js'], dependsOn: ['js/vendor/react-dom.js']}, {paths: ['js/vendor/react-dom.js'], dependsOn: ['js/vendor/react.js']}, {paths: ['js/vendor/react.js']}]"
 	data-init="(function($elm) { $elm.jsxDemo(); })"
 >
 	Conditional loading jsx react application...

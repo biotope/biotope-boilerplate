@@ -1,5 +1,4 @@
-///<reference types="react-dom"/>
-
+import * as ReactDOM from "react-dom";
 import User from './demo/User';
 
 $.fn.jsxDemo = function() {
