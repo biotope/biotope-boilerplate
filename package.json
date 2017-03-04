@@ -1,7 +1,7 @@
 {
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A gulp frontend boilerplate",
   "repository": {
     "type": "git",
