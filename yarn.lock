@@ -3676,9 +3676,9 @@ gulp-babel@6.1.2:
     through2 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
-"gulp-build-framework@https://github.com/virtualidentityag/gulp-build-framework.git#0.0.17":
-  version "0.0.17"
-  resolved "https://github.com/virtualidentityag/gulp-build-framework.git#78c78b688704518b9416594adea3c494a5f37302"
+"gulp-build-framework@https://github.com/virtualidentityag/gulp-build-framework.git#0.0.18":
+  version "0.0.18"
+  resolved "https://github.com/virtualidentityag/gulp-build-framework.git#b0d59a2ca18fa13a678d54e7af6a4aad496694ee"
   dependencies:
     autoprefixer "^6.7.3"
     babel-core "^6.23.1"
