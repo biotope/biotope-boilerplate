@@ -1,12 +1,25 @@
 {
 	"compilerOptions": {
+		"allowJs": true,
+		"jsx": "Preserve",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
 		"noImplicitAny": true,
+		"sourceMap": true,
 		"suppressImplicitAnyIndexErrors": true,
-		"module": "UMD",
-		"target": "ES5",
-		"sourceMap": true
+		"target": "ES5"
 	},
 	"types": [
+		"react",
+		"react-dom",
 		"jquery"
+	],
+	"exclude": [
+		"node_modules",
+		"patterns",
+		"test",
+		"dist",
+		".tmp",
+		"**/*.spec.ts"
 	]
 }
