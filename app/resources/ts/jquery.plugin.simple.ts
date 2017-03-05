@@ -6,7 +6,7 @@
 	 * A sample jQuery plugin written in Typescript.
 	 */
 	class Plugin {
-		public static NAME: string = 'demo';
+		public static NAME: string = 'simple';
 
 		private element: Element;
 		private $element: JQuery;
@@ -39,7 +39,7 @@
 			console.log('init typescript demo plugin');
 
 			this.$element
-				.html('TypeScript Plugin loaded')
+				.append('Done!')
 				.css('backgroundColor', 'lightcoral')
 				.on('click', () => {
 					console.log('clicked element');

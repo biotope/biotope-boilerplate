@@ -1,16 +1,16 @@
 ///<reference types="jquery"/>
 
-import { BoilerplateOptions } from './boilerplate/interfaces/BoilerplateOptions';
+import { BoilerplateOptions } from './advanced/interfaces/BoilerplateOptions';
 import { JQueryPluginBase } from 'jquery-base';
 import EventHelper from 'jquery-events';
-import Demo from './boilerplate/Demo';
+import Demo from './advanced/Demo';
 
 (function ($: JQueryStatic, window: any, document: any) {
 
 	class Plugin extends JQueryPluginBase {
 
 		/** The plugins name */
-		public static NAME: string = 'boilerplate';
+		public static NAME: string = 'advanced';
 
 		/** Set plugins default options defined in given interface */
 		public static DEFAULTS: BoilerplateOptions = {};

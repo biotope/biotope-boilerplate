@@ -84,7 +84,8 @@ describe('Expect that', function() {
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/js/handlebars.templates.js');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/react/jsxDemo.js');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/react/tsxDemo.js');
-		test.fileExistsAndNotEmpty(config.global.dist+'/resources/ts/jquery.typescript.demo.js');
+		test.fileExistsAndNotEmpty(config.global.dist+'/resources/ts/jquery.plugin.simple.js');
+		test.fileExistsAndNotEmpty(config.global.dist+'/resources/ts/jquery.plugin.advanced.js');
 
 		// check contents
 		// test.fileContentEquals(config.global.dist+'/resources/js/scripts.all.min.js', './test/travis/fixtures/js/scripts.all.min.js');

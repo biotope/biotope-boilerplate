@@ -14,8 +14,8 @@ export default class Demo extends JQueryModuleBase {
 
 	test($element: JQuery): void {
 		$element
-			.html('TypeScript Plugin loaded')
-			.css('backgroundColor', 'lightcoral')
+			.append('Done!')
+			.css('backgroundColor', 'lightblue')
 			.on('click', () => {
 				console.log('clicked element');
 				$element.css('backgroundColor', 'green');
