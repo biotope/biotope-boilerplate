@@ -9,6 +9,9 @@
 		"suppressImplicitAnyIndexErrors": true,
 		"target": "ES5"
 	},
+	"typeRoots": [
+		"node_modules/@types"
+	],
 	"types": [
 		"react",
 		"react-dom",
