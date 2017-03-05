@@ -72,40 +72,47 @@ We use different boilerplates to keep our coding structure as homogenous as poss
 
 ###JavaScript / TypeScript
 
-#### jQuery TypeScript Plugins - modr framework
+#### jQuery TypeScript Plugins - Advanced
 
-To get the full benefit of object oriented frontend plugins, component based configuration and conditional loading we use the modr framework.
-https://github.com/janrembold/modr-typescript
+The framework contains a local demo integration of the VI jQuery Boilerplate. 
+See `app/resources/ts/jquery.plugin.advanced.ts` for a local demo.
 
-The corresponding pattern file can be found in /patterns/modr.boilerplate.base.ts
- 
+For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
 
-#### jQuery TypeScript Plugins - standalone
+If you are going to write generic plugins that might be useful in lots of other projects, 
+please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
+
+For project-use only you can copy the structure into your local `app/resources/ts/` folder.
+
+
+#### jQuery TypeScript Plugins - Simple
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like code completion and type checking. 
+See `app/resources/ts/jquery.plugin.simple.ts` for a local demo.
+
+It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
 
-The corresponding pattern file can be found in /patterns/jquery.typescript.boilerplate.ts
+The corresponding pattern file can be found in `patterns/jquery.typescript.boilerplate.ts` 
 
 
 #### Plain and simple jQuery Plugins (legacy way)
 
 That is the plain legacy jQuery Plugin boilerplate.  
 
-The corresponding pattern file can be found in /patterns/jquery.typescript.boilerplate.ts
+The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts`
 
 
 ###CSS / SASS
 
-We compile the CSS stylesheets from SASS. To organize the code as efficient as possible we use the BEM methodology: 
+We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
 see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM  
 
 
 ###React
 
 All react files go to /resources/react/ folder. The entry points of each React application must start in this folder, all necessary includes should lie in a dedicated application folder.
-All React files end with .jsx.
+All React files end with `.jsx` or `.tsx` .
 
 Example for an app called "test":
 
