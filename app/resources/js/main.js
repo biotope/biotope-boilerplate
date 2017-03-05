@@ -1,12 +1,7 @@
 (function ($, window, document, undefined) {
 	'use strict';
 
-	// set ReactDOM
-	if(window.React && window.React.__SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED && !window.ReactDOM) {
-		window.ReactDOM = React.__SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-	}
-
-	$(document).ready(function () {
+	$(function () {
 		var $conditionalResources = $('[data-resources]');
 
 		// listen to resourcesReady event
@@ -16,9 +11,9 @@
 
 		/* globals resourceLoader */
 		resourceLoader({
-			base: global.configuration.data.staticResourcesBase,
+			base: global.configuration.get('data.staticResourcesBase'),
 			baseMap: {
-				'##content': global.configuration.data.staticResourcesContentRepoBase
+				'##content': global.configuration.get('data.staticResourcesContentRepoBase')
 			}
 		});
 

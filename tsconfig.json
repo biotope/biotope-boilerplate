@@ -1,24 +1,28 @@
 {
 	"compilerOptions": {
+		"allowJs": true,
+		"jsx": "Preserve",
+		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"noImplicitAny": true,
-		"removeComments": true,
-		"declaration": false,
-		"target": "ES5",
-		"module": "CommonJS",
-		"sourceMap": true
+		"sourceMap": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"target": "ES5"
 	},
 	"typeRoots": [
 		"node_modules/@types"
 	],
 	"types": [
+		"react",
+		"react-dom",
 		"jquery"
 	],
 	"exclude": [
-		"dist",
-		"example",
 		"node_modules",
+		"patterns",
 		"test",
-		"patterns"
+		"dist",
+		".tmp",
+		"**/*.spec.ts"
 	]
 }

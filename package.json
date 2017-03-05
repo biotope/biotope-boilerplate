@@ -1,7 +1,7 @@
 {
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A gulp frontend boilerplate",
   "repository": {
     "type": "git",
@@ -10,6 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/jquery": "^2.0.40",
+    "@types/react": "^15.0.13",
+    "@types/react-dom": "^0.14.23",
     "breakpoint-sass": "2.7.1",
     "conditional-resource-loader": "git+https://github.com/virtualidentityag/conditional-resource-loader#1.2.1",
     "enquire": "git+https://github.com/WickyNilliams/enquire.js#v2.1.2",
@@ -21,13 +23,14 @@
     "jquery-events": "https://github.com/vi-plugins/jquery-events.git",
     "media-match": "git+https://github.com/virtualidentityag/media-match#2.0.3",
     "normalize.css": "^5.0.0",
-    "react-lite": "^0.15.32",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "susy": "2.2.12",
     "vi-css-helper": "virtualidentityag/vi-css-helper#1.1.1"
   },
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git",
+    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#0.1.0",
     "require-dir": "0.3.1"
   },
   "engines": {

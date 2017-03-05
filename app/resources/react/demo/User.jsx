@@ -1,3 +1,4 @@
+import * as React from "react";
 import UserName from './UserName';
 
 export default class User extends React.Component {

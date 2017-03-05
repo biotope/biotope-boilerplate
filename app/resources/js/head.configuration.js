@@ -1,9 +1,10 @@
 /* initialization of configuration getter and setter methods, use this methods to get and set configuration values */
-(function (allowPredefinedData) {
+
+(function (global, allowPredefinedData) {
 	'use strict';
 
 	/*jshint -W020 */
-	global = global || {};
+	window.global = global;
 	global.configuration = global.configuration || {};
 	if (typeof global.configuration.data === 'undefined') {
 		global.configuration.data = {};
@@ -45,4 +46,4 @@
 		return global.configuration.data[tempKeys[0]];
 	};
 
-})(true);
+})(window.global || {}, true);
