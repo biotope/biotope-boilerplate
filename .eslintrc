@@ -22,10 +22,7 @@
       2,
       "tab"
     ],
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
+    "linebreak-style": 0,
     "no-cond-assign": [
       2,
       "except-parens"
