@@ -1,7 +1,7 @@
 {
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A gulp frontend boilerplate",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#4.0.0",
+    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#4.0.2",
     "require-dir": "0.3.1"
   },
   "engines": {
