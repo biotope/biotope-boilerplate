@@ -1,11 +1,11 @@
 # frontend-framework
 
-##Introduction
+## Introduction
 
 This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
 It depends heavily on the [gulp-build-framework](https://github.com/virtualidentityag/gulp-build-framework)
 
-##Setup
+## Setup
 
 ### 1. Node.js and NPM
 
@@ -31,7 +31,7 @@ See <https://yarnpkg.com/> for details of this dependency manager
 2. Test the installation of Gulp by running `gulp --version` from your command line.
 
 
-##Starting
+## Starting
 
 After your are finished with the step before and everything runs fine, run these steps to get your project on the road.
 
@@ -42,11 +42,11 @@ After your are finished with the step before and everything runs fine, run these
 	* **start** the development environment run `gulp serve`
 	* **build** the code for production use run `gulp build`
 
-##Custom Configuration
+## Custom Configuration
 
 How to set up your personal boilerplate, with dependencies you really need.
 
-###projectConfig.json
+### projectConfig.json
 
 This file lets you enable and disable certain tasks as well as specify additional resource folders.
 
@@ -66,11 +66,11 @@ You can add files which should not be uglified during the uglify task (e.g. file
 __externalResources__
 Add file paths of files that are needed for the build package. The path must be relative to each package inside node_modules.
 
-##Patterns
+## Patterns
 
 We use different boilerplates to keep our coding structure as homogenous as possible. 
 
-###JavaScript / TypeScript
+### JavaScript / TypeScript
 
 #### jQuery TypeScript Plugins - Advanced
 
@@ -103,13 +103,13 @@ That is the plain legacy jQuery Plugin boilerplate.
 The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts`
 
 
-###CSS / SASS
+### CSS / SASS
 
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
 see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM  
 
 
-###React
+### React
 
 All react files go to /resources/react/ folder. The entry points of each React application must start in this folder, all necessary includes should lie in a dedicated application folder.
 All React files end with `.jsx` or `.tsx` .
@@ -124,11 +124,11 @@ and so on...
 https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
 
 
-##Development
+## Development
 
 run the boilerplate with `gulp serve`
 
-###1. Our helpers
+### 1. Our helpers
 
 * `{{= ftf.include("path/to/file.html", { myValue: 123 }) }}` - Include a html file. You can  pass a json object with own data
 * `{{= ftf.text(500) }}` - Generate lorem ipsum text with 500 chars
@@ -136,7 +136,7 @@ run the boilerplate with `gulp serve`
 
 @ToDo - add all helper functions
 
-###2. Folder structure
+### 2. Folder structure
 
 * `/app` is where all of the actual frontend code is stored
 * `/app/_assets` holds static placeholder files like images, audio- and video files.
@@ -145,7 +145,7 @@ run the boilerplate with `gulp serve`
 * `/app/resources` holds JavaScript, TypeScript, SASS/CSS and other files
 * `/test` is where we put automated tests for Travis CI and Nightwatch Testing with Selenium
 
-##Testing
+## Testing
 
 **Nightwatch.js** is an End-to-End (E2E) testing solution for browser based apps and websites using Selenium to automatically 
 perform commands and assertions on DOM elements.
@@ -155,7 +155,7 @@ local selenium. The npm packages for 'test:local' are not included in the packag
 
 **Travis CI** Testing is used for automated boilerplate testing. It uses Mocha/Chai and checks the build process and compares the generated static files with there fixtures. To run the tests locally execute `mocha test/travis/build.js` from terminal. Install mocha globally.
 
-###gulp test
+### gulp test
 
 Gulp task for testing on external Selenium server.
 Add your settings in the configuration file `/test/nightwatch/nightwatch.js`
@@ -177,7 +177,7 @@ module.exports = {
 };
 ```
 
-###gulp test:dev
+### gulp test:dev
 
 Add your settings in the configuration file `/test/nightwatch/nightwatch.dev.js`
 npm packages to install: 
@@ -186,13 +186,13 @@ GraficMagick: `npm install gm`
 
 Download and install imageMagick: http://www.imagemagick.org
 
-##Build
+## Build
 
 run the boilerplate with `gulp build`
 If everything is correct, you will find a build version of your code in the **dist** directory.
 This contains among others a min and concat version of your js and css files
 
-##Release
+## Release
 There is a gulp task for doing releases. Use gulp release --type=[major,minor,patch,prerelease] will do the following steps for you:
 1. update package.json version
 2. git commit the changed package.json
@@ -200,15 +200,15 @@ There is a gulp task for doing releases. Use gulp release --type=[major,minor,pa
 4. set a GIT tag for this version
 5. coming soon: create a diff changelog from last version to this version
 
-##Troubleshooting
+## Troubleshooting
 
-###Line-break errors in eslint
+### Line-break errors in eslint
 
 If there are line-break errors in eslint, it may be because false line endings set by git.
 To prevent this use the git config "core.autocrlf". 
 Use the command "git config core.autocrlf false" to prevent windows from using crlf instead of lf.
 
-###gulp serve malloc error (Unix Only)
+### gulp serve malloc error (Unix Only)
 
 ************** gulp(975,0x104c15000) malloc: *** error for object 0x10164201c: pointer being freed was not allocated *** set a breakpoint in malloc_error_break to debug **************
 
