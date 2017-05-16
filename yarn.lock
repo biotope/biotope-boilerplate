@@ -3718,9 +3718,9 @@ gulp-babel@6.1.2:
     through2 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
-"gulp-build-framework@https://github.com/virtualidentityag/gulp-build-framework.git#4.0.3":
-  version "4.0.3"
-  resolved "https://github.com/virtualidentityag/gulp-build-framework.git#81e4dd087262fc7eaeb1cae1da8833263620e7e7"
+"gulp-build-framework@https://github.com/virtualidentityag/gulp-build-framework.git#4.1.2":
+  version "4.1.2"
+  resolved "https://github.com/virtualidentityag/gulp-build-framework.git#054476c2d5e8e5e40fcdae113737c9e7ca92d841"
   dependencies:
     autoprefixer "^6.7.3"
     babel-core "^6.23.1"
@@ -5321,7 +5321,7 @@ jquery-migrate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.0.0.tgz#03f320596fe1a1db09cdcfb74b14571994aad7bb"
 
-jquery@^3.2.1:
+jquery@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -7622,7 +7622,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@1.1, readable-stream@1.1.x, readable-stream@^1.0.33, readable-stream@~1.1.8, readable-stream@~1.1.9:
+readable-stream@1.1, readable-stream@1.1.x, readable-stream@^1.0.26-2, readable-stream@^1.0.33, readable-stream@~1.1.8, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -7643,7 +7643,7 @@ readable-stream@2, readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", 
     string_decoder "~0.10.x"
     util-deprecate "~1.0.1"
 
-"readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@^1.0.26-2, readable-stream@~1.0.17:
+"readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@~1.0.17:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
   dependencies:
