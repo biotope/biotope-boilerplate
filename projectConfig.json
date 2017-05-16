@@ -26,6 +26,7 @@
 			"media-match": "media.match.js",
 			"conditional-resource-loader": "src/resourceLoader.js",
 			"jquery": "dist/jquery.js",
+			"jquery-migrate": "dist/jquery-migrate.js",
 			"enquire": "dist/enquire.js",
 			"jquery-debouncedwidth": "js/jquery.debouncedwidth.js",
 			"normalize.css": "normalize.css",
