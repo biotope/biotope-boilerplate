@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/virtualidentityag/gulp-frontend-boilerplate"
   },
+  "scripts": {
+    "test": "mocha test/travis/build.js"
+  },
   "license": "MIT",
   "dependencies": {
     "@types/jquery": "^2.0.40",
