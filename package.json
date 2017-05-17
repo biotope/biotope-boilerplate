@@ -7,10 +7,11 @@
     "type": "git",
     "url": "https://github.com/virtualidentityag/gulp-frontend-boilerplate"
   },
-  "scripts": {
-    "test": "mocha test/travis/build.js"
-  },
   "license": "MIT",
+  "scripts": {
+    "test": "mocha test/travis/build.js",
+    "build": "gulp build"
+  },
   "dependencies": {
     "@types/jquery": "^2.0.40",
     "@types/modernizr": "^3.3.0",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#4.1.3",
+    "mocha": "^3.4.1",
     "require-dir": "0.3.1"
   },
   "engines": {

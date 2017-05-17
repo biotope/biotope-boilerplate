@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "6"
   - "7"
-install: npm install -g yarn && yarn global add mocha && yarn install
-before_script: gulp build
-script: mocha test/travis/build.js
+install: npm install -g yarn && yarn install
+before_script: yarn build
+script: yarn test 
