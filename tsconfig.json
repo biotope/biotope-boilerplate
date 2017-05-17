@@ -1,12 +1,13 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"jsx": "Preserve",
+		"jsx": "React",
 		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"noImplicitAny": true,
 		"sourceMap": true,
 		"suppressImplicitAnyIndexErrors": true,
+		"allowSyntheticDefaultImports": true,
 		"target": "ES5"
 	},
 	"typeRoots": [
