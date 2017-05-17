@@ -33,6 +33,10 @@
 			"handlebars": "dist/handlebars.runtime.js",
 			"react": "dist/react.js",
 			"react-dom": "dist/react-dom.js"
-		}
+		},
+		"reactEntryPoints": [
+			"/*.tsx",
+			"/*.jsx"
+		]
 	}
 }
