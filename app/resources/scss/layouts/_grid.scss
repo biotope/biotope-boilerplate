@@ -1,15 +1,80 @@
+@import "../utilities/functions";
+@import "../../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "../../../../node_modules/susy/sass/susy";
+
+$grid-columns: 12 !default;
+$grid-gutter: 30px !default;
+$half-grid-gutter: $grid-gutter / 2 !default;
+$grid-column-width: 120px !default;
+$grid-max-width: $content-max-width !default;
+
+// set susy defaults
+$susy: (
+	math: fluid,
+	columns: $grid-columns,
+	column-width: $grid-column-width,
+	container: $grid-max-width,
+	gutter: $grid-gutter/$grid-column-width,
+	gutter-position: inside-static,
+	global-box-sizing: border-box
+);
+
+
 .row {
-	@include container();
-	@include clearfix();
+	margin-top: -$section_margin_top_small;
+	margin-left: -$half-grid-gutter;
+	margin-right: -$half-grid-gutter;
+	max-width: none;
+
+	@media (min-width: $medium) {
+		margin-top: -$section_margin_top_medium;
+	}
+
+	@media (min-width: $xlarge) {
+		margin-top: -$section_margin_top_xlarge;
+	}
+
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+
+	+ .row,
+	.row {
+		margin-top: 0;
+	}
+
+	&--reducedWidth {
+		margin-left: calc(6.25% - #{$half-grid-gutter});
+		margin-right: calc(6.75% - #{$half-grid-gutter});
+
+		@include breakpoint($medium) {
+			margin-left: calc(1.96% - #{$half-grid-gutter});
+			margin-right: calc(4.3% - #{$half-grid-gutter});
+		}
+
+		@include breakpoint(1520px) {
+			max-width: $content-max-width + $grid-gutter;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
-.columns {
-	position: relative;
-	margin-top: 10px;
-
+.col {
 	@include span(12);
+	margin-top: $section_margin_top_small;
+
+	@media (min-width: $medium) {
+		margin-top: $section_margin_top_medium;
+	}
+
+	@media (min-width: $xlarge) {
+		margin-top: $section_margin_top_xlarge;
+	}
 }
 
-@include make-grid-columns("small", $small);
-@include make-grid-columns("medium", $medium);
-@include make-grid-columns("large", $large);
+// grid columns
+@include make-grid-columns('col--medium', $medium);
+@include make-grid-columns('col--large', $large);
