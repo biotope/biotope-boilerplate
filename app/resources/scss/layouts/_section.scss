@@ -1,4 +1,4 @@
-.sectionBackground {
+.section {
 	$half-grid-gutter: $grid-gutter / 2;
 
 	margin-top: $section_margin_top_small;
@@ -17,20 +17,21 @@
 		margin-right: auto;
 	}
 
-	&--addBottomMargin {
-		// margin-bottom creates problems with parallax effect, so changed it to padding, sorry
-		padding-bottom: $section_margin_top_small;
+	&:not([class*="section--colorTheme"]) {
+		+ [class*="section--colorTheme"] {
+			margin-top: $section_margin_top_small;
 
-		@media (min-width: $medium) {
-			padding-bottom: $section_margin_top_medium;
-		}
+			@media (min-width: $medium) {
+				margin-top: $section_margin_top_medium;
+			}
 
-		@media (min-width: $xlarge) {
-			padding-bottom: $section_margin_top_xlarge;
+			@media (min-width: $xlarge) {
+				margin-top: $section_margin_top_xlarge;
+			}
 		}
 	}
 
-	&[class*="sectionBackground--colorTheme"] {
+	&[class*="section--colorTheme"] {
 		margin-top: 0;
 		padding: 0 6.75% $section_margin_top_small 6.25%;
 
@@ -63,7 +64,7 @@
 			}
 		}
 
-		&.sectionBackground--removeSidePaddings {
+		&.section--removeSidePaddings {
 			padding-left: 0;
 			padding-right: 0;
 		}
