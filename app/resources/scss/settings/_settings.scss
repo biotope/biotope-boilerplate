@@ -23,6 +23,7 @@ $body-line-height:  25px;
 $body-min-width:    300px;
 
 // COMPONENT STYLES
+$content-max-width: 1280px;
 $component-max-width: 1200px;
 
 // breakpoint definitions
@@ -32,9 +33,19 @@ $medium:  768px;
 $large:   992px;
 $xlarge:  1200px;
 
-//// MaxValues
-//$xsmallMax: $small - 1;
-//$smallMax:  $medium - 1;
-//$mediumMax: $large - 1;
-//$largeMax:  $xlarge - 1;
-//$xlargeMax: 10000px;
+// MaxValues
+$xsmallMax: $small - 1;
+$smallMax:  $medium - 1;
+$mediumMax: $large - 1;
+$largeMax:  $xlarge - 1;
+$xlargeMax: 10000px;
+
+// Grid
+$grid-gutter: 30px;
+
+// margins for content and sections
+$section_content_top: 33px;
+$section_margin_top_small: 60px;
+$section_margin_top_medium: 60px;
+$section_margin_top_large: 60px;
+$section_margin_top_xlarge: 80px;
