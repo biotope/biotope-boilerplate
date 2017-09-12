@@ -1,0 +1,15 @@
+@mixin icon-styles {
+    position: relative;
+    font-family: "<%= fontName %>";
+    font-size: 68%;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    speak: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
