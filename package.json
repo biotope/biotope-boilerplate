@@ -9,8 +9,12 @@
   },
   "license": "MIT",
   "scripts": {
+    "start": "npm run start:gulp",
+    "build": "npm run build:gulp",
     "test": "mocha test/travis/build.js",
-    "build": "gulp build"
+    "gulp": "node_modules/gulp/bin/gulp.js",
+    "start:gulp": "npm run gulp serve",
+    "build:gulp": "npm run gulp build"
   },
   "dependencies": {
     "@types/jquery": "^2.0.40",
