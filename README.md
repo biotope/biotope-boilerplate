@@ -23,13 +23,6 @@ See <https://yarnpkg.com/> for details of this dependency manager
 1. Run `npm install -g yarn` to install yarn dependency manager 
 1a. (On windows) You can also get the installer from <https://yarnpkg.com/en/docs/install>.
 
-### 3. Gulp
-
-**Gulp** is a task automator running on Node.js. It will do a lot of hard work for us preparing the source code for productive use. Amongst others Gulp combines files, shrinks them, tests code for faults etc.
-
-1. Run `yarn global add gulp-cli` to install Gulp's command line interface globally. This will put the gulp command in your system path, allowing it to be run from any directory.
-2. Test the installation of Gulp by running `gulp --version` from your command line.
-
 
 ## Starting
 
@@ -39,8 +32,8 @@ After your are finished with the step before and everything runs fine, run these
 2. Navigate to the project folder
 3. Run `yarn install`
 4. To
-	* **start** the development environment run `gulp serve`
-	* **build** the code for production use run `gulp build`
+	* **start** the development environment run `yarn start`
+	* **build** the code for production use run `yarn build`
 
 ## Custom Configuration
 
@@ -126,7 +119,7 @@ https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
 
 ## Development
 
-run the boilerplate with `gulp serve`
+run the boilerplate with `yarn start`
 
 ### 1. Our helpers
 
@@ -155,12 +148,12 @@ local selenium. The npm packages for 'test:local' are not included in the packag
 
 **Travis CI** Testing is used for automated boilerplate testing. It uses Mocha/Chai and checks the build process and compares the generated static files with there fixtures. To run the tests locally execute `mocha test/travis/build.js` from terminal. Install mocha globally.
 
-### gulp test
+### test selenium
 
 Gulp task for testing on external Selenium server.
 Add your settings in the configuration file `/test/nightwatch/nightwatch.js`
 
-`gulp test -url=http://YOURDOMAIN.com`
+`yarn test:selenium -url=http://YOURDOMAIN.com`
 
 '-url' can be used in nightwatch tests with 'browser.launch_url'.
 Example:
@@ -188,7 +181,7 @@ Download and install imageMagick: http://www.imagemagick.org
 
 ## Build
 
-run the boilerplate with `gulp build`
+run the boilerplate with `yarn build`
 If everything is correct, you will find a build version of your code in the **dist** directory.
 This contains among others a min and concat version of your js and css files
 
@@ -212,5 +205,5 @@ Use the command "git config core.autocrlf false" to prevent windows from using c
 
 ************** gulp(975,0x104c15000) malloc: *** error for object 0x10164201c: pointer being freed was not allocated *** set a breakpoint in malloc_error_break to debug **************
 
-This is caused by missing sass files. Be sure you've done a bower install before gulp serve.
+This is caused by missing sass files. Be sure you've done a bower install before `yarn start`.
 

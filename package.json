@@ -9,12 +9,16 @@
   },
   "license": "MIT",
   "scripts": {
+    "mocha": "node node_modules/.bin/mocha",
+    "gulp": "node node_modules/.bin/gulp",
+
+    "start:gulp": "npm run gulp serve",
+    "build:gulp": "npm run gulp build",
+    "test:selenium": "npm run gulp test",
+
     "start": "npm run start:gulp",
     "build": "npm run build:gulp",
-    "test": "mocha test/travis/build.js",
-    "gulp": "node node_modules/gulp/bin/gulp.js",
-    "start:gulp": "npm run gulp serve",
-    "build:gulp": "npm run gulp build"
+    "test": "npm run mocha test/travis/build.js"
   },
   "dependencies": {
     "@types/jquery": "^2.0.40",
