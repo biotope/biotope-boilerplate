@@ -12,7 +12,7 @@
     "start": "npm run start:gulp",
     "build": "npm run build:gulp",
     "test": "mocha test/travis/build.js",
-    "gulp": "node_modules/gulp/bin/gulp.js",
+    "gulp": "node node_modules/gulp/bin/gulp.js",
     "start:gulp": "npm run gulp serve",
     "build:gulp": "npm run gulp build"
   },
