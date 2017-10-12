@@ -2,11 +2,11 @@
 
 	<!-- DEV-note: CONTENT AREA! -->
 	<span style="display:block; background-color:#06c; padding:5px; width:100%; color:#fff; min-height:100px;">
-		{{? ftf.headline }}
-			<h2 style="color: #fff">{{= ftf.headline }}</h2>
-		{{??}}
+		{{#if headline}}
+			<h2 style="color: #fff">{{headline}}</h2>
+		{{else}}
 			66.7% width CENTERED - 1 content column per row - 8 grid-cells wide - 2 grid-cells offset
-		{{?}}
+		{{/if}}
 	</span>
 
 </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{=ftf.package.title}} | {{=ftf.package.version}}</title>
+    <title>{{package.title}} | {{package.version}}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -51,15 +51,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{=ftf.package.title}} {{=ftf.package.version}}</a>
+            <a class="navbar-brand" href="#">{{package.title}} {{package.version}}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                {{ for(var prop in ftf.indexr) { }}
-                {{? ftf.indexr[prop].category }}
-                <li><a href="#category{{=ftf.indexr[prop].priority}}" class="capitalize">{{=ftf.indexr[prop].category}}</a></li>
-                {{?}}
-                {{ } }}
+				{{#each templates}}
+					{{#if template.category}}
+						<li><a href="#category{{template.priority}}" class="capitalize">{{template.category}}</a></li>
+					{{/if}}
+				{{/each}}
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -69,7 +69,7 @@
 
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">{{=ftf.package.title}} {{=ftf.package.version}}</h3>
+            <h3 class="panel-title">{{package.title}} {{package.version}}</h3>
         </div>
         <div class="panel-body">
             This VI Frontend Framework is a framework to build state of the art websites with an approved UI look and feel. It provides ready-to-use layouts, design and functionaliy and incorporates many proven practices used to build excellent websites. It has an adaptive / responsive design, is build mobile first and while it makes use of modern browser's capabilities, it also works on browsers as ancient as Internet Explorer 9. We hope to save you and your team hundreds of hours of work - Hours which you can invest in better content and maybe even into helping us improve this framework.
@@ -78,22 +78,26 @@
 
     <div class="row">
         <div class="col-sm-8">
-            {{ for(var prop in ftf.indexr) { }}
-                {{? ftf.indexr[prop].category }}
-                    <h2 class="anchor capitalize" id="category{{=ftf.indexr[prop].priority}}">{{=ftf.indexr[prop].category}}</h2>
-                {{?}}
-                <h4><a href="{{=ftf.indexr[prop].file.base}}">{{=ftf.indexr[prop].data.title || ftf.indexr[prop].file.name}}</a></h4>
-                {{? ftf.indexr[prop].data.description}}<p>{{=ftf.indexr[prop].data.description}}</p>{{?}}
-            {{ } }}
+			{{#each templates}}
+				{{#if template.category}}
+					<h2 class="anchor capitalize" id="category{{template.priority}}">{{template.category}}</h2>
+				{{/if}}
+				<h4><a href="{{template.file.base}}">{{def this.title template.file.name}}</a></h4>
+				{{#if this.description}}
+					<p>{{this.description}}</p>
+				{{/if}}
+
+			{{/each}}
+
         </div>
         <div class="col-sm-4">
             <h2 class="anchor">Categories</h2>
             <ul>
-                {{ for(var prop in ftf.indexr) { }}
-                {{? ftf.indexr[prop].category }}
-                <li><a href="#category{{=ftf.indexr[prop].priority}}" class="capitalize">{{=ftf.indexr[prop].category}}</a></li>
-                {{?}}
-                {{ } }}
+				{{#each templates}}
+					{{#if template.category}}
+						<li><a href="#category{{template.priority}}" class="capitalize">{{template.category}}</a></li>
+					{{/if}}
+				{{/each}}
             </ul>
         </div>
     </div>

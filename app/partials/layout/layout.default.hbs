@@ -1,30 +1,30 @@
-{{= ftf.include("includes/htmltag.html") }}
+{{> includes/htmltag }}
 <head>
-	{{= ftf.include("includes/htmlhead.meta.html") }}
+	{{> includes/htmlhead.meta }}
 
 	<!-- inject:head:html -->
 	<!-- endinject -->
 
 	<!-- DEV-note: include page specific meta information after this comment -->
 
-	{{= ftf.include("includes/htmlhead.styles.html") }}
-	{{= ftf.include("includes/htmlhead.scripts.html") }}
+	{{> includes/htmlhead.styles }}
+	{{> includes/htmlhead.scripts }}
 
 	<!-- DEV-note: include page specific styles and scripts after this comment -->
-	{{# partial.conditionalResources || ''}}
+
 </head>
-<body role="document" class="{{# partial.bodyClass || '' }}">
+<body role="document" class="{{bodyClass}}">
 
     <div class="offcanvas offcanvas--fixed-height layout--default">
         <div class="offcanvas__inner">
 
-            {{= ftf.include("framework/header.html") }}
+            {{> framework/header }}
             <main class="content">
                 <article>
-                    {{= ftf.include( partial.contentMain ) }}
+					{{> (lookup . 'contentMain') }}
                 </article>
             </main>
-            {{= ftf.include("framework/footer.html") }}
+            {{> framework/footer }}
 
             <div class="offcanvas__area offcanvas__area--left"> LEFT OFFCANVAS AREA </div>
             <div class="offcanvas__area offcanvas__area--right"> RIGHT OFFCANVAS AREA </div>
@@ -33,13 +33,8 @@
         </div>
     </div>
 
-	<!-- DEV-note: optional offsite content that is independent from normal content flow  -->
-	{{? partial.contentOffsite }}
-		{{= ftf.include( partial.contentOffsite ) || '' }}
-	{{?}}
-
-	{{= ftf.include("includes/scripts.html") }}
-	{{= ftf.include("includes/tracking.html") }}
+	{{> includes/scripts }}
+	{{> includes/tracking }}
 	<!-- DEV-note: include page specific scrips after this comment -->
 </body>
 </html>
