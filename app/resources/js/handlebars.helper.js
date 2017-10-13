@@ -82,6 +82,10 @@
 			} else {
 				return options.inverse(this);
 			}
+		},
+
+		def: function(variable, defaultValue) {
+			return variable ? variable : defaultValue;
 		}
 
 	};
