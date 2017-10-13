@@ -130,10 +130,12 @@ run the boilerplate with `gulp serve`
 
 ### 1. Our helpers
 
-* `{{= ftf.include("path/to/file.html", { myValue: 123 }) }}` - Include a html file. You can  pass a json object with own data
+* `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folder. i.e. for the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile. The partials can be *.hbs or *.html. 
+* `{{def variable 'default value'}}` - set a default value for a variable 
+
+@TODO replace these helpers with handelbar equivalent
 * `{{= ftf.text(500) }}` - Generate lorem ipsum text with 500 chars
 * `{{= ftf.renderHbs("demo", "app/_mock/demo.json") }}` - Render a hbs file with json data into static templates
-
 @TODO - add all helper functions
 
 ### 2. Folder structure
