@@ -55,6 +55,12 @@ To add additional resource folders, create the folders and add the paths to the 
 The path needs to be prepended with a "/" and relative to the app folder.
 The default resource folder is "/resources"
 
+__component folders__
+To add additional component folders, create the folders and add the paths to the global.components array.
+The path needs to be prepended with a "/" and relative to the app folder.
+The default components folder is "/components"
+If an additinal component folder is added create an additional resource Folder since every components folder nees its own corresponding resource folder.
+
 __tasks__
 To disable certain tasks, simply set the specific task to false. 
 At the moment the tasks that can be disabled are: "linting", "iconfont", "angular", "handlebars", "uglify", "cleanCss", "favicons", "cssStats".
@@ -130,7 +136,7 @@ run the boilerplate with `gulp serve`
 
 ### 1. Our helpers
 
-* `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folder. i.e. for the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile. The partials can be *.hbs or *.html. 
+* `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
 * `{{def variable 'default value'}}` - set a default value for a variable 
 
 @TODO replace these helpers with handelbar equivalent
