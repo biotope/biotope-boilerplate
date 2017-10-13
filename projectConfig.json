@@ -9,7 +9,7 @@
 			"cleanCss": true,
 			"cssStats": true,
 			"sass": true,
-			"less": false,
+			"less": true,
 			"favicons": true,
 			"handlebars": true,
 			"iconfont": true,
