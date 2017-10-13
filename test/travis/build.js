@@ -56,7 +56,7 @@ describe('Expect that', function() {
 		test.fileExistsAndNotEmpty(config.global.dist+'/index.html');
 		test.fileExistsAndNotEmpty(config.global.dist+'/01layout.01default.html');
 		test.fileExistsAndNotEmpty(config.global.dist+'/90demo.01icons.html');
-		test.fileExistsAndNotEmpty(config.global.dist+'/90demo.02handlebars.html');
+		// test.fileExistsAndNotEmpty(config.global.dist+'/90demo.02handlebars.html');
 
 		// check content
 		// test.fileContentEquals(config.global.dist+'/index.html', './test/travis/fixtures/html/index.html');
