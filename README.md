@@ -134,15 +134,17 @@ run the boilerplate with `gulp serve`
 * `{{= ftf.text(500) }}` - Generate lorem ipsum text with 500 chars
 * `{{= ftf.renderHbs("demo", "app/_mock/demo.json") }}` - Render a hbs file with json data into static templates
 
-@ToDo - add all helper functions
+@TODO - add all helper functions
 
 ### 2. Folder structure
 
 * `/app` is where all of the actual frontend code is stored
 * `/app/_assets` holds static placeholder files like images, audio- and video files.
 * `/app/_mock` holds files that would be generated dynamically (such as `nav.json`) by the cms implementing the frontend
-* `/app/_partials` holds snippets of html code that are reused throughout the frontend
-* `/app/resources` holds JavaScript, TypeScript, SASS/CSS and other files
+* `/app/pages` holds the base html files to create the index preview
+* `/app/partials` holds snippets of html code that are reused throughout the frontend
+* `/app/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
+* `/app/components` holds reusable components and the corresponding resource files
 * `/test` is where we put automated tests for Travis CI and Nightwatch Testing with Selenium
 
 ## Testing
@@ -204,7 +206,7 @@ There is a gulp task for doing releases. Use gulp release --type=[major,minor,pa
 
 ### Line-break errors in eslint
 
-If there are line-break errors in eslint, it may be because false line endings set by git.
+If there are line-break errors in eslint, it may be because false line endings set by git. Try to check out the repo again.
 To prevent this use the git config "core.autocrlf". 
 Use the command "git config core.autocrlf false" to prevent windows from using crlf instead of lf.
 
