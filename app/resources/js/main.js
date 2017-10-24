@@ -11,14 +11,14 @@
 
 		/* globals resourceLoader */
 		resourceLoader({
-			base: global.configuration.get('data.staticResourcesBase'),
+			base: ffglobal.configuration.get('data.staticResourcesBase'),
 			baseMap: {
-				'##content': global.configuration.get('data.staticResourcesContentRepoBase')
+				'##content': ffglobal.configuration.get('data.staticResourcesContentRepoBase')
 			}
 		});
 
 		function init() {
-			global.configuration.get('initCore')();
+			ffglobal.configuration.get('initCore')();
 
 			// initialize components
 			$conditionalResources.each(function() {
@@ -31,7 +31,7 @@
 
 	});
 
-	global.configuration.set('initCore', function () {
+	ffglobal.configuration.set('initCore', function () {
 
 		// offcanvas click events
 		$('[data-offcanvas-show]').on('click', function (e) {

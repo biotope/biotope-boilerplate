@@ -1,24 +1,24 @@
 // init configuration namespace if not exists already
-global.configuration = global.configuration || {};
-global.configuration.data = global.configuration.data || {};
+ffglobal.configuration = ffglobal.configuration || {};
+ffglobal.configuration.data = ffglobal.configuration.data || {};
 //
 //// global variables
-global.configuration.data.global = global.configuration.data.global || {};
+ffglobal.configuration.data.global = ffglobal.configuration.data.global || {};
 
 // breakpoints see: \app\resources\css\settings\_settings.scss
-//global.configuration.data.global.bpXSmall = 300;
-//global.configuration.data.global.bpSmall = 600;
-//global.configuration.data.global.bpMedium = 768;
-//global.configuration.data.global.bpLarge = 992;
-//global.configuration.data.global.bpXLarge = 1200;
+//ffglobal.configuration.data.ffglobal.bpXSmall = 300;
+//ffglobal.configuration.data.ffglobal.bpSmall = 600;
+//ffglobal.configuration.data.ffglobal.bpMedium = 768;
+//ffglobal.configuration.data.ffglobal.bpLarge = 992;
+//ffglobal.configuration.data.ffglobal.bpXLarge = 1200;
 //// max:
-//global.configuration.data.global.bpXSmallMax = global.configuration.data.global.bpSmall - 1;
-//global.configuration.data.global.bpSmallMax = global.configuration.data.global.bpMedium - 1;
-//global.configuration.data.global.bpMediumMax = global.configuration.data.global.bpLarge - 1;
-//global.configuration.data.global.bpLargeMax = global.configuration.data.global.bpXLarge - 1;
-//global.configuration.data.global.bpXLargeMax = 10000;
-//global.configuration.data.global.offCanvasWidth = 270;
+//ffglobal.configuration.data.ffglobal.bpXSmallMax = ffglobal.configuration.data.ffglobal.bpSmall - 1;
+//ffglobal.configuration.data.ffglobal.bpSmallMax = ffglobal.configuration.data.ffglobal.bpMedium - 1;
+//ffglobal.configuration.data.ffglobal.bpMediumMax = ffglobal.configuration.data.ffglobal.bpLarge - 1;
+//ffglobal.configuration.data.ffglobal.bpLargeMax = ffglobal.configuration.data.ffglobal.bpXLarge - 1;
+//ffglobal.configuration.data.ffglobal.bpXLargeMax = 10000;
+//ffglobal.configuration.data.ffglobal.offCanvasWidth = 270;
 
 //// i18n
-global.configuration.data.i18n = global.configuration.data.i18n || {};
-global.configuration.data.i18n.browserwarning = 'Ihr Browser ist veraltet! Die Seite wird möglicherweise in Funktionalität und Darstellung eingeschränkt sein.';
+ffglobal.configuration.data.i18n = ffglobal.configuration.data.i18n || {};
+ffglobal.configuration.data.i18n.browserwarning = 'Ihr Browser ist veraltet! Die Seite wird möglicherweise in Funktionalität und Darstellung eingeschränkt sein.';
