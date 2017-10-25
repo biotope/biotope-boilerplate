@@ -60,3 +60,5 @@
 	};
 
 })(jQuery, window, document);
+
+//@ sourceURL=jquery.plugin.simple.js

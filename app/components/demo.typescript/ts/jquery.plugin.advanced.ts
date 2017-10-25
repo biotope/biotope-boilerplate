@@ -75,3 +75,5 @@ import Demo from './advanced/Demo';
 	};
 
 })(jQuery, window, document);
+
+//@ sourceURL=jquery.plugin.advanced.js

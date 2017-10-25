@@ -15,8 +15,6 @@
   "dependencies": {
     "@types/jquery": "^2.0.40",
     "@types/modernizr": "^3.3.0",
-    "@types/react": "^15.0.13",
-    "@types/react-dom": "^0.14.23",
     "breakpoint-sass": "2.7.1",
     "conditional-resource-loader": "git+https://github.com/virtualidentityag/conditional-resource-loader#1.2.2",
     "enquire": "git+https://github.com/WickyNilliams/enquire.js#v2.1.6",
@@ -29,8 +27,6 @@
     "jquery-migrate": "^3.0.0",
     "media-match": "git+https://github.com/virtualidentityag/media-match#2.0.3",
     "normalize.css": "^7.0.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
     "susy": "2.2.12",
     "vi-css-helper": "virtualidentityag/vi-css-helper#1.1.1"
   },
