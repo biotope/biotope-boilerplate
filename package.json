@@ -34,7 +34,7 @@
     "gulp": "3.9.1",
     "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#build-framework-4.5",
     "mocha": "^3.4.1",
-    "require-dir": "0.3.1"
+    "require-dir": "0.3.2"
   },
   "engines": {
     "node": ">=6.0.0",
