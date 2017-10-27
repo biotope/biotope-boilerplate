@@ -1313,12 +1313,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000750"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000750.tgz#3f1f85c92c9134edda735695e369d7e176752b75"
+  version "1.0.30000752"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000752.tgz#daa129d54ce700e94ad14388bdef514ec1e2dd54"
 
 caniuse-lite@^1.0.30000697, caniuse-lite@^1.0.30000744:
-  version "1.0.30000750"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000750.tgz#38ad19aa4c6d88da38e8900d3666b4e3bbb65c22"
+  version "1.0.30000752"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000752.tgz#0a79df520669d92ddc7f57406eed935948263130"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -3652,7 +3652,7 @@ gulp-babel@7.0.0:
 
 "gulp-build-framework@https://github.com/virtualidentityag/gulp-build-framework.git#build-framework-4.5":
   version "4.5"
-  resolved "https://github.com/virtualidentityag/gulp-build-framework.git#88dd62c5dbed66632daeeafc04966e5d29e05ec8"
+  resolved "https://github.com/virtualidentityag/gulp-build-framework.git#622f7baf004f58e9d99fe5d3e543624976cc0010"
   dependencies:
     autoprefixer "7.1.2"
     babel-core "6.26.0"
@@ -4695,8 +4695,8 @@ ieee754@^1.1.4:
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
 ignore@^3.1.2, ignore@^3.2.0:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.6.tgz#b6f3196b38ed92f0c86e52f6f79b7fc4c8266c8d"
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
 image-size@^0.4.0:
   version "0.4.0"
@@ -4900,8 +4900,8 @@ is-blank@^1.1.0:
     is-whitespace "^0.3.0"
 
 is-buffer@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.5.tgz#1f3b26ef613b214b88cbca23cc6c01d87961eecc"
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
 is-builtin-module@^1.0.0:
   version "1.0.0"
@@ -6167,7 +6167,11 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-"mime-db@>= 1.30.0 < 2", mime-db@~1.30.0:
+"mime-db@>= 1.30.0 < 2":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.31.0.tgz#a49cd8f3ebf3ed1a482b60561d9105ad40ca74cb"
+
+mime-db@~1.30.0:
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.30.0.tgz#74c643da2dd9d6a45399963465b26d5ca7d71f01"
 
