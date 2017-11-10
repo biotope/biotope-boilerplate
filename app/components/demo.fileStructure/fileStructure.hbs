@@ -2,8 +2,8 @@
 	 data-resources="[{paths: ['components/demo.fileStructure/scss/test.css', 'components/demo.fileStructure/test.css'] }]"
 	 data-init=""
 >
-	{{> demo.fileStructure/hbs/demo fileStructureText="Simple Demo to preview the file structure of the framework"}}
-	{{> demo.fileStructure/hbs/demo}}
+	{{> components/demo.fileStructure/hbs/demo fileStructureText="Simple Demo to preview the file structure of the framework"}}
+	{{> components/demo.fileStructure/hbs/demo}}
 
-	{{demoFileStructure.fileStructure.someTestData}}
+	{{data.components.demoFileStructure.fileStructure.someTestData}}
 </div>

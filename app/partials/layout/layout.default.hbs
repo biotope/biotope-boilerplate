@@ -1,15 +1,15 @@
-{{> includes/htmltag }}
+{{> partials/includes/htmltag }}
 <head>
-	{{> includes/htmlhead.meta }}
+	{{> partials/includes/htmlhead.meta }}
 
 	<!-- inject:head:html -->
 	<!-- endinject -->
 
 	<!-- DEV-note: include page specific meta information after this comment -->
 
-	{{> includes/htmlhead.styles }}
+	{{> partials/includes/htmlhead.styles }}
 
-	{{> includes/htmlhead.scripts }}
+	{{> partials/includes/htmlhead.scripts }}
 
 	<!-- DEV-note: include page specific styles and scripts after this comment -->
 
@@ -19,13 +19,13 @@
     <div class="offcanvas offcanvas--fixed-height layout--default">
         <div class="offcanvas__inner">
 
-            {{> framework/header }}
+            {{> partials/framework/header }}
             <main class="content">
                 <article>
 					{{> (lookup . 'contentMain') }}
                 </article>
             </main>
-            {{> framework/footer }}
+            {{> partials/framework/footer }}
 
             <div class="offcanvas__area offcanvas__area--left"> LEFT OFFCANVAS AREA </div>
             <div class="offcanvas__area offcanvas__area--right"> RIGHT OFFCANVAS AREA </div>
@@ -34,8 +34,8 @@
         </div>
     </div>
 
-	{{> includes/scripts }}
-	{{> includes/tracking }}
+	{{> partials/includes/scripts }}
+	{{> partials/includes/tracking }}
 	<!-- DEV-note: include page specific scrips after this comment -->
 </body>
 </html>
