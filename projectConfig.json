@@ -5,7 +5,6 @@
 			"/resources"
 		],
 		"tasks": {
-			"angular": true,
 			"cleanCss": true,
 			"cssStats": true,
 			"sass": true,
@@ -16,7 +15,6 @@
 			"image": true,
 			"linting": true,
 			"markdown": false,
-			"typescript": true,
 			"uglify": true,
 			"webpack": true
 		},
@@ -30,13 +28,7 @@
 			"enquire": "dist/enquire.js",
 			"jquery-debouncedwidth": "js/jquery.debouncedwidth.js",
 			"normalize.css": "normalize.css",
-			"handlebars": "dist/handlebars.runtime.js",
-			"react": "dist/react.js",
-			"react-dom": "dist/react-dom.js"
-		},
-		"reactEntryPoints": [
-			"/*.tsx",
-			"/*.jsx"
-		]
+			"handlebars": "dist/handlebars.runtime.js"
+		}
 	}
 }
