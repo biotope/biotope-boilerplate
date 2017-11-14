@@ -1,3 +1,4 @@
 {
-	"someTestData": "some test value"
+	"someTestData": "some test value",
+	"children": ["array element 1", "element 2", "3"]
 }

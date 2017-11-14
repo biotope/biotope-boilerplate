@@ -3,7 +3,17 @@
 	 data-init=""
 >
 	{{> components/demoFileStructure/hbs/demo fileStructureText="Simple Demo to preview the file structure of the framework"}}
-	{{> components/demoFileStructure/hbs/demo}}
+	{{> components/demoFileStructure/hbs/demo
+		somePartial="components/headlineH1/headline.h1.overline"
+		headline="eine andere Überschrift"
+	}}
+
+	{{include 'components/demoFileStructure/hbs/demo'
+		somePartial="components/headlineH1/headline.h1.overline"
+		headline="eine andere Überschrift"
+		parent=this
+	}}
 
 	{{data.components.demoFileStructure.fileStructure.someTestData}}
+
 </div>
