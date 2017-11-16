@@ -1,0 +1,17 @@
+{
+	"component": "name",
+	"array": [
+		{"content": "a"},
+		{
+			"partial" : "components/demoFileStructure/hbs/demo",
+			"partialData": {
+				"fileStructureText": "some Text overwritten by json Data"
+			}
+		},
+		{"content": "c"}
+	],
+	"partial" : "components/demoFileStructure/hbs/demo",
+	"partialData": {
+		"fileStructureText": "some Text overwritten by another json data"
+	}
+}

@@ -1,0 +1,15 @@
+<ul>
+	{{#each siteData.array}}
+		<li>
+			{{#> (lookup . 'partial') this.partialData}}
+				{{../this.content}}
+			{{/undefined}}
+		</li>
+	{{/each}}
+</ul>
+
+{{#siteData}}
+	{{#> (lookup . 'partial') this.partialData}}
+		{{../this.content}}
+	{{/undefined}}
+{{/siteData}}
