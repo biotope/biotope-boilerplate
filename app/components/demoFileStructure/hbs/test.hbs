@@ -1,0 +1,15 @@
+<h2>{{def headline "Default test headline"}}</h2>
+<ul>
+    {{#each items}}
+        <li>{{itemText}}</li>
+    {{else}}
+        <li>Default list item</li>
+        <li>Another default list item</li>
+    {{/each}}
+</ul>
+
+<h3>Persist context to next partial</h3>
+{{include 'components/demoFileStructure/hbs/test2'
+          context=this
+          headline='Test2 overwrite'
+}}

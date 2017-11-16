@@ -1,19 +1,39 @@
 <div class="fileStructure component"
-	 data-resources="[{paths: ['components/demoFileStructure/scss/test.css', 'components/demoFileStructure/test.css'] }]"
-	 data-init=""
+     data-resources="[{paths: ['components/demoFileStructure/scss/test.css', 'components/demoFileStructure/test.css'] }]"
+     data-init=""
 >
-	{{> components/demoFileStructure/hbs/demo fileStructureText="Simple Demo to preview the file structure of the framework"}}
-	{{> components/demoFileStructure/hbs/demo
-		somePartial="components/headlineH1/headline.h1.overline"
-		headline="eine andere Überschrift"
-	}}
+    {{!--
+    <h1>Einfacher include ohne Variablen</h1>
+    {{include 'components/demoFileStructure/hbs/test'}}
 
-	{{include 'components/demoFileStructure/hbs/demo'
-		somePartial="components/headlineH1/headline.h1.overline"
-		headline="eine andere Überschrift"
-		parent=this
-	}}
+    <hr>
 
-	{{data.components.demoFileStructure.fileStructure.someTestData}}
+    <h1>Headline variable</h1>
+    {{include 'components/demoFileStructure/hbs/test'
+              headline='Nur eine Headline von aussen'
+    }}
 
+    <hr>
+    --}}
+
+    <h1>JSON include</h1>
+    {{include 'components/demoFileStructure/hbs/test'
+              json='data.components.demoFileStructure.scaffolding.variation1'
+    }}
+
+    {{!--
+    {{> components/demoFileStructure/hbs/demo fileStructureText="Simple Demo to preview the file structure of the framework"}}
+    {{> components/demoFileStructure/hbs/demo
+        somePartial="components/headlineH1/headline.h1.overline"
+        headline="eine andere Überschrift"
+    }}
+
+    {{include 'components/demoFileStructure/hbs/demo'
+          somePartial="components/headlineH1/headline.h1.overline"
+          headline="eine andere Überschrift"
+          parent=this
+    }}
+
+    {{data.components.demoFileStructure.fileStructure.someTestData}}
+    --}}
 </div>

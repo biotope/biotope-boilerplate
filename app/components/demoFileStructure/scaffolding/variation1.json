@@ -1,0 +1,14 @@
+{
+	"headline": "Variation 1 Headline",
+	"items": [
+		{
+			"itemText": "List item 1"
+		},
+		{
+			"itemText": "List item 2"
+		},
+		{
+			"itemText": "List item 3"
+		}
+	]
+}
