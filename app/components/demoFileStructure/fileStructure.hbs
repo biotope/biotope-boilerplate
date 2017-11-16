@@ -2,12 +2,15 @@
      data-resources="[{paths: ['components/demoFileStructure/scss/test.css', 'components/demoFileStructure/test.css'] }]"
      data-init=""
 >
-    {{!--
+
+	{{!--
     <h1>Einfacher include ohne Variablen</h1>
     {{include 'components/demoFileStructure/hbs/test'}}
 
     <hr>
+    --}}
 
+	{{!--
     <h1>Headline variable</h1>
     {{include 'components/demoFileStructure/hbs/test'
               headline='Nur eine Headline von aussen'
@@ -16,24 +19,59 @@
     <hr>
     --}}
 
-    <h1>JSON include</h1>
-    {{include 'components/demoFileStructure/hbs/test'
-              json='data.components.demoFileStructure.scaffolding.variation1'
-    }}
+	{{!--
+	<h1>JSON include</h1>
+	{{include 'components/demoFileStructure/hbs/test'
+			  json='data.components.demoFileStructure.scaffolding.variation1'
+	}}
+	--}}
 
-    {{!--
+    <h1>JSON include with sub partials</h1>
+	{{include 'components/demoFileStructure/hbs/partialDemo'
+			  json='data.components.demoFileStructure.scaffolding.variation2'
+	}}
+
+	<hr>
+
+
+	{{!--
     {{> components/demoFileStructure/hbs/demo fileStructureText="Simple Demo to preview the file structure of the framework"}}
     {{> components/demoFileStructure/hbs/demo
         somePartial="components/headlineH1/headline.h1.overline"
         headline="eine andere Überschrift"
     }}
 
-    {{include 'components/demoFileStructure/hbs/demo'
+    <hr>
+    --}}
+
+	{{!--
+
+ 	<h1>Partial include with variable</h1>
+    {{include 'components/demoFileStructure/hbs/partialDemo'
           somePartial="components/headlineH1/headline.h1.overline"
-          headline="eine andere Überschrift"
-          parent=this
+          headline="Partialaufruf mit einer anderen Überschrift"
     }}
 
-    {{data.components.demoFileStructure.fileStructure.someTestData}}
+	<hr>
     --}}
+
+	{{!--
+	<h1>Partial include with variable</h1>
+	{{include 'components/demoFileStructure/hbs/partialDemo'
+			  somePartial="components/demoFileStructure/hbs/partialDemo2"
+			  someOtherPartial="components/headlineH1/headline.h1.overline"
+			  headline="Partialaufruf mit einer anderen Überschrift !!!"
+	}}
+
+	<hr>
+
+	--}}
+
+	{{!--
+
+	<h1>Accessing Data Object</h1>
+	{{data.components.demoFileStructure.fileStructure.someTestData}}
+
+	--}}
+
 </div>

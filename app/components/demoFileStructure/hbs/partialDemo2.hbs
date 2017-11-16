@@ -1,0 +1,6 @@
+<!-- partial block with lookup helper -->
+<h3 style="background-color: greenyellow">other partial with lookup helper</h3>
+{{#each childContext}}
+	{{stringify this}}
+	{{include this.partial childContext=childContext}}
+{{/each}}

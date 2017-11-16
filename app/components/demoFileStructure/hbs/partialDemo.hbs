@@ -1,0 +1,18 @@
+<!-- partial block with lookup helper -->
+<h3>partial block with lookup helper and failover content</h3>
+
+{{#each somePartial}}
+	{{#include this.partial childContext=this.childContext}}
+		failover: {{stringify this}}
+	{{/include}}
+{{/each}}
+
+{{!--
+{{#> (lookup . 'somePartial') }}
+	<h3 style="background: palevioletred">
+		Failover Content if no partials is passed.
+	</h3>
+	<p>Can also contain another partial</p>
+	{{> components/headlineH1/headline.h1.overline }}
+{{/undefined}}
+--}}
