@@ -21,6 +21,7 @@
     "handlebars": "^4.0.10",
     "jQuery.DebouncedResize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize#1.0.2",
     "jquery": "3.2.1",
+    "jquery-accordion": "https://github.com/vi-plugins/jquery-accordion",
     "jquery-base": "https://github.com/vi-plugins/jquery-base.git",
     "jquery-debouncedwidth": "git+https://github.com/janrembold/jquery-debouncedwidth#v1.1.3",
     "jquery-events": "https://github.com/vi-plugins/jquery-events.git",

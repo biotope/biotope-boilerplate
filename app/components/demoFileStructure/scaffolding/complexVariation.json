@@ -1,0 +1,51 @@
+{
+	"childContext": [
+		{
+			"partial": "components/demoFileStructure/hbs/partialDemo2",
+			"headline": "someHeadline",
+			"childContext": [{
+				"partial": "components/demoFileStructure/hbs/partialDemo3",
+				"headline": "someHeadline",
+				"childContext": [{
+					"partial": "components/demoFileStructure/hbs/partialDemo2",
+					"headline": "someHeadline",
+					"childContext": [{
+						"partial": "components/demoFileStructure/hbs/partialDemo3",
+						"headline": "someHeadline",
+						"childContext": [{
+							"partial": "components/headlineH1/headline.h1.overline",
+							"headline": "22221231231232"
+						}]
+					}]
+				}]
+			}]
+		},
+		{
+			"partial": "components/headlineH1/headline.h1.overline",
+			"headline": "22221231231232"
+		},
+		{
+			"partial": "components/headlineH1/headline.h1.overline",
+			"headline": "22221231231232"
+		},
+		{
+			"partial": "components/demoFileStructure/hbs/partialDemo3",
+			"headline": "someHeadline",
+			"childContext": [{
+				"partial": "components/demoFileStructure/hbs/partialDemo2",
+				"headline": "someHeadline",
+				"childContext": [{
+					"partial": "components/demoFileStructure/hbs/partialDemo3",
+					"headline": "someHeadline",
+					"childContext": [{
+						"partial": "components/headlineH1/headline.h1.overline",
+						"headline": "22221231231232"
+					}]
+				}]
+			}]
+		}
+
+
+	]
+
+}

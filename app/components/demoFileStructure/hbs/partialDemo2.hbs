@@ -1,6 +1,10 @@
 <!-- partial block with lookup helper -->
-<h3 style="background-color: greenyellow">other partial with lookup helper</h3>
-{{#each childContext}}
-	{{stringify this}}
-	{{include this.partial childContext=childContext}}
-{{/each}}
+<div style="border: 1px dashed #f00; padding: 10px;">
+	<h3>other partial with lookup helper</h3>
+
+	{{#each this.childContext}}
+		{{#> (lookup . 'partial') childContext=this.childContext }}
+			failover content
+		{{/undefined}}
+	{{/each}}
+</div>
