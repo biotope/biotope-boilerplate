@@ -18,7 +18,7 @@
     "breakpoint-sass": "2.7.1",
     "conditional-resource-loader": "git+https://github.com/virtualidentityag/conditional-resource-loader#1.2.2",
     "enquire": "git+https://github.com/WickyNilliams/enquire.js#v2.1.6",
-    "handlebars": "^4.0.10",
+    "handlebars": "^4.0.11",
     "jQuery.DebouncedResize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize#1.0.2",
     "jquery": "3.2.1",
     "jquery-accordion": "https://github.com/vi-plugins/jquery-accordion",
@@ -37,8 +37,8 @@
     "mocha": "^3.4.1",
     "require-dir": "0.3.2"
   },
-  "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
-  }
+	"engines": {
+		"node": ">=7.9.0 <=8.9.99",
+		"yarn": ">=1.3.2"
+	}
 }
