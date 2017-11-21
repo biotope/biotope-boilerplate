@@ -2,7 +2,7 @@
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
   "version": "4.5.0",
-  "description": "A gulp frontend boilerplate",
+  "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
     "url": "https://github.com/virtualidentityag/gulp-frontend-boilerplate"
@@ -21,12 +21,9 @@
     "handlebars": "^4.0.11",
     "jQuery.DebouncedResize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize#1.0.2",
     "jquery": "3.2.1",
-    "jquery-accordion": "https://github.com/vi-plugins/jquery-accordion",
     "jquery-base": "https://github.com/vi-plugins/jquery-base.git",
     "jquery-debouncedwidth": "git+https://github.com/janrembold/jquery-debouncedwidth#v1.1.3",
     "jquery-events": "https://github.com/vi-plugins/jquery-events.git",
-    "jquery-migrate": "^3.0.0",
-    "media-match": "git+https://github.com/virtualidentityag/media-match#2.0.3",
     "normalize.css": "^7.0.0",
     "susy": "2.2.12",
     "vi-css-helper": "virtualidentityag/vi-css-helper#1.1.1"
