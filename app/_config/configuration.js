@@ -17,7 +17,6 @@ ffglobal.configuration.data.global = ffglobal.configuration.data.global || {};
 //ffglobal.configuration.data.ffglobal.bpMediumMax = ffglobal.configuration.data.ffglobal.bpLarge - 1;
 //ffglobal.configuration.data.ffglobal.bpLargeMax = ffglobal.configuration.data.ffglobal.bpXLarge - 1;
 //ffglobal.configuration.data.ffglobal.bpXLargeMax = 10000;
-//ffglobal.configuration.data.ffglobal.offCanvasWidth = 270;
 
 //// i18n
 ffglobal.configuration.data.i18n = ffglobal.configuration.data.i18n || {};
