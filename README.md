@@ -3,7 +3,7 @@
 ## Introduction
 
 This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
-It depends heavily on the [gulp-build-framework](https://github.com/virtualidentityag/gulp-build-framework)
+It depends heavily on the [hbs-build-framework](https://github.com/virtualidentityag/hbs-build-framework)
 
 ## Setup
 
@@ -114,22 +114,6 @@ The corresponding pattern file can be found in `/patterns/jquery.typescript.boil
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
 see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM  
 
-
-### React
-
-All react files go to /resources/react/ folder. The entry points of each React application must start in this folder, all necessary includes should lie in a dedicated application folder.
-All React files end with `.jsx` or `.tsx` .
-
-Example for an app called "test":
-
-/resources/react/test.jsx
-/resources/react/test/TestClass1.jsx
-/resources/react/test/TestClass2.jsx
-and so on...
-
-https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
-
-
 ## Development
 
 run the boilerplate with `gulp serve`
@@ -137,64 +121,26 @@ run the boilerplate with `gulp serve`
 ### 1. Our helpers
 
 * `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
+* `{{include 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
 * `{{def variable 'default value'}}` - set a default value for a variable 
+* `{{text 500}}` - a filler text with 500 chars
 
-@TODO replace these helpers with handelbar equivalent
-* `{{= ftf.text(500) }}` - Generate lorem ipsum text with 500 chars
-* `{{= ftf.renderHbs("demo", "app/_mock/demo.json") }}` - Render a hbs file with json data into static templates
 @TODO - add all helper functions
 
 ### 2. Folder structure
 
 * `/app` is where all of the actual frontend code is stored
 * `/app/_assets` holds static placeholder files like images, audio- and video files.
-* `/app/_mock` holds files that would be generated dynamically (such as `nav.json`) by the cms implementing the frontend
+* `/app/_mock` holds files that would be generated dynamically by the cms implementing the frontend and not explicitly corresponding to a component
+* `/app/_config` holds the js configuration file
 * `/app/pages` holds the base html files to create the index preview
-* `/app/partials` holds snippets of html code that are reused throughout the frontend
 * `/app/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
 * `/app/components` holds reusable components and the corresponding resource files
-* `/test` is where we put automated tests for Travis CI and Nightwatch Testing with Selenium
+* `/test` is where we put automated tests for Travis CI
 
 ## Testing
 
-**Nightwatch.js** is an End-to-End (E2E) testing solution for browser based apps and websites using Selenium to automatically 
-perform commands and assertions on DOM elements.
-
-There are two different Gulp Tasks: 'test' for using an external Selenium server and 'test:dev' to start the test on a 
-local selenium. The npm packages for 'test:local' are not included in the package.json, so you need to install them manually.
-
 **Travis CI** Testing is used for automated boilerplate testing. It uses Mocha/Chai and checks the build process and compares the generated static files with there fixtures. To run the tests locally execute `mocha test/travis/build.js` from terminal. Install mocha globally.
-
-### gulp test
-
-Gulp task for testing on external Selenium server.
-Add your settings in the configuration file `/test/nightwatch/nightwatch.js`
-
-`gulp test -url=http://YOURDOMAIN.com`
-
-'-url' can be used in nightwatch tests with 'browser.launch_url'.
-Example:
-```javascript
-module.exports = {
-   'Visual Test - Stage Component': function(browser) {
-      browser
-         .windowMaximize()
-         .url(browser.launch_url + '/90demo.01icons.html')
-         .waitForElementPresent('body', 3000)
-         .assert.title('VIGulpFrontendBoilerplate')
-         .end();
-   }
-};
-```
-
-### gulp test:dev
-
-Add your settings in the configuration file `/test/nightwatch/nightwatch.dev.js`
-npm packages to install: 
-Selenium.jar: `npm install selenium-server-standalone-jar`
-GraficMagick: `npm install gm`
-
-Download and install imageMagick: http://www.imagemagick.org
 
 ## Build
 
@@ -215,8 +161,7 @@ There is a gulp task for doing releases. Use gulp release --type=[major,minor,pa
 ### Line-break errors in eslint
 
 If there are line-break errors in eslint, it may be because false line endings set by git. Try to check out the repo again.
-To prevent this use the git config "core.autocrlf". 
-Use the command "git config core.autocrlf false" to prevent windows from using crlf instead of lf.
+To prevent this check the git config "core.autocrlf". 
 
 ### gulp serve malloc error (Unix Only)
 
