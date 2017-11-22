@@ -1,6 +1,6 @@
 <div class="fileStructure component"
-     data-resources="[{paths: ['components/demoFileStructure/scss/test.css', 'components/demoFileStructure/test.css'] }]"
-     data-init=""
+     data-resources="[{paths: ['components/demoFileStructure/scss/test.css', 'components/demoFileStructure/test.css', 'components/demoFileStructure/js/test.js'] }]"
+     data-init="(function() {test('called via resourceLoader');})"
 >
     <h2>Simple HBS Include via "include" and default partial helper</h2>
     {{include 'components/demoFileStructure/includes/simplePartial'}}

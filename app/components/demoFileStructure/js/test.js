@@ -1,6 +1,6 @@
-function test() {
+function test(something) {
 	'use strict';
-	console.log('test');
+	console.log(something);
 }
 
-test();
+test('js call');
