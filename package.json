@@ -1,11 +1,11 @@
 {
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
-  "version": "4.5.0",
+  "version": "5.0.0",
   "description": "A gulp frontend boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/virtualidentityag/gulp-frontend-boilerplate"
+    "url": "https://github.com/virtualidentityag/frontend-framework.git"
   },
   "license": "MIT",
   "scripts": {
@@ -32,12 +32,11 @@
   },
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#build-framework-4.5",
-    "mocha": "^3.4.1",
-    "require-dir": "0.3.2"
+    "hbs-build-framework": "https://github.com/virtualidentityag/hbs-build-framework.git",
+    "mocha": "3.4.1"
   },
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=8.0.0",
+    "yarn": ">=1.0.0"
   }
 }
