@@ -1,0 +1,10 @@
+<div class="accordion"
+	 data-resources="[{paths: ['js/vendor/accordion.min.js', 'css/vendor/accordion.css', 'components/accordion/css/accordion.css']}]"
+	 data-init="(function($elm) {$elm.accordion({ tabbed: {minViewportWidth: 700}, scrolling: {topOffsetSelector: '.my-header', scrollOnOpen: true, scrollOnOpenMaximumScreenWidth: 480 }}).trigger('init.accordion'); })"
+>
+	{{#each panels}}
+		{{#> (lookup . 'panel') panelContext=this.panelContext }}
+			<p style="color: red; font-weight: bold; font-size: 24px;">No panel partial found! Fix partial name or add a default behaviour!</p>
+		{{/undefined}}
+	{{/each}}
+</div>
