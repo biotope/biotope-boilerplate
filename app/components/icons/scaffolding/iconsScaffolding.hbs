@@ -2,8 +2,11 @@
 	<section>
 		<div class="row row--reducedWidth">
 			<div class="col">
-				{{> components/headlineH1/headline.h1.overline }}
-				{{> components/leadtext/leadtext }}
+				<h1>Full Iconset</h1>
+
+				{{#each data.icons }}
+					{{> components/icons/icon iconName=this}}
+				{{/each}}
 			</div>
 		</div>
 	</section>

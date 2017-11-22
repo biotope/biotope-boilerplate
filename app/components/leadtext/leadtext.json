@@ -1,0 +1,12 @@
+{
+	"leadtextElements": [
+		{
+			"component": "components/text/text",
+			"text": "Lorem ipsum dolor sit ..."
+		},
+		{
+			"component": "components/text/text",
+			"text": "Lorem ipsum dolor sit ..."
+		}
+	]
+}
