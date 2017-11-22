@@ -1,0 +1,40 @@
+{
+	"panels": [
+		{
+			"headline": "Panel 3 headline",
+			"classVariant": "accordion__panel--green",
+			"panel": "components/accordion/includes/panel",
+			"panelContext": [
+				{
+					"component": "components/text/text"
+				}
+			]
+		},
+		{
+			"headline": "Panel 2 headline",
+			"panel": "components/accordion/includes/panel2",
+			"panelContext": [
+				{
+					"component": "components/headlineH1/headline.h1.overline",
+					"headline": "Content Headline Panel 2 from hbs file"
+				}
+			]
+		},
+		{
+			"panel": "components/accordion/includes/panel",
+			"headline": "Panel 1 headline",
+			"panelContext": [
+				{
+					"component": "components/headlineH1/headline.h1.overline",
+					"headline": "Content Headline from hbs file"
+				},
+				{
+					"component": "components/text/text",
+					"text": "Text Content from hbs file for panel 1. Lorem Ipsum Dolor sit amet.",
+					"markup": "<p style='color: green;'>some text</p>"
+				}
+			]
+		}
+
+	]
+}
