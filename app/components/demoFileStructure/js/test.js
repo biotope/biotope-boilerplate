@@ -1,4 +1,6 @@
 function test() {
 	'use strict';
-	return false;
+	console.log('test');
 }
+
+test();

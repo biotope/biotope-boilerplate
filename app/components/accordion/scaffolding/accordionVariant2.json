@@ -31,7 +31,7 @@
 				{
 					"component": "components/text/text",
 					"text": "Text Content from hbs file for panel 1. Lorem Ipsum Dolor sit amet.",
-					"markup": "<p style='color: green;'>some text</p>"
+					"markup": "<p style=\"color: green;\">some text</p>"
 				}
 			]
 		}
