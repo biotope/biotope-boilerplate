@@ -1304,8 +1304,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000760:
-  version "1.0.30000769"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000769.tgz#d68c5aa0772ea3eac6c97d42e239c9b4d3261b93"
+  version "1.0.30000770"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000770.tgz#bc8e7f50b073273390db6ab357378909a14e9bdb"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1585,8 +1585,8 @@ commander@2.9.0:
     graceful-readlink ">= 1.0.0"
 
 commander@^2.8.1, commander@^2.9.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.1.tgz#468635c4168d06145b9323356d1da84d14ac4a7a"
 
 commander@~2.8.1:
   version "2.8.1"
@@ -2273,8 +2273,8 @@ detect-indent@^4.0.0:
     repeating "^2.0.0"
 
 detect-libc@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.2.tgz#71ad5d204bf17a6a6ca8f450c61454066ef461e1"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
 
 detect-newline@2.X:
   version "2.1.0"
@@ -2512,8 +2512,8 @@ es-to-primitive@^1.1.1:
     is-symbol "^1.0.1"
 
 es5-ext@^0.10.14, es5-ext@^0.10.30, es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14, es5-ext@~0.10.2:
-  version "0.10.35"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.35.tgz#18ee858ce6a3c45c7d79e91c15fcca9ec568494f"
+  version "0.10.36"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.36.tgz#189b82b8951592ea10ac58cb69a7b33e2f2d3856"
   dependencies:
     es6-iterator "~2.0.1"
     es6-symbol "~3.1.1"
@@ -4392,13 +4392,14 @@ hawk@~6.0.2:
 
 "hbs-build-framework@https://github.com/virtualidentityag/hbs-build-framework.git":
   version "5.0.0"
-  resolved "https://github.com/virtualidentityag/hbs-build-framework.git#5a9f7c757c64618902f53e64e9b1f98cceb71be1"
+  resolved "https://github.com/virtualidentityag/hbs-build-framework.git#0e07edda6babdea8243528ad0a25b275a4be4730"
   dependencies:
     autoprefixer "7.1.6"
     babel-core "6.26.0"
     babel-loader "7.1.2"
     babel-preset-env "^1.6.1"
     check-dependencies "1.1.0"
+    colors "^1.1.2"
     del "3.0.0"
     globule "1.2.0"
     gulp "3.9.1"
@@ -4441,7 +4442,6 @@ hawk@~6.0.2:
     gulp-ttf2woff "1.1.1"
     gulp-uglify "2.1.2"
     gulp-useref "3.1.3"
-    gulp-util "3.0.8"
     gulp-watch "4.3.11"
     gulp-wrap "0.13.0"
     htmlhint-stylish "1.0.3"
@@ -6173,9 +6173,13 @@ mime@1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.4.tgz#115f9e3b6b3daf2959983cb38f149a2d40eb5d53"
 
-mime@1.4.1, mime@^1.2.11, mime@^1.3.4:
+mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
+
+mime@^1.2.11, mime@^1.3.4:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-1.5.0.tgz#59c20e03ae116089edeb7d3b34a6788c5b3cccea"
 
 mimic-fn@^1.0.0:
   version "1.1.0"
