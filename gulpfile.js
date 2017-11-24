@@ -1,1 +1,1 @@
-require('hbs-build-framework');
+require('build-framework');

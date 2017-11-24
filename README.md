@@ -3,7 +3,7 @@
 ## Introduction
 
 This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
-It depends heavily on the [hbs-build-framework](https://github.com/virtualidentityag/hbs-build-framework)
+It depends heavily on the [build-framework](https://github.com/frontend-framework/build-framework)
 
 ## Setup
 
