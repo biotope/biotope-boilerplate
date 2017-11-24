@@ -1,0 +1,240 @@
+<!-- DEV-note: Each section contains a single background container.
+ It controls background colors, the containers width (and therefore the max width of inner containers) and special margin settings.
+ Later on this container will control background images and background videos.
+
+ By default this container is transparent and uses full width.
+ Possible style classes are:
+
+ - "section--reducedWidth" => Sets the outer width of the container to the sites max-width (currently 1440px)
+ - "section--colorTheme[theme number 1-12]" => Sets the background color of the container
+ - "section--removeSidePaddings" => Removes the left and right paddings of COLORED background container to achieve real full viewport views (e.g. for full width stages)
+-->
+<div class="section">
+
+	<!-- DEV-note: The section might control visual and functional effects for the whole section.
+	 This might be an inPage navigation or parallax effects. All effects must be controlled by data attributes.
+	 The section itself shouldn't have any style classes!
+
+	 Possible attributes are:
+
+	 - "data-navlabel" => "String": Sets the name for the automatically generated in-page navigation. Also works as the anchor for that navigation. Default: none
+	 - "data-parallax" => "true|false": Enables the parallax effect for this section. Default: false
+	 - "data-parallax-offset" => "100": Sets how far bottom of a section should be above the bottom [in px] of viewport before parallax effect kicks in for that section. Default: 100
+	 -->
+	<section>
+		<!-- DEV-note: The grid row defines the content width. But it is always limited by its surrounding background container.
+		 It is possible to stack an unlimeted number of rows below each other.
+
+		 By default each row uses full width and has no paddings/margins activated.
+		 Possible style classes are:
+
+		 - "row--reducedWidth" => Sets the outer width of the container to the sites max-width (currently 1440px)
+		-->
+		<div class="row row--reducedWidth">
+
+			<!-- DEV-note: Each grid "row" has at least a column class "col". This is the default 100% full width container.
+			 All grid columns collapse to 100% width either at 768px (medium) or 1024px (large).
+
+			 !!! columns and offsets must have the same collapsing definition, both medium or both large !!!
+
+			 Following grid columns are available:
+
+			 - "col" => Adds a 12 "grid-columns" wide column - 100% width - 1 per row
+			 - "col--[medium|large]-8" => Adds a 6 "grid-columns" wide column - 66.7% width - 1 per row
+			 - "col--[medium|large]-6" => Adds a 6 "grid-columns" wide column - 50% width - 2 per row
+			 - "col--[medium|large]-4" => Adds a 4 "grid-columns" wide column - 33.3% width - 3 per row
+			 - "col--[medium|large]-3" => Adds a 3 "grid-columns" wide column - 25% width - 4 per row
+			 - "col--[medium|large]-2" => Adds a 2 "grid-columns" wide column - 16.7% width - 6 per row
+			 - "col--[medium|large]-offset-[1-10]" => Moves the column to the right by given count of columns
+			-->
+			{{> components/framework/grid/includes/demo.grid.1col}}
+
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.2cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.3cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.4cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.6cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.8cols.4cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.8cols.centered }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Multiple rows in reduced width content'}}
+		</div>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.3cols }}
+		</div>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.2cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section>
+		<div class="row">
+			{{components/framework/grid/includes/demo.grid.1col headline='Multiple rows in full width content'}}
+		</div>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.3cols }}
+		</div>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.2cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section">
+	<section data-navlabel="Special bottom handling">
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Next section has colored background - additional margin top is automatically added'}}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--colorTheme9">
+	<section data-navlabel="Colored Sections">
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Colored full width background section with default content (including paddings left/right)'}}
+		</div>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.3cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--colorTheme11">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Colored full width background section with reduced width content (1440px)'}}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--removeSidePaddings section--colorTheme1">
+	<section>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Colored full width background section with full width content (removed paddings left/right)'}}
+		</div>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.6cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--colorTheme7">
+	<section>
+		<div class="row">
+			{{components/framework/grid/includes/demo.grid.1col headline='Multiple rows in colored background section'}}
+		</div>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.3cols }}
+		</div>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.2cols }}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--reducedWidth section--colorTheme5">
+	<section>
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Colored background section with reduced width (1440px)'}}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--reducedWidth">
+	<section data-navlabel="Tricky Cases">
+		<div class="row">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Transparent background with reduced width (1440px) and full width content'}}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--addBottomMargin">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.1col headline='Transparent background and reduced width content (1440px)'}}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--colorTheme3">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.8cols.centered headline='Colored full width background and reduced width content (1440px) including a 66.7% wide centered grid column'}}
+		</div>
+	</section>
+</div>
+
+
+<div class="section section--reducedWidth section--colorTheme10">
+	<section>
+		<div class="row row--reducedWidth">
+			{{> components/framework/grid/includes/demo.grid.8cols.centered headline='Colored reduced width background and reduced width content (1440px) including a 66.7% wide centered grid column'}}
+		</div>
+	</section>
+</div>
