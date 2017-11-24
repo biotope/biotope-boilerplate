@@ -1200,9 +1200,9 @@ bufferstreams@^1.0.2, bufferstreams@^1.1.0:
   dependencies:
     readable-stream "^2.0.2"
 
-"build-framework@https://github.com/frontend-framework/build-framework.git":
-  version "5.0.1"
-  resolved "https://github.com/frontend-framework/build-framework.git#42f9e3dfc84b4c959509793a0e99ed65c29da028"
+"build-framework@https://github.com/frontend-framework/build-framework.git#5.0.0":
+  version "5.0.0"
+  resolved "https://github.com/frontend-framework/build-framework.git#771a013eaba9f481f00d88d8d6bb922e06af6599"
   dependencies:
     autoprefixer "7.1.6"
     babel-core "6.26.0"
