@@ -1,7 +1,7 @@
 {
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
@@ -31,8 +31,8 @@
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
+    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.0.1",
     "gulp": "3.9.1",
-    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.0.0",
     "mocha": "3.4.1"
   },
   "engines": {
