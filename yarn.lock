@@ -745,7 +745,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-preset-env@^1.6.1:
+babel-preset-env@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.6.1.tgz#a18b564cc9b9afdf4aae57ae3c1b0d99188e6f48"
   dependencies:
@@ -1200,16 +1200,16 @@ bufferstreams@^1.0.2, bufferstreams@^1.1.0:
   dependencies:
     readable-stream "^2.0.2"
 
-"build-framework@https://github.com/frontend-framework/build-framework.git#5.0.1":
-  version "5.0.1"
-  resolved "https://github.com/frontend-framework/build-framework.git#728d1b5bdec9a1d64e72b7f31939faea246f2884"
+"build-framework@https://github.com/frontend-framework/build-framework.git#5.0.4":
+  version "5.0.3"
+  resolved "https://github.com/frontend-framework/build-framework.git#2d533060626012371a3a3f83378cb01b61c6e14b"
   dependencies:
     autoprefixer "7.1.6"
     babel-core "6.26.0"
     babel-loader "7.1.2"
-    babel-preset-env "^1.6.1"
+    babel-preset-env "1.6.1"
     check-dependencies "1.1.0"
-    colors "^1.1.2"
+    colors "1.1.2"
     del "3.0.0"
     globule "1.2.0"
     gulp "3.9.1"
@@ -1218,7 +1218,7 @@ bufferstreams@^1.0.2, bufferstreams@^1.1.0:
     gulp-concat "2.6.1"
     gulp-connect "5.0.0"
     gulp-cssstats "1.0.1"
-    gulp-debug "^3.1.0"
+    gulp-debug "3.1.0"
     gulp-declare "0.3.0"
     gulp-eslint "4.0.0"
     gulp-favicons "2.2.7"
@@ -1602,7 +1602,7 @@ colors@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
-colors@^1.1.2, colors@~1.1.2:
+colors@1.1.2, colors@^1.1.2, colors@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
 
@@ -1627,8 +1627,8 @@ commander@2.9.0:
     graceful-readlink ">= 1.0.0"
 
 commander@^2.8.1, commander@^2.9.0:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.1.tgz#468635c4168d06145b9323356d1da84d14ac4a7a"
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
 commander@~2.8.1:
   version "2.8.1"
@@ -3705,7 +3705,7 @@ gulp-cssstats@1.0.1:
     cssstats latest
     through2 "^0.6.3"
 
-gulp-debug@^3.1.0:
+gulp-debug@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/gulp-debug/-/gulp-debug-3.1.0.tgz#4da91568b54915be803696caaac10c895b2c0a71"
   dependencies:
@@ -4663,8 +4663,8 @@ inquirer@^3.0.6:
     through "^2.3.6"
 
 interpret@^1.0.0:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.4.tgz#820cdd588b868ffb191a809506d6c9c8f212b1b0"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
 invariant@^2.2.2:
   version "2.2.2"
@@ -6261,8 +6261,8 @@ nan@^2.3.0, nan@^2.3.2:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
 
 nanomatch@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.5.tgz#5c9ab02475c76676275731b0bf0a7395c624a9c4"
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.6.tgz#f27233e97c34a8706b7e781a4bc611c957a81625"
   dependencies:
     arr-diff "^4.0.0"
     array-unique "^0.3.2"
