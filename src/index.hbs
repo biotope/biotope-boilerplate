@@ -50,8 +50,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
 				{{#each templates}}
-					{{#if templateInfo.category}}
-						<li><a href="#category{{templateInfo.priority}}" class="capitalize">{{templateInfo.category}}</a></li>
+					{{#if indexr.category}}
+						<li><a href="#category{{indexr.priority}}" class="capitalize">{{indexr.category}}</a></li>
 					{{/if}}
 				{{/each}}
             </ul>
@@ -73,10 +73,10 @@
     <div class="row">
         <div class="col-sm-8">
 			{{#each templates}}
-				{{#if templateInfo.category}}
-					<h2 class="anchor capitalize" id="category{{templateInfo.priority}}">{{templateInfo.category}}</h2>
+				{{#if indexr.category}}
+					<h2 class="anchor capitalize" id="category{{indexr.priority}}">{{indexr.category}}</h2>
 				{{/if}}
-				<h4><a href="{{templateInfo.file.name}}.html">{{def this.title templateInfo.file.name}}</a></h4>
+				<h4><a href="{{indexr.file.name}}.html">{{def this.title indexr.file.name}}</a></h4>
 				{{#if this.description}}
 					<p>{{this.description}}</p>
 				{{/if}}
@@ -88,8 +88,8 @@
             <h2 class="anchor">Categories</h2>
             <ul>
 				{{#each templates}}
-					{{#if templateInfo.category}}
-						<li><a href="#category{{templateInfo.priority}}" class="capitalize">{{templateInfo.category}}</a></li>
+					{{#if indexr.category}}
+						<li><a href="#category{{indexr.priority}}" class="capitalize">{{indexr.category}}</a></li>
 					{{/if}}
 				{{/each}}
             </ul>

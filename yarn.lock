@@ -1202,7 +1202,7 @@ bufferstreams@^1.0.2, bufferstreams@^1.1.0:
 
 "build-framework@https://github.com/frontend-framework/build-framework.git#5.0.4":
   version "5.0.3"
-  resolved "https://github.com/frontend-framework/build-framework.git#2d533060626012371a3a3f83378cb01b61c6e14b"
+  resolved "https://github.com/frontend-framework/build-framework.git#d1d7750e249c2fbc7c12881a1f195d7a35e7c15e"
   dependencies:
     autoprefixer "7.1.6"
     babel-core "6.26.0"
@@ -1346,8 +1346,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000770:
-  version "1.0.30000772"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000772.tgz#78129622cabfed7af1ff38b64ab680a6a0865420"
+  version "1.0.30000775"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000775.tgz#74d27feddc47f3c84cfbcb130c3092a35ebc2de2"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
