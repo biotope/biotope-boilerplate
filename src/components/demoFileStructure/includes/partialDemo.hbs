@@ -2,10 +2,10 @@
 
 <h3>partial block with lookup helper and failover content</h3>
 
-{{#each childContext}}
-	{{#> (lookup . 'partial') childContext=this.childContext }}
+{{#each data.components.demoFileStructure.scaffolding.complexVariation.childContext}}
+	{{#include (lookup . 'partial') childContext=this.childContext }}
 		failover content
-	{{/undefined}}
+	{{/include}}
 {{/each}}
 
 </div>

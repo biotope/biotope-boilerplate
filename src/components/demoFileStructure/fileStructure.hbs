@@ -2,10 +2,8 @@
      data-resources="[{paths: ['components/demoFileStructure/scss/test.css', 'components/demoFileStructure/test.css', 'components/demoFileStructure/js/test.js'] }]"
      data-init="(function() {test('called via resourceLoader');})"
 >
-    <h2>Simple HBS Include via "include" and default partial helper</h2>
+    <h2>Simple HBS Include via "include" partial helper</h2>
     {{include 'components/demoFileStructure/includes/simplePartial'}}
-	{{> components/demoFileStructure/includes/simplePartial}}
-
 	<hr style="margin: 20px;">
 
     <h2>Pass variables to partial</h2>
@@ -13,19 +11,6 @@
 		headline='headline passed from outside'
 		text="some other text"
     }}
-
-	{{> components/demoFileStructure/includes/simplePartial
-		headline='headline passed from outside'
-		text="some other text"
-	}}
-
-	<hr style="margin: 20px;">
-
-	<h2>include json file and pass to partial via "include" helper</h2>
-	{{include 'components/demoFileStructure/includes/simplePartial'
-			  json='data.components.demoFileStructure.scaffolding.simpleVariation'
-	}}
-
 	<hr style="margin: 20px;">
 
 	<h2>include inline json object and pass to partial via "include" helper</h2>
@@ -45,14 +30,11 @@
 					]
 				}'
 	}}
-
 	<hr style="margin: 20px;">
 
     <h2>complex include json file with sub partials</h2>
 
-	{{include 'components/demoFileStructure/includes/partialDemo'
-			  json='data.components.demoFileStructure.scaffolding.complexVariation'
-	}}
+	{{include 'components/demoFileStructure/includes/partialDemo' }}
 
 	<hr style="margin: 20px;">
 
