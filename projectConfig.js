@@ -27,7 +27,8 @@ module.exports = {
 			'enquire': 'dist/enquire.js',
 			'jquery-debouncedwidth': 'js/jquery.debouncedwidth.js',
 			'normalize.css': 'normalize.css',
-			'handlebars': 'dist/handlebars.runtime.js'
+			'handlebars': 'dist/handlebars.runtime.js',
+			"jquery-accordion": ["dist/accordion.css", "dist/accordion.min.js"]
 		}
 	}
 };
