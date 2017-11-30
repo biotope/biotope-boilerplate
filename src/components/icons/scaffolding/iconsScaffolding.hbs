@@ -5,7 +5,7 @@
 				<h1>Full Iconset</h1>
 
 				{{#each data.icons }}
-					{{> components/icons/icon iconName=this}}
+					{{include 'components/icons/icon' iconName=this}}
 				{{/each}}
 			</div>
 		</div>
