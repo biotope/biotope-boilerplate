@@ -28,14 +28,6 @@ See <https://yarnpkg.com/> for details of this dependency manager
 1. Run `npm install -g yarn` to install yarn dependency manager 
 1a. (On windows) You can also get the installer from <https://yarnpkg.com/en/docs/install>.
 
-### 3. Gulp
-
-**Gulp** is a task automator running on Node.js. It will do a lot of hard work for us preparing the source code for productive use. Amongst others Gulp combines files, shrinks them, tests code for faults etc.
-
-1. Run `yarn global add gulp-cli` to install Gulp's command line interface globally. This will put the gulp command in your system path, allowing it to be run from any directory.
-2. Test the installation of Gulp by running `gulp --version` from your command line.
-
-
 ## Starting
 
 After your are finished with the step before and everything runs fine, run these steps to get your project on the road.
@@ -44,8 +36,8 @@ After your are finished with the step before and everything runs fine, run these
 2. Navigate to the project folder
 3. Run `yarn install`
 4. To
-	* **start** the development environment run `gulp serve`
-	* **build** the code for production use run `gulp build`
+	* **start** the development environment run `yarn run serve`
+	* **build** the code for production use run `yarn run build`
 
 ## Custom Configuration
 
