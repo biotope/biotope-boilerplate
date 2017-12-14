@@ -30,7 +30,7 @@
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.0.6",
+    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.1.0",
     "gulp": "3.9.1",
     "mocha": "3.4.1"
   },
