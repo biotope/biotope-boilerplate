@@ -16,7 +16,8 @@ module.exports = {
 			linting: true,
 			markdown: false,
 			uglify: true,
-			webpack: true
+			webpack: true,
+			browserSupport: false
 		},
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
