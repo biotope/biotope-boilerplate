@@ -1,24 +1,6 @@
 module.exports = {
 	project: 'VI Frontend Framework 5',
 	global: {
-		resources: [
-			'/resources'
-		],
-		tasks: {
-			cleanCss: true,
-			cssStats: true,
-			sass: true,
-			less: true,
-			favicons: true,
-			handlebars: true,
-			iconfont: true,
-			image: true,
-			linting: true,
-			markdown: false,
-			uglify: true,
-			webpack: true,
-			browserSupport: false
-		},
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
 			'jQuery.DebouncedResize': 'js/jquery.debouncedresize.js',
