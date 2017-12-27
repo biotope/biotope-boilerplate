@@ -1,7 +1,7 @@
 {
 	"clientName": "default",
 	"lastUpdate": "2017-12-18",
-	"message": "<a href='browserSupport.html'><span class='glyphicon glyphicon-chevron-right'></span> Browser Matrix</a>",
+	"message": "<a href=\"browserSupport.html\"><span class=\"glyphicon glyphicon-chevron-right\"></span> Browser Matrix</a>",
 
 	"supportedBrowserMatrix": [
 		{
