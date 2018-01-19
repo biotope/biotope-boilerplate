@@ -13,6 +13,7 @@ pipeline {
 rm -f ./node_modules.tar
 
 yarn install
+yarn global add gulp
 
 gulp build
 
