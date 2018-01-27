@@ -49,12 +49,12 @@ This file lets you enable and disable certain tasks as well as specify additiona
 
 __resource folders__
 To add additional resource folders, create the folders and add the paths to the global.resources array.
-The path needs to be prepended with a "/" and relative to the app folder.
+The path needs to be prepended with a "/" and relative to the src folder.
 The default resource folder is "/resources"
 
 __component folders__
 To add additional component folders, create the folders and add the paths to the global.components array.
-The path needs to be prepended with a "/" and relative to the app folder.
+The path needs to be prepended with a "/" and relative to the src folder.
 The default components folder is "/components"
 If an additinal component folder is added create an additional resource Folder since every components folder nees its own corresponding resource folder.
 
@@ -78,20 +78,20 @@ We use different boilerplates to keep our coding structure as homogenous as poss
 #### jQuery TypeScript Plugins - Advanced
 
 The framework contains a local demo integration of the VI jQuery Boilerplate. 
-See `app/resources/ts/jquery.plugin.advanced.ts` for a local demo.
+See `src/resources/ts/jquery.plugin.advanced.ts` for a local demo.
 
 For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
 
 If you are going to write generic plugins that might be useful in lots of other projects, 
 please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
 
-For project-use only you can copy the structure into your local `app/resources/ts/` folder.
+For project-use only you can copy the structure into your local `src/resources/ts/` folder.
 
 
 #### jQuery TypeScript Plugins - Simple
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-See `app/resources/ts/jquery.plugin.simple.ts` for a local demo.
+See `src/resources/ts/jquery.plugin.simple.ts` for a local demo.
 
 It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
@@ -126,13 +126,13 @@ run the boilerplate with `gulp serve`
 
 ### 2. Folder structure
 
-* `/app` is where all of the actual frontend code is stored
-* `/app/_assets` holds static placeholder files like images, audio- and video files.
-* `/app/_mock` holds files that would be generated dynamically by the cms implementing the frontend and not explicitly corresponding to a component
-* `/app/_config` holds the js configuration file
-* `/app/pages` holds the base html files to create the index preview
-* `/app/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
-* `/app/components` holds reusable components and the corresponding resource files
+* `/src` is where all of the actual frontend code is stored
+* `/src/_assets` holds static placeholder files like images, audio- and video files.
+* `/src/_mock` holds files that would be generated dynamically by the cms implementing the frontend and not explicitly corresponding to a component
+* `/src/_config` holds the js configuration file
+* `/src/pages` holds the base html files to create the index preview
+* `/src/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
+* `/src/components` holds reusable components and the corresponding resource files
 * `/test` is where we put automated tests for Travis CI
 
 ## Testing
