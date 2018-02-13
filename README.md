@@ -3,7 +3,7 @@
 ## Introduction
 
 This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
-It depends heavily on the [gulp-build-framework](https://github.com/virtualidentityag/gulp-build-framework)
+It depends heavily on the [build-framework](https://github.com/frontend-framework/build-framework)
 
 ## Setup
 
@@ -16,13 +16,17 @@ It depends heavily on the [gulp-build-framework](https://github.com/virtualident
 2. (On Windows if asked) choose to also install NPM and add Node.js to your path.
 3. Check the installation of Node.js and NPM by running `node -v` or `npm -v` from your command line.
 
+> IMPORTANT NOTE ON PERMISSIONS: If you experience permission problems while installing Node.js (especially on Mac or Linux machines) never use `sudo` to install packages with `npm` or `yarn`
+> Please ask your IT Admins to give you proper permissions or let them do the installation. 
+> See <https://docs.npmjs.com/getting-started/fixing-npm-permissions> for instructions. 
+  
+
 ### 2. yarn
 **yarn** is a Node Package Manager which will allow us to download and install required components for Node.js with ease
 See <https://yarnpkg.com/> for details of this dependency manager
 
 1. Run `npm install -g yarn` to install yarn dependency manager 
 1a. (On windows) You can also get the installer from <https://yarnpkg.com/en/docs/install>.
-
 
 ## Starting
 
@@ -45,8 +49,14 @@ This file lets you enable and disable certain tasks as well as specify additiona
 
 __resource folders__
 To add additional resource folders, create the folders and add the paths to the global.resources array.
-The path needs to be prepended with a "/" and relative to the app folder.
+The path needs to be prepended with a "/" and relative to the src folder.
 The default resource folder is "/resources"
+
+__component folders__
+To add additional component folders, create the folders and add the paths to the global.components array.
+The path needs to be prepended with a "/" and relative to the src folder.
+The default components folder is "/components"
+If an additinal component folder is added create an additional resource Folder since every components folder nees its own corresponding resource folder.
 
 __tasks__
 To disable certain tasks, simply set the specific task to false. 
@@ -68,20 +78,20 @@ We use different boilerplates to keep our coding structure as homogenous as poss
 #### jQuery TypeScript Plugins - Advanced
 
 The framework contains a local demo integration of the VI jQuery Boilerplate. 
-See `app/resources/ts/jquery.plugin.advanced.ts` for a local demo.
+See `src/resources/ts/jquery.plugin.advanced.ts` for a local demo.
 
 For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
 
 If you are going to write generic plugins that might be useful in lots of other projects, 
 please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
 
-For project-use only you can copy the structure into your local `app/resources/ts/` folder.
+For project-use only you can copy the structure into your local `src/resources/ts/` folder.
 
 
 #### jQuery TypeScript Plugins - Simple
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-See `app/resources/ts/jquery.plugin.simple.ts` for a local demo.
+See `src/resources/ts/jquery.plugin.simple.ts` for a local demo.
 
 It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
@@ -101,83 +111,33 @@ The corresponding pattern file can be found in `/patterns/jquery.typescript.boil
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
 see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM  
 
-
-### React
-
-All react files go to /resources/react/ folder. The entry points of each React application must start in this folder, all necessary includes should lie in a dedicated application folder.
-All React files end with `.jsx` or `.tsx` .
-
-Example for an app called "test":
-
-/resources/react/test.jsx
-/resources/react/test/TestClass1.jsx
-/resources/react/test/TestClass2.jsx
-and so on...
-
-https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
-
-
 ## Development
 
 run the boilerplate with `yarn start`
 
 ### 1. Our helpers
 
-* `{{= ftf.include("path/to/file.html", { myValue: 123 }) }}` - Include a html file. You can  pass a json object with own data
-* `{{= ftf.text(500) }}` - Generate lorem ipsum text with 500 chars
-* `{{= ftf.renderHbs("demo", "app/_mock/demo.json") }}` - Render a hbs file with json data into static templates
+* `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
+* `{{include 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
+* `{{def variable 'default value'}}` - set a default value for a variable 
+* `{{text 500}}` - a filler text with 500 chars
 
-@ToDo - add all helper functions
+@TODO - add all helper functions
 
 ### 2. Folder structure
 
-* `/app` is where all of the actual frontend code is stored
-* `/app/_assets` holds static placeholder files like images, audio- and video files.
-* `/app/_mock` holds files that would be generated dynamically (such as `nav.json`) by the cms implementing the frontend
-* `/app/_partials` holds snippets of html code that are reused throughout the frontend
-* `/app/resources` holds JavaScript, TypeScript, SASS/CSS and other files
-* `/test` is where we put automated tests for Travis CI and Nightwatch Testing with Selenium
+* `/src` is where all of the actual frontend code is stored
+* `/src/_assets` holds static placeholder files like images, audio- and video files.
+* `/src/_mock` holds files that would be generated dynamically by the cms implementing the frontend and not explicitly corresponding to a component
+* `/src/_config` holds the js configuration file
+* `/src/pages` holds the base html files to create the index preview
+* `/src/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
+* `/src/components` holds reusable components and the corresponding resource files
+* `/test` is where we put automated tests for Travis CI
 
 ## Testing
 
-**Nightwatch.js** is an End-to-End (E2E) testing solution for browser based apps and websites using Selenium to automatically 
-perform commands and assertions on DOM elements.
-
-There are two different Gulp Tasks: 'test' for using an external Selenium server and 'test:dev' to start the test on a 
-local selenium. The npm packages for 'test:local' are not included in the package.json, so you need to install them manually.
-
 **Travis CI** Testing is used for automated boilerplate testing. It uses Mocha/Chai and checks the build process and compares the generated static files with there fixtures. To run the tests locally execute `mocha test/travis/build.js` from terminal. Install mocha globally.
-
-### test selenium
-
-Gulp task for testing on external Selenium server.
-Add your settings in the configuration file `/test/nightwatch/nightwatch.js`
-
-`yarn test:selenium -url=http://YOURDOMAIN.com`
-
-'-url' can be used in nightwatch tests with 'browser.launch_url'.
-Example:
-```javascript
-module.exports = {
-   'Visual Test - Stage Component': function(browser) {
-      browser
-         .windowMaximize()
-         .url(browser.launch_url + '/90demo.01icons.html')
-         .waitForElementPresent('body', 3000)
-         .assert.title('VIGulpFrontendBoilerplate')
-         .end();
-   }
-};
-```
-
-### gulp test:dev
-
-Add your settings in the configuration file `/test/nightwatch/nightwatch.dev.js`
-npm packages to install: 
-Selenium.jar: `npm install selenium-server-standalone-jar`
-GraficMagick: `npm install gm`
-
-Download and install imageMagick: http://www.imagemagick.org
 
 ## Build
 
@@ -197,9 +157,8 @@ There is a gulp task for doing releases. Use gulp release --type=[major,minor,pa
 
 ### Line-break errors in eslint
 
-If there are line-break errors in eslint, it may be because false line endings set by git.
-To prevent this use the git config "core.autocrlf". 
-Use the command "git config core.autocrlf false" to prevent windows from using crlf instead of lf.
+If there are line-break errors in eslint, it may be because false line endings set by git. Try to check out the repo again.
+To prevent this check the git config "core.autocrlf". 
 
 ### gulp serve malloc error (Unix Only)
 

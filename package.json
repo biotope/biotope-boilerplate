@@ -1,55 +1,48 @@
 {
   "name": "frontend-framework",
   "title": "VI Frontend Framework",
-  "version": "4.2.0",
-  "description": "A gulp frontend boilerplate",
+  "version": "5.1.1",
+  "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
-    "url": "https://github.com/virtualidentityag/gulp-frontend-boilerplate"
+    "url": "https://github.com/virtualidentityag/frontend-framework.git"
   },
   "license": "MIT",
   "scripts": {
     "mocha": "node node_modules/.bin/mocha",
     "gulp": "node node_modules/.bin/gulp",
 
-    "start:gulp": "npm run gulp serve",
+    "serve:gulp": "npm run gulp serve",
     "build:gulp": "npm run gulp build",
-    "test:selenium": "npm run gulp test",
 
-    "start": "npm run start:gulp",
+    "start": "npm run serve:gulp",
     "build": "npm run build:gulp",
-    "test": "npm run mocha test/travis/build.js"
+    "test:travis": "npm run mocha test/travis/build.js"
   },
   "dependencies": {
-    "@types/jquery": "^2.0.40",
-    "@types/modernizr": "^3.3.0",
-    "@types/react": "^15.0.13",
-    "@types/react-dom": "^0.14.23",
+    "@types/jquery": "2.0.48",
+    "@types/modernizr": "3.5.1",
     "breakpoint-sass": "2.7.1",
-    "conditional-resource-loader": "git+https://github.com/virtualidentityag/conditional-resource-loader#1.2.2",
-    "enquire": "git+https://github.com/WickyNilliams/enquire.js#v2.1.6",
-    "handlebars": "^4.0.10",
-    "jQuery.DebouncedResize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize#1.0.2",
+    "conditional-resource-loader": "https://github.com/virtualidentityag/conditional-resource-loader.git#1.2.2",
+    "enquire": "https://github.com/WickyNilliams/enquire.js.git#v2.1.6",
+    "handlebars": "4.0.11",
+    "jQuery.DebouncedResize": "https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2",
     "jquery": "3.2.1",
-    "jquery-base": "https://github.com/vi-plugins/jquery-base.git",
-    "jquery-debouncedwidth": "git+https://github.com/janrembold/jquery-debouncedwidth#v1.1.3",
-    "jquery-events": "https://github.com/vi-plugins/jquery-events.git",
-    "jquery-migrate": "^3.0.0",
-    "media-match": "git+https://github.com/virtualidentityag/media-match#2.0.3",
-    "normalize.css": "^7.0.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "jquery-base": "https://github.com/vi-plugins/jquery-base.git#1.0.0",
+    "jquery-debouncedwidth": "https://github.com/janrembold/jquery-debouncedwidth.git#v1.1.3",
+    "jquery-events": "https://github.com/vi-plugins/jquery-events.git#1.0.0",
+    "jquery-migrate": "3.0.1",
+    "normalize.css": "7.0.0",
     "susy": "2.2.12",
-    "vi-css-helper": "virtualidentityag/vi-css-helper#1.1.1"
+    "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
+    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.1.1",
     "gulp": "3.9.1",
-    "gulp-build-framework": "https://github.com/virtualidentityag/gulp-build-framework.git#4.3.0",
-    "mocha": "^3.4.1",
-    "require-dir": "0.3.1"
+    "mocha": "3.4.1"
   },
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=8.0.0",
+    "yarn": ">=1.0.0"
   }
 }
