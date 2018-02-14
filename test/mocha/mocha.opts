@@ -1,0 +1,3 @@
+src/resources/**/*.spec.js
+src/resources/**/*.spec.ts
+--compilers ts:ts-node/register
