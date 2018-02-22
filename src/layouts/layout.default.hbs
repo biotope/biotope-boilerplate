@@ -1,31 +1,31 @@
-{{include 'layouts/includes/htmltag' }}
+{{helperInclude 'layouts/includes/htmltag' }}
 <head>
-	{{include 'layouts/includes/htmlhead.meta' }}
+	{{helperInclude 'layouts/includes/htmlhead.meta' }}
 
 	<!-- inject:head:html -->
 	<!-- endinject -->
 
 	<!-- DEV-note: include page specific meta information after this comment -->
 
-	{{include 'layouts/includes/htmlhead.styles' }}
+	{{helperInclude 'layouts/includes/htmlhead.styles' }}
 
-	{{include 'layouts/includes/htmlhead.scripts' }}
+	{{helperInclude 'layouts/includes/htmlhead.scripts' }}
 
 	<!-- DEV-note: include page specific styles and scripts after this comment -->
 </head>
 <body role="document" class="{{bodyClass}}">
-    {{include 'components/framework/header/header' }}
+    {{helperInclude 'components/framework/header/header' }}
 
     <main class="content">
         <article>
-            {{include (lookup . 'contentMain') }}
+            {{helperInclude (lookup . 'contentMain') }}
         </article>
     </main>
 
-    {{include 'components/framework/footer/footer' }}
+    {{helperInclude 'components/framework/footer/footer' }}
 
-	{{include 'layouts/includes/scripts' }}
-	{{include 'layouts/includes/tracking' }}
+	{{helperInclude 'layouts/includes/scripts' }}
+	{{helperInclude 'layouts/includes/tracking' }}
 
 	<!-- DEV-note: include page specific scrips after this comment -->
 </body>

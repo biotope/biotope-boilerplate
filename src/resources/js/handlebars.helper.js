@@ -14,7 +14,7 @@
 
 	var helpers = {
 		/**
-		 * {{#compare}}...{{/compare}}
+		 * {{#helperCompare}}...{{/compare}}
 		 *
 		 * @credit: OOCSS
 		 * @param left value
@@ -24,17 +24,17 @@
 		 * @return {String} formatted html
 		 *
 		 * @example:
-		 * {{#compare unicorns "<" ponies}}
+		 * {{#helperCompare unicorns "<" ponies}}
 		 * I knew it, unicorns are just low-quality ponies!
 		 * {{/compare}}
 		 *
-		 * {{#compare value ">=" 10}}
+		 * {{#helperCompare value ">=" 10}}
 		 * The value is greater or equal than 10
 		 * {{else}}
 		 * The value is lower than 10
 		 * {{/compare}}
 		 */
-		compare: function (left, operator, right, options) {
+		helperCompare: function (left, operator, right, options) {
 			/*jshint eqeqeq: false*/
 			if (arguments.length < 3) {
 				throw new Error('Handlebars Helper "compare" needs 2 parameters');
@@ -84,7 +84,7 @@
 			}
 		},
 
-		def: function(variable, defaultValue) {
+		helperDef: function(variable, defaultValue) {
 			return variable ? variable : defaultValue;
 		}
 
