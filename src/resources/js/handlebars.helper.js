@@ -5,7 +5,7 @@
 (function (root, factory) {
 	'use strict';
 	if (typeof module === 'object' && module.exports) {
-		module.exports = factory(require('handlebars'));
+		module.exports.register = factory;
 	} else {
 		factory(root.Handlebars);
 	}
