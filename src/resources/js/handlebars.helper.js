@@ -34,7 +34,7 @@
 		 * The value is lower than 10
 		 * {{/bioCompare}}
 		 */
-		biobioCompare: function (left, operator, right, options) {
+		bioCompare: function (left, operator, right, options) {
 			/*jshint eqeqeq: false*/
 			if (arguments.length < 3) {
 				throw new Error('Handlebars Helper "compare" needs 2 parameters');
