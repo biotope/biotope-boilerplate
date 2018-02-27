@@ -1,9 +1,11 @@
-# frontend-framework
+# biotope
+
+The Frontend Ecosystem Framework
 
 ## Introduction
 
-This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
-It depends heavily on the [build-framework](https://github.com/frontend-framework/build-framework)
+This boilerplate helps you to easily kickstart new Frontend Ecosystems with the Biotope framework. Just mirror this repository, run the setup tasks and start developing.
+It depends heavily on [biotope-build](https://github.com/biotope/biotope-build)
 
 ## Setup
 
@@ -60,7 +62,7 @@ If an additinal component folder is added create an additional resource Folder s
 
 __tasks__
 To disable certain tasks, simply set the specific task to false. 
-At the moment the tasks that can be disabled are: "linting", "iconfont", "angular", "handlebars", "uglify", "cleanCss", "favicons", "cssStats".
+At the moment the tasks that can be disabled are: "linting", "iconfont", "handlebars", "uglify", "cleanCss", "favicons", "cssStats".
 Per default all tasks are enabled.
 
 __uglifyExceptions__
@@ -77,7 +79,7 @@ We use different boilerplates to keep our coding structure as homogenous as poss
 
 #### jQuery TypeScript Plugins - Advanced
 
-The framework contains a local demo integration of the VI jQuery Boilerplate. 
+The boilerplate contains a local demo integration of the VI jQuery Boilerplate. 
 See `src/resources/ts/jquery.plugin.advanced.ts` for a local demo.
 
 For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
@@ -109,7 +111,8 @@ The corresponding pattern file can be found in `/patterns/jquery.typescript.boil
 ### CSS / SASS
 
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
-see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM  
+see https://github.com/virtualidentityag/vi
+Standards/wiki/vi-BEM  
 
 ## Development
 
