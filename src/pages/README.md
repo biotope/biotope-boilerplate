@@ -20,6 +20,9 @@ Mandatory properties are:
 * title
 * description
 
+Optional properties are:
+* deprecated (type: boolean)
+
 They are used to describe the page on the main overview (generated index.html).
 It is possible to use these properties inside the partials via {{ data.frontMatter.\[your property\] }}
 
