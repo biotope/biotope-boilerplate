@@ -9,9 +9,20 @@
   },
   "license": "MIT",
   "scripts": {
-    "test:travis": "mocha test/travis/build.js",
-    "serve": "gulp serve",
-    "build": "gulp build"
+    "mocha": "node node_modules/.bin/mocha",
+    "gulp": "node node_modules/.bin/gulp",
+
+    "serve:gulp": "npm run gulp serve",
+    "build:gulp": "npm run gulp build",
+
+    "start": "npm run serve:gulp",
+    "build": "npm run build:gulp",
+
+    "test:travis": "npm run mocha test/travis/build.js",
+    "test:ci": "echo \"Not implemented yet\"",
+    "test:e2e": "echo \"Not implemented yet\"",
+
+    "lint": "echo \"Not implemented yet\""
   },
   "dependencies": {
     "@types/jquery": "2.0.48",

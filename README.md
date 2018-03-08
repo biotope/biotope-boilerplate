@@ -38,8 +38,8 @@ After your are finished with the step before and everything runs fine, run these
 2. Navigate to the project folder
 3. Run `yarn install`
 4. To
-	* **start** the development environment run `yarn run serve`
-	* **build** the code for production use run `yarn run build`
+	* **start** the development environment run `yarn start`
+	* **build** the code for production use run `yarn build`
 
 ## Custom Configuration
 
@@ -116,7 +116,7 @@ Standards/wiki/vi-BEM
 
 ## Development
 
-run the boilerplate with `gulp serve`
+run the boilerplate with `yarn start`
 
 ### 1. Our helpers
 
@@ -144,7 +144,7 @@ run the boilerplate with `gulp serve`
 
 ## Build
 
-run the boilerplate with `gulp build`
+run the boilerplate with `yarn build`
 If everything is correct, you will find a build version of your code in the **dist** directory.
 This contains among others a min and concat version of your js and css files
 
@@ -167,5 +167,5 @@ To prevent this check the git config "core.autocrlf".
 
 ************** gulp(975,0x104c15000) malloc: *** error for object 0x10164201c: pointer being freed was not allocated *** set a breakpoint in malloc_error_break to debug **************
 
-This is caused by missing sass files. Be sure you've done a bower install before gulp serve.
+This is caused by missing sass files. Be sure you've done a bower install before `yarn start`.
 
