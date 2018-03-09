@@ -42,7 +42,7 @@
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.2.0",
+    "@biotope/build": "^5.2.0",
     "gulp": "3.9.1",
     "mocha": "5.0.1"
   },
