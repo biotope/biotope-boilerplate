@@ -4,7 +4,7 @@ module.exports = {
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
 			'jQuery.DebouncedResize': 'js/jquery.debouncedresize.js',
-			'conditional-resource-loader': 'src/resourceLoader.js',
+			'@biotope/resource-loader': 'src/resourceLoader.js',
 			'jquery': 'dist/jquery.js',
 			'jquery-migrate': 'dist/jquery-migrate.js',
 			'enquire': 'dist/enquire.js',

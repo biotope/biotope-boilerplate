@@ -28,7 +28,7 @@
     "@types/jquery": "2.0.48",
     "@types/modernizr": "3.5.1",
     "breakpoint-sass": "2.7.1",
-    "conditional-resource-loader": "https://github.com/virtualidentityag/conditional-resource-loader.git#1.2.3",
+    "@biotope/resource-loader": "^1.3.0",
     "enquire": "https://github.com/WickyNilliams/enquire.js.git#v2.1.6",
     "handlebars": "4.0.11",
     "jQuery.DebouncedResize": "https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2",
@@ -42,7 +42,7 @@
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "build-framework": "https://github.com/frontend-framework/build-framework.git#5.2.0",
+    "@biotope/build": "^5.2.0",
     "gulp": "3.9.1",
     "mocha": "5.0.1"
   },
