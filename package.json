@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "mocha": "node node_modules/.bin/mocha",
-    "gulp": "node node_modules/.bin/gulp",
+    "mocha": "mocha",
+    "gulp": "gulp",
 
-    "serve:gulp": "npm run gulp serve",
-    "build:gulp": "npm run gulp build",
+    "serve:gulp": "gulp serve",
+    "build:gulp": "gulp build",
 
     "start": "npm run serve:gulp",
     "build": "npm run build:gulp",
