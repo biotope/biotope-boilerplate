@@ -121,9 +121,9 @@ run the boilerplate with `yarn start`
 ### 1. Our helpers
 
 * `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
-* `{{include 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
-* `{{def variable 'default value'}}` - set a default value for a variable 
-* `{{text 500}}` - a filler text with 500 chars
+* `{{bioInclude 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
+* `{{bioDef variable 'default value'}}` - set a default value for a variable 
+* `{{bioText 500}}` - a filler text with 500 chars
 
 @TODO - add all helper functions
 
