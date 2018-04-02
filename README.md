@@ -1,9 +1,11 @@
-# frontend-framework
+# biotope
+
+The Frontend Ecosystem Framework
 
 ## Introduction
 
-This frontend framework boilerplate helps you to easily kickstart new frontend frameworks. Just mirror this repository, run the setup tasks and start developing.
-It depends heavily on the [build-framework](https://github.com/frontend-framework/build-framework)
+This boilerplate helps you to easily kickstart new Frontend Ecosystems with the Biotope framework. Just mirror this repository, run the setup tasks and start developing.
+It depends heavily on [biotope-build](https://github.com/biotope/biotope-build)
 
 ## Setup
 
@@ -36,8 +38,8 @@ After your are finished with the step before and everything runs fine, run these
 2. Navigate to the project folder
 3. Run `yarn install`
 4. To
-	* **start** the development environment run `yarn run serve`
-	* **build** the code for production use run `yarn run build`
+	* **start** the development environment run `yarn start`
+	* **build** the code for production use run `yarn build`
 
 ## Custom Configuration
 
@@ -49,18 +51,18 @@ This file lets you enable and disable certain tasks as well as specify additiona
 
 __resource folders__
 To add additional resource folders, create the folders and add the paths to the global.resources array.
-The path needs to be prepended with a "/" and relative to the app folder.
+The path needs to be prepended with a "/" and relative to the src folder.
 The default resource folder is "/resources"
 
 __component folders__
 To add additional component folders, create the folders and add the paths to the global.components array.
-The path needs to be prepended with a "/" and relative to the app folder.
+The path needs to be prepended with a "/" and relative to the src folder.
 The default components folder is "/components"
 If an additinal component folder is added create an additional resource Folder since every components folder nees its own corresponding resource folder.
 
 __tasks__
 To disable certain tasks, simply set the specific task to false. 
-At the moment the tasks that can be disabled are: "linting", "iconfont", "angular", "handlebars", "uglify", "cleanCss", "favicons", "cssStats".
+At the moment the tasks that can be disabled are: "linting", "iconfont", "handlebars", "uglify", "cleanCss", "favicons", "cssStats".
 Per default all tasks are enabled.
 
 __uglifyExceptions__
@@ -77,21 +79,21 @@ We use different boilerplates to keep our coding structure as homogenous as poss
 
 #### jQuery TypeScript Plugins - Advanced
 
-The framework contains a local demo integration of the VI jQuery Boilerplate. 
-See `app/resources/ts/jquery.plugin.advanced.ts` for a local demo.
+The boilerplate contains a local demo integration of the VI jQuery Boilerplate. 
+See `src/resources/ts/jquery.plugin.advanced.ts` for a local demo.
 
 For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
 
 If you are going to write generic plugins that might be useful in lots of other projects, 
 please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
 
-For project-use only you can copy the structure into your local `app/resources/ts/` folder.
+For project-use only you can copy the structure into your local `src/resources/ts/` folder.
 
 
 #### jQuery TypeScript Plugins - Simple
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-See `app/resources/ts/jquery.plugin.simple.ts` for a local demo.
+See `src/resources/ts/jquery.plugin.simple.ts` for a local demo.
 
 It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
@@ -109,30 +111,31 @@ The corresponding pattern file can be found in `/patterns/jquery.typescript.boil
 ### CSS / SASS
 
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
-see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM  
+see https://github.com/virtualidentityag/vi
+Standards/wiki/vi-BEM  
 
 ## Development
 
-run the boilerplate with `gulp serve`
+run the boilerplate with `yarn start`
 
 ### 1. Our helpers
 
 * `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
-* `{{include 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
-* `{{def variable 'default value'}}` - set a default value for a variable 
-* `{{text 500}}` - a filler text with 500 chars
+* `{{bioInclude 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
+* `{{bioDef variable 'default value'}}` - set a default value for a variable 
+* `{{bioText 500}}` - a filler text with 500 chars
 
 @TODO - add all helper functions
 
 ### 2. Folder structure
 
-* `/app` is where all of the actual frontend code is stored
-* `/app/_assets` holds static placeholder files like images, audio- and video files.
-* `/app/_mock` holds files that would be generated dynamically by the cms implementing the frontend and not explicitly corresponding to a component
-* `/app/_config` holds the js configuration file
-* `/app/pages` holds the base html files to create the index preview
-* `/app/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
-* `/app/components` holds reusable components and the corresponding resource files
+* `/src` is where all of the actual frontend code is stored
+* `/src/_assets` holds static placeholder files like images, audio- and video files.
+* `/src/_mock` holds files that would be generated dynamically by the cms implementing the frontend and not explicitly corresponding to a component
+* `/src/_config` holds the js configuration file
+* `/src/pages` holds the base html files to create the index preview
+* `/src/resources` holds global resources: JavaScript, TypeScript, SASS/CSS and other files
+* `/src/components` holds reusable components and the corresponding resource files
 * `/test` is where we put automated tests for Travis CI
 
 ## Testing
@@ -141,7 +144,7 @@ run the boilerplate with `gulp serve`
 
 ## Build
 
-run the boilerplate with `gulp build`
+run the boilerplate with `yarn build`
 If everything is correct, you will find a build version of your code in the **dist** directory.
 This contains among others a min and concat version of your js and css files
 
@@ -164,5 +167,5 @@ To prevent this check the git config "core.autocrlf".
 
 ************** gulp(975,0x104c15000) malloc: *** error for object 0x10164201c: pointer being freed was not allocated *** set a breakpoint in malloc_error_break to debug **************
 
-This is caused by missing sass files. Be sure you've done a bower install before gulp serve.
+This is caused by missing sass files. Be sure you've done a bower install before `yarn start`.
 

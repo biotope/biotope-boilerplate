@@ -9,9 +9,6 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="navbar-fixed-top.css" rel="stylesheet">
-
     <style>
         body {
             min-height: 2000px;
@@ -79,7 +76,11 @@
 				{{#if indexr.category}}
 					<h2 class="anchor capitalize" id="category{{indexr.priority}}">{{indexr.category}}</h2>
 				{{/if}}
-				<h4><a href="{{indexr.file.name}}.html">{{def this.title indexr.file.name}}</a></h4>
+				<h4><a href="{{indexr.file.name}}.html">{{bioDef this.title indexr.file.name}}</a>
+					{{#if this.deprecated}}
+						<mark><em>deprecated</em></mark>
+					{{/if}}
+				</h4>
 				{{#if this.description}}
 					<p>{{this.description}}</p>
 				{{/if}}
