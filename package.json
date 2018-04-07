@@ -9,13 +9,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "mocha": "mocha",
-    "gulp": "gulp",
-    "serve:gulp": "gulp serve",
-    "build:gulp": "gulp build",
-    "start": "npm run serve:gulp",
-    "build": "npm run build:gulp",
-    "test:travis": "npm run mocha test/travis/build.js",
+    "start": "gulp serve",
+    "build": "gulp build",
+    "test:travis": "mocha test/travis/build.js",
     "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
     "lint": "echo \"Not implemented yet\""
