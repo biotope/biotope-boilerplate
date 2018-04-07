@@ -1,4 +1,4 @@
-var config = require('../../node_modules/gulp-build-framework/gulp/config.js');
+var config = require('../../node_modules/@biotope/build/config.js');
 var chai = require('chai');
 var expect = chai.expect;
 var fs = require('fs');
