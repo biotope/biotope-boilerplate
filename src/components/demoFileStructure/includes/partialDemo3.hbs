@@ -3,6 +3,6 @@
 	<h3>third partial with lookup helper</h3>
 
 	{{#each this.childContext}}
-		{{include (lookup . 'partial') childContext=this.childContext }}
+		{{bioInclude (lookup . 'partial') childContext=this.childContext }}
 	{{/each}}
 </div>

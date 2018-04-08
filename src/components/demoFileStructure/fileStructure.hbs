@@ -3,18 +3,18 @@
      data-init="(function() {test('called via resourceLoader');})"
 >
     <h2>Simple HBS Include via "include" partial helper</h2>
-    {{include 'components/demoFileStructure/includes/simplePartial'}}
+    {{bioInclude 'components/demoFileStructure/includes/simplePartial'}}
 	<hr style="margin: 20px;">
 
     <h2>Pass variables to partial</h2>
-    {{include 'components/demoFileStructure/includes/simplePartial'
+    {{bioInclude 'components/demoFileStructure/includes/simplePartial'
 		headline='headline passed from outside'
 		text="some other text"
     }}
 	<hr style="margin: 20px;">
 
 	<h2>include inline json object and pass to partial via "include" helper</h2>
-	{{include 'components/demoFileStructure/includes/simplePartial'
+	{{bioInclude 'components/demoFileStructure/includes/simplePartial'
 			  object='{
 					"headline": "Variation 1 Headline",
 					"items": [
@@ -34,7 +34,7 @@
 
     <h2>complex include json file with sub partials</h2>
 
-	{{include 'components/demoFileStructure/includes/partialDemo' }}
+	{{bioInclude 'components/demoFileStructure/includes/partialDemo' }}
 
 	<hr style="margin: 20px;">
 

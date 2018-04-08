@@ -3,9 +3,9 @@
 <h3>partial block with lookup helper and failover content</h3>
 
 {{#each data.components.demoFileStructure.scaffolding.complexVariation.childContext}}
-	{{#include (lookup . 'partial') childContext=this.childContext }}
+	{{#bioInclude (lookup . 'partial') childContext=this.childContext }}
 		failover content
-	{{/include}}
+	{{/bioInclude}}
 {{/each}}
 
 </div>

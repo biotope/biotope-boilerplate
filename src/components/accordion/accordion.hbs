@@ -3,8 +3,8 @@
 	 data-init="(function($elm) {$elm.accordion({ tabbed: {minViewportWidth: 700}, scrolling: {topOffsetSelector: '.my-header', scrollOnOpen: true, scrollOnOpenMaximumScreenWidth: 480 }}).trigger('init.accordion'); })"
 >
 	{{#each panels}}
-		{{#> (lookup . 'panel') panelContext=this.panelContext }}
+		{{#bioInclude (lookup . 'panel') panelContext=this.panelContext }}
 			<p style="color: red; font-weight: bold; font-size: 24px;">No panel partial found! Fix partial name or add a default behaviour!</p>
-		{{/undefined}}
+		{{/bioInclude}}
 	{{/each}}
 </div>
