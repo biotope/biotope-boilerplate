@@ -1,10 +1,14 @@
+---
+title: index
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{package.title}} | {{package.version}}</title>
+    <title>{{data.package.title}} | {{data.package.version}}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -42,14 +46,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{package.title}} {{package.version}}</a>
+            <a class="navbar-brand" href="#">{{data.package.title}} {{data.package.version}}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-				{{#each templates}}
-					{{#if indexr.category}}
-						<li><a href="#category{{indexr.priority}}" class="capitalize">{{indexr.category}}</a></li>
-					{{/if}}
+				{{#each data.indexr}}
+					{{#bioCompare this.attributes.title '!==' 'index'}}
+						{{#if this.newSection}}
+							<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
+						{{/if}}
+					{{/bioCompare}}
 				{{/each}}
             </ul>
         </div><!--/.nav-collapse -->
@@ -72,29 +78,31 @@
 
     <div class="row">
         <div class="col-sm-8">
-			{{#each templates}}
-				{{#if indexr.category}}
-					<h2 class="anchor capitalize" id="category{{indexr.priority}}">{{indexr.category}}</h2>
-				{{/if}}
-				<h4><a href="{{indexr.file.name}}.html">{{bioDef this.title indexr.file.name}}</a>
-					{{#if this.deprecated}}
-						<mark><em>deprecated</em></mark>
+			{{#each data.indexr}}
+				{{#bioCompare this.attributes.title '!==' 'index'}}
+					{{#if this.newSection}}
+						<h2 class="anchor capitalize" id="category{{this.priority}}">{{this.currentCategory}}</h2>
 					{{/if}}
-				</h4>
-				{{#if this.description}}
-					<p>{{this.description}}</p>
-				{{/if}}
-
+					<h4><a href="{{this.parsedFile.name}}.html">{{bioDef this.attributes.title this.parsedFile.name}}</a>
+						{{#if this.attributes.deprecated}}
+							<mark><em>deprecated</em></mark>
+						{{/if}}
+					</h4>
+					{{#if this.attributes.description}}
+						<p>{{this.attributes.description}}</p>
+					{{/if}}
+				{{/bioCompare}}
 			{{/each}}
-
         </div>
         <div class="col-sm-4">
             <h2 class="anchor">Categories</h2>
             <ul>
-				{{#each templates}}
-					{{#if indexr.category}}
-						<li><a href="#category{{indexr.priority}}" class="capitalize">{{indexr.category}}</a></li>
-					{{/if}}
+				{{#each data.indexr}}
+					{{#bioCompare this.attributes.title '!==' 'index'}}
+						{{#if this.newSection}}
+							<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
+						{{/if}}
+					{{/bioCompare}}
 				{{/each}}
             </ul>
         </div>
