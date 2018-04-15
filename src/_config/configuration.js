@@ -1,23 +1,23 @@
 // init configuration namespace if not exists already
-ffglobal.configuration = ffglobal.configuration || {};
-ffglobal.configuration.data = ffglobal.configuration.data || {};
+biotope.configuration = biotope.configuration || {};
+biotope.configuration.data = biotope.configuration.data || {};
 //
 //// global variables
-ffglobal.configuration.data.global = ffglobal.configuration.data.global || {};
+biotope.configuration.data.global = biotope.configuration.data.global || {};
 
 // breakpoints see: \app\resources\css\settings\_settings.scss
-//ffglobal.configuration.data.ffglobal.bpXSmall = 300;
-//ffglobal.configuration.data.ffglobal.bpSmall = 600;
-//ffglobal.configuration.data.ffglobal.bpMedium = 768;
-//ffglobal.configuration.data.ffglobal.bpLarge = 992;
-//ffglobal.configuration.data.ffglobal.bpXLarge = 1200;
+//biotope.configuration.data.biotope.bpXSmall = 300;
+//biotope.configuration.data.biotope.bpSmall = 600;
+//biotope.configuration.data.biotope.bpMedium = 768;
+//biotope.configuration.data.biotope.bpLarge = 992;
+//biotope.configuration.data.biotope.bpXLarge = 1200;
 //// max:
-//ffglobal.configuration.data.ffglobal.bpXSmallMax = ffglobal.configuration.data.ffglobal.bpSmall - 1;
-//ffglobal.configuration.data.ffglobal.bpSmallMax = ffglobal.configuration.data.ffglobal.bpMedium - 1;
-//ffglobal.configuration.data.ffglobal.bpMediumMax = ffglobal.configuration.data.ffglobal.bpLarge - 1;
-//ffglobal.configuration.data.ffglobal.bpLargeMax = ffglobal.configuration.data.ffglobal.bpXLarge - 1;
-//ffglobal.configuration.data.ffglobal.bpXLargeMax = 10000;
+//biotope.configuration.data.biotope.bpXSmallMax = biotope.configuration.data.biotope.bpSmall - 1;
+//biotope.configuration.data.biotope.bpSmallMax = biotope.configuration.data.biotope.bpMedium - 1;
+//biotope.configuration.data.biotope.bpMediumMax = biotope.configuration.data.biotope.bpLarge - 1;
+//biotope.configuration.data.biotope.bpLargeMax = biotope.configuration.data.biotope.bpXLarge - 1;
+//biotope.configuration.data.biotope.bpXLargeMax = 10000;
 
 //// i18n
-ffglobal.configuration.data.i18n = ffglobal.configuration.data.i18n || {};
-ffglobal.configuration.data.i18n.browserwarning = 'Ihr Browser ist veraltet! Die Seite wird möglicherweise in Funktionalität und Darstellung eingeschränkt sein.';
+biotope.configuration.data.i18n = biotope.configuration.data.i18n || {};
+biotope.configuration.data.i18n.browserwarning = 'Ihr Browser ist veraltet! Die Seite wird möglicherweise in Funktionalität und Darstellung eingeschränkt sein.';

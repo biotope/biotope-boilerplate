@@ -10,20 +10,20 @@
 
 		/* globals resourceLoader */
 		resourceLoader({
-			base: ffglobal.configuration.get('data.staticResourcesBase'),
+			base: biotope.configuration.get('data.staticResourcesBase'),
 			baseMap: {
-				'##content': ffglobal.configuration.get('data.staticResourcesContentRepoBase')
+				'##content': biotope.configuration.get('data.staticResourcesContentRepoBase')
 			}
 		});
 
 		function init() {
-			ffglobal.configuration.get('initCore')();
-			ffglobal.configuration.get('initElementFunctions')();
+			biotope.configuration.get('initCore')();
+			biotope.configuration.get('initElementFunctions')();
 		}
 
 	});
 
-	ffglobal.configuration.set('initCore', function () {
+	biotope.configuration.set('initCore', function () {
 
 	});
 

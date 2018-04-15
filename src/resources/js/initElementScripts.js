@@ -1,7 +1,7 @@
 (function ($, window, document, undefined) {
 	'use strict';
 
-	ffglobal.configuration.set('initElementFunctions', function () {
+	biotope.configuration.set('initElementFunctions', function () {
 		var $elementsWithDataInit = $('[data-init]');
 		$elementsWithDataInit.each(function() {
 			if ($(this).data('init')) {
