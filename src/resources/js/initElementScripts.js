@@ -1,4 +1,4 @@
-(function ($, window, document, undefined) {
+(function ($) {
 	'use strict';
 
 	biotope.configuration.set('initElementFunctions', function () {
@@ -11,4 +11,4 @@
 		});
 	});
 
-})(jQuery, window, document);
+})(jQuery);
