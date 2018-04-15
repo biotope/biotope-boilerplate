@@ -51,11 +51,9 @@ title: index
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
 				{{#each data.indexr}}
-					{{#bioCompare this.attributes.title '!==' 'index'}}
-						{{#if this.newSection}}
-							<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
-						{{/if}}
-					{{/bioCompare}}
+					{{#if this.newSection}}
+						<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
+					{{/if}}
 				{{/each}}
             </ul>
         </div><!--/.nav-collapse -->
@@ -70,8 +68,8 @@ title: index
         </div>
         <div class="panel-body">
             This VI Frontend Framework is a framework to build state of the art websites with an approved UI look and feel. It provides ready-to-use layouts, design and functionaliy and incorporates many proven practices used to build excellent websites. It has an adaptive / responsive design, is build mobile first and while it makes use of modern browser's capabilities, it also works on browsers as ancient as Internet Explorer 9. We hope to save you and your team hundreds of hours of work - Hours which you can invest in better content and maybe even into helping us improve this framework.
-			{{#if browserSupport}}
-				<p>{{{browserSupport.message}}}</p>
+			{{#if data.browserSupport}}
+				<p>{{{data.browserSupport.message}}}</p>
 			{{/if}}
 		</div>
     </div>
