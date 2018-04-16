@@ -2,15 +2,18 @@
 
 ## Migration Checklist 5.2.x to 5.3.x
 
-TODO...
+### HBS / JS File Changes
+* Change `handlebars.helpers.js` according to `https://github.com/biotope/biotope/blob/master/src/resources/js/handlebars.helper.js`
+* Change `index.hbs` according to `https://github.com/biotope/biotope/blob/master/src/index.hbs`
+* Change `browserSupport.hbs` according to `https://github.com/biotope/biotope/blob/master/src/browserSupport.hbs`
 
 
 ## Migration Checklist 4.x to 5.2.x
 
-## System
+### System
 * Update to node.js > 8 (if possible install node version manager like https://github.com/tj/n)
 
-## Configuration
+### Configuration
 
 * projectConfig.json rename to projectConfig.js and export data with module.exports = {}
 * projectConfig.js unnecessary remove " around properties and rename all remaining from double to single quotation
@@ -19,7 +22,7 @@ TODO...
 * package.json "gulp-build-framework"-Pfad anpassen (aktuellste Version setzen!): "build-framework": "https://github.com/frontend-framework/build-framework.git#5.x.x",
 => /node_modules löschen und `yarn install` ausführen 
 
-## Folders
+### Folders
 * /app nach /src umbenennen
 * /layout in /layouts umbenennen, /includes nach /layouts kopieren
 * create /src/pages and move all pages (except index.html) there
@@ -27,17 +30,17 @@ TODO...
 * move _icons to /resources and rename it to icons
 * delete gulp folder
 
-## Files
+### Files
 * change all *.html extensions to *.hbs in /src, /pages, /components, /layouts, /layouts/includes, /pages 
 (Mac Renamer: https://mrrsoftware.com/namechanger/) 
 (Windows Renamer: https://gist.github.com/alxbenz/b302fa6cb74d241bdf151a1ea091eebc)
 
-## Template Engine
+### Template Engine
 * rename /src/index.html to /src/index.hbs and copy new indexr source from repo (or edit file if Indexr was customized)
 * rename all /pages to *.hbs and refactor content to match YAML structure and change partial include to HBS, see https://github.com/frontend-framework/frontend-framework/blob/master/src/pages/01layout.01grid.hbs for a demo
 * rename all HTML files from /layouts, /pages, /components into *.hbs
 
-## Search & Replace 
+### Search & Replace 
 
 Order of execution is critical!!!!! But should be able to be used globally (strg+shift+R on src folder [windows]).
 
@@ -105,7 +108,7 @@ INTO: {{ $1 }}
 ```
 
 
-## Handcraft
+### Handcraft
 !!! USE THIS ONLY ON FILE LEVEL, LOCALLY !!!
 
 * /pages/*.hbs rewrite from Zetzer/JSON to Handlebars/FrontMatter(YAML). See example: https://github.com/frontend-framework/frontend-framework/blob/demo-5.x/src/pages/01layout.01default.hbs 
@@ -141,15 +144,15 @@ $1 = $2
 !!! HANDLE WITH CARE !!!
 
 
-## Scripts
+### Scripts
 
-## SASS
+### SASS
 
-## Troubleshooting
+### Troubleshooting
 * YAML description can not contain ':'
 
-## Noticable differences between 4.x and 5.x
-### passing variables
+### Noticable differences between 4.x and 5.x
+#### passing variables
 BS Templates pass variables automatically downwards. This may lead to some unwanted behaviour. When nesting components like accordions / tabs the variables must be unique. 
 
 
