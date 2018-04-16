@@ -77,30 +77,26 @@ title: index
     <div class="row">
         <div class="col-sm-8">
 			{{#each data.indexr}}
-				{{#bioCompare this.attributes.title '!==' 'index'}}
-					{{#if this.newSection}}
-						<h2 class="anchor capitalize" id="category{{this.priority}}">{{this.currentCategory}}</h2>
+				{{#if this.newSection}}
+					<h2 class="anchor capitalize" id="category{{this.priority}}">{{this.currentCategory}}</h2>
+				{{/if}}
+				<h4><a href="{{this.parsedFile.name}}.html">{{bioDef this.attributes.title this.parsedFile.name}}</a>
+					{{#if this.attributes.deprecated}}
+						<mark><em>deprecated</em></mark>
 					{{/if}}
-					<h4><a href="{{this.parsedFile.name}}.html">{{bioDef this.attributes.title this.parsedFile.name}}</a>
-						{{#if this.attributes.deprecated}}
-							<mark><em>deprecated</em></mark>
-						{{/if}}
-					</h4>
-					{{#if this.attributes.description}}
-						<p>{{this.attributes.description}}</p>
-					{{/if}}
-				{{/bioCompare}}
+				</h4>
+				{{#if this.attributes.description}}
+					<p>{{this.attributes.description}}</p>
+				{{/if}}
 			{{/each}}
         </div>
         <div class="col-sm-4">
             <h2 class="anchor">Categories</h2>
             <ul>
 				{{#each data.indexr}}
-					{{#bioCompare this.attributes.title '!==' 'index'}}
-						{{#if this.newSection}}
-							<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
-						{{/if}}
-					{{/bioCompare}}
+					{{#if this.newSection}}
+						<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
+					{{/if}}
 				{{/each}}
             </ul>
         </div>
