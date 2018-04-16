@@ -6,7 +6,7 @@
 * Change `handlebars.helpers.js` according to `https://github.com/biotope/biotope/blob/master/src/resources/js/handlebars.helper.js`
 * Change `index.hbs` according to `https://github.com/biotope/biotope/blob/master/src/index.hbs`
 * Change `browserSupport.hbs` according to `https://github.com/biotope/biotope/blob/master/src/browserSupport.hbs`
-
+* Rename all {{ frontMatter.* }} expressions to {{ data.frontMatter.* }} - mostly used in layout template as title tag
 
 ## Migration Checklist 4.x to 5.2.x
 
