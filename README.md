@@ -111,8 +111,7 @@ The corresponding pattern file can be found in `/patterns/jquery.typescript.boil
 ### CSS / SASS
 
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
-see https://github.com/virtualidentityag/vi
-Standards/wiki/vi-BEM  
+see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM
 
 ## Development
 
