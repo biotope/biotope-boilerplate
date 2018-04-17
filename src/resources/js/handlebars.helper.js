@@ -14,10 +14,6 @@
 
 	var helpers = {
 
-		foo: function(variable) {
-			return variable + ' bar';
-		}
-
 	};
 
 	for (var helper in helpers) {

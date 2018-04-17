@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{package.title}} | {{package.version}}</title>
+    <title>{{data.package.title}} | {{data.package.version}}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -44,16 +44,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{package.title}} {{package.version}}</a>
+            <a class="navbar-brand" href="#">{{data.package.title}} {{data.package.version}}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-				{{#each templates}}
-					{{#if indexr.category}}
-						<li><a href="#category{{indexr.priority}}" class="capitalize">{{indexr.category}}</a></li>
+			<ul class="nav navbar-nav">
+				{{#each data.indexr}}
+					{{#if this.newSection}}
+						<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
 					{{/if}}
 				{{/each}}
-            </ul>
+			</ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
@@ -66,9 +66,9 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<h1>Browsermatrix of {{package.title}}</h1>
-			{{#if browserSupport.lastUpdate}}
-			<p>Our browser matrix recommendation is based on the browser usage statistics of {{browserSupport.clientName}} from {{browserSupport.lastUpdate}}</p>
+			<h1>Browsermatrix of {{data.package.title}}</h1>
+			{{#if data.browserSupport.lastUpdate}}
+			<p>Our browser matrix recommendation is based on the browser usage statistics of {{data.browserSupport.clientName}} from {{data.browserSupport.lastUpdate}}</p>
 			{{/if}}
 			<p>In general: A distinction is made between a test browser matrix and the matrix of supported browsers.
 				The test browser matrix defines the browsers in which each new component is tested. Each additional browser increases the testing effort for each new component.
@@ -100,7 +100,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				{{#each browserSupport.supportedBrowserMatrix }}
+				{{#each data.browserSupport.supportedBrowserMatrix }}
 					<tr>
 						<td>{{version}}</td>
 						<td>{{os}}</td>
@@ -125,7 +125,7 @@
 				</tr>
 				</thead>
 				<tbody>
-				{{#each browserSupport.testBrowserMatrix }}
+				{{#each data.browserSupport.testBrowserMatrix }}
 					<tr>
 						<td>{{version}}</td>
 						<td>{{os}}</td>
