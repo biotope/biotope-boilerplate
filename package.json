@@ -45,6 +45,6 @@
     "yarn": ">=1.4.0"
   },
   "resolutions": {
-    "gulp-sass/node-sass": "4.7.2"
+    "@biotope/build/gulp-sass/node-sass": "4.7.2"
   }
 }
