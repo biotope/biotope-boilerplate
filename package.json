@@ -20,9 +20,11 @@
     "@biotope/resource-loader": "^1.3.0",
     "@types/jquery": "2.0.48",
     "@types/modernizr": "3.5.1",
+    "@webcomponents/webcomponentsjs": "^1.2.0",
     "breakpoint-sass": "2.7.1",
     "enquire": "https://github.com/WickyNilliams/enquire.js.git#v2.1.6",
     "handlebars": "4.0.11",
+    "hyperhtml": "^2.10.0",
     "jQuery.DebouncedResize": "https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2",
     "jquery": "3.3.1",
     "jquery-base": "https://github.com/vi-plugins/jquery-base.git#1.0.0",
@@ -34,7 +36,7 @@
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "5.3.0",
+    "@biotope/build": "5.3.1",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",

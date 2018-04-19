@@ -25,6 +25,15 @@
 
 	biotope.configuration.set('initCore', function () {
 
+		// Load web component scripts
+		var webComponents = {};
+		$('[data-load-web-component]').each(function() {
+			webComponents[$(this).data('load-web-component')] = true;
+		});
+
+		for(var component in webComponents) {
+			window.loadScriptsWhenReady(component);
+		}
 	});
 
 })(jQuery, window, document);
