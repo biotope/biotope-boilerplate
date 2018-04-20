@@ -6,7 +6,7 @@ export class CustomComponent extends HTMLElement {
 
 	constructor() {
 		super();
-		this.html = hyper.bind(this.attachShadow({mode: 'closed'}));
+		this.html = hyper.bind(this);
 		this.counter = 666;
 	}
 
@@ -22,6 +22,7 @@ export class CustomComponent extends HTMLElement {
 	}
 
 	countUp() {
+		console.log('COUNT_UP');
 		document.dispatchEvent(new CustomEvent('action', { detail: { type: 'COUNT_UP' }}));
 	}
 
