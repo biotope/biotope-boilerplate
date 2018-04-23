@@ -1,6 +1,8 @@
 import {Slider} from './slider';
 import {hyper} from 'hyperhtml/esm';
 import {SliderState} from './interfaces/SliderState';
+import {setEntryState} from '../../state/core.redux';
+
 
 (function () {
 	'use strict';
@@ -13,6 +15,19 @@ import {SliderState} from './interfaces/SliderState';
 		constructor() {
 			super();
 			this.html = hyper.bind(this);
+
+			setEntryState('123456', {
+				headline: 'Foo',
+				previousSlideText: '< Previous',
+				nextSlideText: 'Next >',
+				images: [
+					'https://dummyimage.com/900x300/0000ff/ffffff&text=Slide+1',
+					'https://dummyimage.com/900x300/00ff00/ffffff&text=Slide+2',
+					'https://dummyimage.com/900x300/ff0000/ffffff&text=Slide+3'
+				],
+				showNavigation: true,
+				startWithSlide: 0
+			});
 
 			// Default State
 			this.state = {
