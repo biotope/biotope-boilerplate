@@ -9,5 +9,11 @@ module.exports = {
 			'normalize.css': 'normalize.css',
 			'@webcomponents/webcomponentsjs': ['webcomponents-loader.js', 'custom-elements-es5-adapter.js']
 		}
+	},
+
+	uglify: {
+		ignoreList: [
+			'resources/js/vendor/custom-elements-es5-adapter.js'
+		]
 	}
 };
