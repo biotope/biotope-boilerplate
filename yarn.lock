@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@biotope/build@5.3.1":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@biotope/build/-/build-5.3.1.tgz#22be22dd39f346cee63c3d3e5e7e91678acdd7fb"
+"@biotope/build@5.3.2":
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/@biotope/build/-/build-5.3.2.tgz#52ef4fb450fb47afb12e4548bf12937f78a39d1b"
   dependencies:
     autoprefixer "7.1.6"
     babel-core "6.26.0"
