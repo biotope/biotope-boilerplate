@@ -19,7 +19,6 @@
 		"jquery"
 	],
 	"exclude": [
-		"node_modules",
 		"patterns",
 		"test",
 		"dist",

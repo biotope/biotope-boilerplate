@@ -2,21 +2,22 @@ import {Slider} from './slider';
 import {hyper} from 'hyperhtml/esm';
 import {SliderState} from './interfaces/SliderState';
 import {setEntryState} from '../../state/core.redux';
+import {BiotopeComponent} from '../../core/BiotopeComponent';
+import {registerComponent} from '../../core/registerComponent';
+import {Store} from 'redux';
 
 
-(function () {
-	'use strict';
-
-	class SliderComponent extends HTMLElement {
+registerComponent((store: Store): any =>
+	class SliderComponent extends BiotopeComponent {
 		private html: any;
 		private slider: any;
 		private state: SliderState;
 
 		constructor() {
-			super();
+			super(store);
 			this.html = hyper.bind(this);
 
-			setEntryState('123456', {
+			this.store.dispatch(setEntryState('123456', {
 				headline: 'Foo',
 				previousSlideText: '< Previous',
 				nextSlideText: 'Next >',
@@ -27,7 +28,7 @@ import {setEntryState} from '../../state/core.redux';
 				],
 				showNavigation: true,
 				startWithSlide: 0
-			});
+			}));
 
 			// Default State
 			this.state = {
@@ -88,10 +89,5 @@ import {setEntryState} from '../../state/core.redux';
 				</ul>
             `;
 		}
-	}
-
-	if (!customElements.get('slider-component')) {
-		customElements.define('slider-component', SliderComponent);
-	}
-})();
+	});
 
