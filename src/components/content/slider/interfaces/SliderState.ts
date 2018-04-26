@@ -4,5 +4,6 @@ export interface SliderState {
 	nextSlideText: string,
 	images: string[],
 	showNavigation: boolean,
-	startWithSlide: number
+	startWithSlide: number,
+	currentSlide: number
 }
