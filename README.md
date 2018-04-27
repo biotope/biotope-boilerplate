@@ -123,12 +123,15 @@ run the boilerplate with `yarn start`
 * `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
 * `{{bioInclude 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
 * `{{bioDef variable 'default value'}}` - set a default value for a variable 
-* `{{bioText 500}}` - a filler text with 500 chars
+* `{{bioText count max}}` - a filler text with a variable count of letters and an added variance (max)
 * `{{bioImg width height src}}` - creates image src for generated assets. Example: {{bioImg 300 400 srcName.jpg}} gets to '_assets/generated/srcName_300x400.jpg'
 * `{{#bioCompare left, operator, right, options}}` – block helper to compare two values (left, right) with a variable operator.
 * `{{bioMath left, operator, right, options}}` – allows math operations between two values (left, right) and a variable operator. Example: {{bioMath 10 '+' 15}} returns 25
+* `{{bioCode content}}` – defines a code block to allow curly brackets for other frameworks. Use with {{{{code}}}} {{{{/code}}}} (4 curly brackets for literal string contents)
+* `{{bioStringify object}}` – Convert a JSON/JavaScript Object into a string
 
-@TODO - add all helper functions
+Each intern helper from biotope-build is prefixed with 'bio'.
+Each project specific helper should be prefixed with an abbreviation of the project/client. This leads to a better distinction and prevents from conflicts with variables.
 
 ### 2. Folder structure
 
