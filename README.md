@@ -128,7 +128,8 @@ run the boilerplate with `yarn start`
 * `{{#bioCompare left, operator, right, options}}` – block helper to compare two values (left, right) with a variable operator.
 * `{{bioMath left, operator, right, options}}` – allows math operations between two values (left, right) and a variable operator. Example: {{bioMath 10 '+' 15}} returns 25
 * `{{bioCode content}}` – defines a code block to allow curly brackets for other frameworks. Use with {{{{code}}}} {{{{/code}}}} (4 curly brackets for literal string contents)
-* `{{bioStringify object}}` – Convert a JSON/JavaScript Object into a string
+* `{{bioStringify object}}` – Convert a JSON/JavaScript Object into a string for debugging
+* `{{bioParseJSON data options}}` – block helper to parse a String to JSON for debugging
 
 Each intern helper from biotope-build is prefixed with 'bio'.
 Each project specific helper should be prefixed with an abbreviation of the project/client. This leads to a better distinction and prevents from conflicts with variables.
