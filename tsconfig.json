@@ -8,6 +8,7 @@
 		"sourceMap": true,
 		"suppressImplicitAnyIndexErrors": true,
 		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
 		"target": "ES5"
 	},
 	"typeRoots": [

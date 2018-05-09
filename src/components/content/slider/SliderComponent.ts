@@ -98,3 +98,7 @@ export class SliderComponent extends BiotopeComponent {
             `;
 	}
 }
+
+// if (!customElements.get(componentName)) {
+// 	customElements.define(componentName, component as any);
+// }

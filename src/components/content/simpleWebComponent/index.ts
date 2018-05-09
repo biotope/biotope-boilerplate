@@ -1,13 +1,35 @@
 import {hyper} from 'hyperhtml/esm';
+import {
+	biotopeStateClassDecorator,
+	biotopeStateMethodDecorator,
+	biotopeStatePropertyDecorator
+} from "../../core/biotopeDecorators";
 
+// @biotopeStateClassDecorator({
+// 	store: 'class decorator'
+// })
 export class CustomComponent extends HTMLElement {
 	private html: any;
 	private counter: number;
+
+	// @biotopeStatePropertyDecorator({
+	// 	store: 'property decorator'
+	// })
+	// private state: any;
 
 	constructor() {
 		super();
 		this.html = hyper.bind(this);
 		this.counter = 666;
+
+		this.onStateChange("World", "Hello")
+	}
+
+	@biotopeStateMethodDecorator({
+		store: 'method decorator'
+	})
+	onStateChange(...args: any[]) {
+		console.log('onStateChange', args);
 	}
 
 	connectedCallback() {
