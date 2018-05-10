@@ -1,17 +1,7 @@
 import {Store} from "redux";
 import {setEntryState} from "../state/core.redux";
 import {EntryAction} from "../state/EntryAction";
-
-interface BiotopeStore {
-	lastState: any;
-	store: Store;
-	id: string;
-	triggerOnStateChange?: Function;
-
-	getState(store: Store, id?: string): any;
-	dispatch(state: any): EntryAction;
-	subscribe(store: Store, id: string, triggerOnStateChange: Function): void;
-}
+import {BiotopeStore} from "./BiotopeStore";
 
 export class BiotopeReduxStore implements BiotopeStore {
 	lastState: any;

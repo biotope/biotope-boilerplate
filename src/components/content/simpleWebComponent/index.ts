@@ -1,5 +1,5 @@
 import {hyper} from 'hyperhtml/esm';
-import {BiotopeReduxStore} from "../../core/biotopeDecorators";
+import {BiotopeReduxStore} from "../../core/BiotopeReduxStore";
 import {setEntryState} from "../../state/core.redux";
 
 export class CustomComponent extends HTMLElement {

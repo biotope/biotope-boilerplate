@@ -1,32 +1,31 @@
 import {Store} from "redux";
-import {BiotopeComponent} from "../../core/BiotopeComponent";
 import {SliderState} from "./interfaces/SliderState";
 import {Slider} from "./lib/slider";
 import {hyper} from 'hyperhtml/esm';
 import {setEntryState} from '../../state/core.redux';
 
-export class SliderComponent extends BiotopeComponent {
+export class SliderComponent extends HTMLElement {
 	private html: any;
 	private slider: any;
 	private cache: SliderState;
 
-	constructor(store: Store) {
-		super(store);
+	constructor() {
+		super();
 		this.html = hyper.bind(this);
 
-		this.initStore(this.store, '123456', {
-			headline: 'Foo',
-			previousSlideText: '< Previous',
-			nextSlideText: 'Next >',
-			images: [
-				'https://dummyimage.com/900x300/0000ff/ffffff&text=Slide+1',
-				'https://dummyimage.com/900x300/00ff00/ffffff&text=Slide+2',
-				'https://dummyimage.com/900x300/ff0000/ffffff&text=Slide+3'
-			],
-			showNavigation: true,
-			startWithSlide: 0,
-			currentSlide: 0
-		});
+		// this.initStore(this.store, '123456', {
+		// 	headline: 'Foo',
+		// 	previousSlideText: '< Previous',
+		// 	nextSlideText: 'Next >',
+		// 	images: [
+		// 		'https://dummyimage.com/900x300/0000ff/ffffff&text=Slide+1',
+		// 		'https://dummyimage.com/900x300/00ff00/ffffff&text=Slide+2',
+		// 		'https://dummyimage.com/900x300/ff0000/ffffff&text=Slide+3'
+		// 	],
+		// 	showNavigation: true,
+		// 	startWithSlide: 0,
+		// 	currentSlide: 0
+		// });
 	}
 
 	/*
@@ -44,36 +43,18 @@ export class SliderComponent extends BiotopeComponent {
 
 	slideToNext(e: any) {
 		e.preventDefault();
-		const newState = {
-			...this.cache,
-			currentSlide: this.cache.currentSlide - 1
-		};
-
-		this.store.dispatch(setEntryState('123456', newState));
+		// const newState = {
+		// 	...this.cache,
+		// 	currentSlide: this.cache.currentSlide - 1
+		// };
+        //
+		// this.store.dispatch(setEntryState('123456', newState));
 		this.slider.next();
 	}
 
 	slideToPrevious(e: any) {
 		e.preventDefault();
 		this.slider.prev();
-	}
-
-	initStore(store: Store, id: string, initialState: SliderState) {
-		this.subscribeToStore(store, id);
-		store.dispatch(setEntryState(id, initialState));
-	}
-
-	subscribeToStore(store: Store, id: string) {
-		store.subscribe(() => {
-			const state = store.getState().entries[id];
-			if(state !== this.cache) {
-				this.onStateChange(state);
-			}
-		});
-	}
-
-	onStateChange(state: SliderState) {
-		debugger
 	}
 
 	render() {
