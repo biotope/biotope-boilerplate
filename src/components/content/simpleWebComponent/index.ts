@@ -1,35 +1,43 @@
 import {hyper} from 'hyperhtml/esm';
-import {
-	biotopeStateClassDecorator,
-	biotopeStateMethodDecorator,
-	biotopeStatePropertyDecorator
-} from "../../core/biotopeDecorators";
+import {BiotopeReduxStore} from "../../core/biotopeDecorators";
+import {setEntryState} from "../../state/core.redux";
 
-// @biotopeStateClassDecorator({
-// 	store: 'class decorator'
-// })
 export class CustomComponent extends HTMLElement {
 	private html: any;
 	private counter: number;
-
-	// @biotopeStatePropertyDecorator({
-	// 	store: 'property decorator'
-	// })
-	// private state: any;
+	private uid: string;
+	private store: any;
 
 	constructor() {
 		super();
 		this.html = hyper.bind(this);
 		this.counter = 666;
 
-		this.onStateChange("World", "Hello")
+		// grab some unique ID from somewhere
+		this.uid = '123';
+		this.store = new BiotopeReduxStore(window['biotope'].store, this.uid, this.onStateChange);
+
+		// debugging only
+		console.log(this.store.getState());
+
+		this.store.dispatch(setEntryState(this.uid, {
+			'test': true
+		}));
+
+		this.store.dispatch(setEntryState(this.uid, {
+			'test': true
+		}));
+
+		console.log(this.store.getState());
 	}
 
-	@biotopeStateMethodDecorator({
-		store: 'method decorator'
-	})
-	onStateChange(...args: any[]) {
-		console.log('onStateChange', args);
+	onStateChange(state: any, lastState: any) {
+		console.log('onStateChange', state, lastState);
+		// this.render(state);
+	}
+
+	getUid() {
+		return this.uid;
 	}
 
 	connectedCallback() {

@@ -1,45 +1,45 @@
-// TODO store should be some Store adapter type and not directly bound to Redux or any other state management storage
-export interface biotopeStateOptions {
-	store: any,
-	key?: string
+import {Store} from "redux";
+import {setEntryState} from "../state/core.redux";
+import {EntryAction} from "../state/EntryAction";
+
+interface BiotopeStore {
+	lastState: any;
+	store: Store;
+	id: string;
+	triggerOnStateChange?: Function;
+
+	getState(store: Store, id?: string): any;
+	dispatch(state: any): EntryAction;
+	subscribe(store: Store, id: string, triggerOnStateChange: Function): void;
 }
 
-// might be something like jsonLdToState decorator
-export const biotopeStateClassDecorator = (param1: biotopeStateOptions) => {
-    return (target: Function) => {
-        console.log('param1', param1);
-        console.log('target', target);
-    };
-};
+export class BiotopeReduxStore implements BiotopeStore {
+	lastState: any;
 
-// this decorator is bound directly to the state property inside a web component
-export const biotopeStatePropertyDecorator = (param: biotopeStateOptions) => {
-	return (target: any, key: string) => {
-		console.log('param', param);
-		console.log('target', target);
-		console.log('key', key);
-	};
-};
+	constructor(
+		public store: Store,
+		public id: string,
+		public triggerOnStateChange?: Function
+	) {
+		this.subscribe(store, id, triggerOnStateChange);
+	}
 
-export const biotopeStateMethodDecorator = (param: biotopeStateOptions) => {
-	return function (target: any, key: string, descriptor: PropertyDescriptor) {
-		console.log('param', param);
-		console.log('target', target);
-		console.log('key', key);
-		console.log('descriptor', descriptor);
+	getState(store: Store, id?: string): any {
+		const state = this.store.getState();
+		return id ? state.entries[id] : state;
+	}
 
-		const oldValue = descriptor.value;
+	dispatch(state: any): EntryAction {
+		return this.store.dispatch(setEntryState(this.id, state));
+	}
 
-		descriptor.value = function() {
-			console.log(`Calling "${key}" with`, arguments,target);
+	subscribe(store: Store, id: string, triggerOnStateChange: Function) {
+		store.subscribe(() => {
+			const state = this.getState(store, id);
 
-			// Executing the original function interchanging the arguments
-			let value = oldValue.apply(null, [arguments[1], arguments[0]]);
-
-			//returning a modified value
-			return value + "; This is awesome";
-		};
-
-		return descriptor;
-	};
+			if (triggerOnStateChange) {
+				triggerOnStateChange(state, this.lastState);
+			}
+		});
+	}
 }
