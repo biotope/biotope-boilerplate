@@ -1,17 +1,4 @@
----
-# These values are used for creating the index
-# It is also possible to use these inside the partials via frontMatter.name
-
-title: Structural Component Demo
-description: A demo to show the composition of an accordion component
-
----
-
-{{!-- DEV-Notes:
-	specify the layout as the main partial
-	inject the content via contentMain variable
---}}
-
-{{> layouts/layout.default
-	contentMain="components/accordion/scaffolding/accordionScaffolding"
+--- # These values are used for creating the index # It is also possible to use these inside the partials via frontMatter.name
+title: Structural Component Demo description: A demo to show the composition of an accordion component --- {{!-- DEV-Notes:
+specify the layout as the main partial inject the content via contentMain variable --}} {{> layouts/layout.default contentMain="components/accordion/scaffolding/accordionScaffolding"
 }}

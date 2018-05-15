@@ -1,18 +1,18 @@
-
 {
 	"panels": [
 		{
 			"panel": "components/accordion/includes/panel",
-			"headline": "Panel 1 headline",
+			"headline": "Panel 1 headlineQQQQQ",
 			"panelContext": [
 				{
 					"component": "components/headlineH1/headline.h1.overline",
 					"headline": "Content Headline from hbs file"
 				},
 				{
-					"component": "components/text/text",
-					"text": "Text Content from hbs file for panel 1. Lorem Ipsum Dolor sit amet.",
-					"markup": "<p style=\"color: green;\">some text</p>"
+					"component": "components/text/texxt",
+					"text":
+						"Text Content from hbs file for panel 1. Lorem Ipsum Dolor sit amet.",
+					"markup": "<p style=\\\"color: green;\\\">some text</p>"
 				}
 			]
 		},

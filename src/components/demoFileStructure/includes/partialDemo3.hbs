@@ -1,8 +1,0 @@
-<!-- partial block with lookup helper -->
-<div style="border: 1px dashed #0f0; padding: 10px;">
-	<h3>third partial with lookup helper</h3>
-
-	{{#each this.childContext}}
-		{{bioInclude (lookup . 'partial') childContext=this.childContext }}
-	{{/each}}
-</div>

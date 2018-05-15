@@ -1,12 +1,10 @@
-<h1>Accordion with multiple panels</h1>
-
+<h1>Accordion with multiple pane asdfals!!</h1>
 <div class="section">
 	<section>
 		<div class="row row--reducedWidth">
+			<h1>anither</h1>
 			<div class="col">
-				{{bioInclude 'components/accordion/accordion'
-						  json='data.components.accordion.scaffolding.accordionVariant1'
-				}}
+				{{bioInclude 'components/accordion/accordion' json='data.components.accordion.scaffolding.accordionVariant1' }}
 			</div>
 		</div>
 	</section>
@@ -15,10 +13,27 @@
 <div class="section">
 	<section>
 		<div class="row row--reducedWidth">
+			<h1>anither</h1>
 			<div class="col">
-				{{bioInclude 'components/accordion/accordion'
-						  json='data.components.accordion.scaffolding.accordionVariant2'
-				}}
+				{{bioInclude 'components/accordion/accordion' panels=data.components.accordion.scaffolding.accordionVariant1.panels }}
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			<h1>anither</h1>
+			<div class="col">
+				{{bioInclude 'components/accordion/accordion' object='{ "panels": [ { "panel": "components/accordion/includes/panel", "headline":
+				"Panel 1 headlines!!!!", "panelContext": [ { "component": "components/headlineH1/headline.h1.overline", "headline": "Content
+				Headline from hbs file" }, { "component": "components/text/text", "text": "Text Content from hbs file for panel 1. Lorem
+				Ipsum Dolor sit amet.", "markup": "
+				<p>some text</p>" } ] }, { "headline": "Panel 2 headline", "panel": "components/accordion/includes/panel2", "panelContext":
+				[ { "component": "components/headlineH1/headline.h1.overline", "headline": "Content Headline Panel 2 from hbs file" }
+				] }, { "headline": "Panel 3 headline", "classVariant": "accordion__panel--green", "panel": "components/accordion/includes/panel",
+				"panelContext": [ { "component": "components/text/text" } ] } ] }' }}
 			</div>
 		</div>
 	</section>
