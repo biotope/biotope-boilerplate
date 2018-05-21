@@ -7,6 +7,15 @@
 3. Update State (by Attributes / JSON-LD / Fetch API / Headless CMS & SPA) 
 4. Render Component 
 
+## Lifecycle 
+
+- document.ready
+- customElements.define
+- store.setState
+- store.getState
+- render
+
+**Missing Link: Unique ID of component ?!?!?**
 
 ## Scenarios
 
