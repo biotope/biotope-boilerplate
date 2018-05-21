@@ -1,4 +1,4 @@
-import {SimpleComponent} from './index';
+import {SimpleComponent} from './SimpleComponent';
 import {AttributeToState} from '../../core/AttributeToState';
 
 class SimpleComponentFromAttributes extends SimpleComponent {
