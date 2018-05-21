@@ -3,7 +3,6 @@ import {setEntryState} from "../state/core.redux";
 import {EntryAction} from "../state/EntryAction";
 import {BiotopeStore, BiotopeStoreConfiguration} from "./BiotopeStore";
 
-
 export class BiotopeReduxStore implements BiotopeStore {
 	lastState: any;
 	config: BiotopeStoreConfiguration
