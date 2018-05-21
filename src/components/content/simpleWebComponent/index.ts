@@ -2,7 +2,7 @@ import {hyper} from 'hyperhtml/esm';
 import {BiotopeReduxStore} from "../../core/BiotopeReduxStore";
 import {setEntryState} from "../../state/core.redux";
 
-export class CustomComponent extends HTMLElement {
+export class SimpleComponent extends HTMLElement {
 	private html: any;
 	private counter: number;
 	private uid: string;
@@ -15,7 +15,11 @@ export class CustomComponent extends HTMLElement {
 
 		// grab some unique ID from somewhere
 		this.uid = '123';
-		this.store = new BiotopeReduxStore(window['biotope'].store, this.uid, this.onStateChange);
+		this.store = new BiotopeReduxStore({
+			store: window['biotope'].store,
+			componentId: this.uid,
+			triggerOnStateChange: this.onStateChange
+		});
 
 		// debugging only
 		console.log(this.store.getState());
@@ -64,6 +68,6 @@ export class CustomComponent extends HTMLElement {
 	}
 }
 
-if (!customElements.get('custom-component')) {
-	customElements.define('custom-component', CustomComponent);
+if (!customElements.get('simple-component')) {
+	customElements.define('simple-component', SimpleComponent);
 }

@@ -1,11 +1,15 @@
 import {Store} from "redux";
 import {EntryAction} from "../state/EntryAction";
 
+export interface BiotopeStoreConfiguration {
+	store: Store,
+	componentId: string,
+	triggerOnStateChange?: Function
+}
+
 export interface BiotopeStore {
 	lastState: any;
-	store: Store;
-	id: string;
-	triggerOnStateChange?: Function;
+	config: BiotopeStoreConfiguration;
 
 	getState(store: Store, id?: string): any;
 	dispatch(state: any): EntryAction;
