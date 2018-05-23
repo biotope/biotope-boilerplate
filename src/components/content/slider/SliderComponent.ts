@@ -58,25 +58,25 @@ export class SliderComponent extends HTMLElement {
 	}
 
 	render() {
-		const state = this.store.getState().entries['123456'];
-		return this.html`
-				<h1>${state.headline}</h1>
-                <div class="vjslider">
-                	${state.images.map((url: any) => ` <div class="vjslider__slide"><img src=${url} alt=""></div>`)}
-				</div>
-				<ul class="sliderNavigation">
-					<li class="sliderNavigation__element">
-							<button class="js-prev" onclick=${(e:any) => {this.slideToPrevious(e)}}>
-							${state.previousSlideText}
-						</button>
-					</li>
-					<li class="sliderNavigation__element">
-						<button class="js-next" onclick=${(e:any) => {this.slideToNext(e)}}>
-							${state.nextSlideText}
-						</button>
-					</li>
-				</ul>
-            `;
+		// const state = {};// this.store.getState().entries['123456'];
+		// return this.html`
+		// 		<h1>${state.headline}</h1>
+        //         <div class="vjslider">
+        //         	${state.images.map((url: any) => ` <div class="vjslider__slide"><img src=${url} alt=""></div>`)}
+		// 		</div>
+		// 		<ul class="sliderNavigation">
+		// 			<li class="sliderNavigation__element">
+		// 					<button class="js-prev" onclick=${(e:any) => {this.slideToPrevious(e)}}>
+		// 					${state.previousSlideText}
+		// 				</button>
+		// 			</li>
+		// 			<li class="sliderNavigation__element">
+		// 				<button class="js-next" onclick=${(e:any) => {this.slideToNext(e)}}>
+		// 					${state.nextSlideText}
+		// 				</button>
+		// 			</li>
+		// 		</ul>
+        //     `;
 	}
 }
 

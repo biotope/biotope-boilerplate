@@ -9,6 +9,11 @@ export class BiotopeReduxStore implements BiotopeStore {
 
 	constructor(config: BiotopeStoreConfiguration) {
 		this.config = config;		
+
+		if(!this.config.componentId) {
+			this.config.componentId = this.generateUniqueId();
+		}
+
 		this.subscribe(
 			this.config.store, 
 			this.config.componentId, 
@@ -16,22 +21,36 @@ export class BiotopeReduxStore implements BiotopeStore {
 		);
 	}
 
-	getState(store: Store, id?: string): any {
+	getState(store: Store, componentId?: string): any {
 		const state = this.config.store.getState();
-		return id ? state.entries[id] : state;
+		return componentId ? state.entries[componentId] : state;
 	}
 
 	dispatch(state: any): EntryAction {
 		return this.config.store.dispatch(setEntryState(this.config.componentId, state));
 	}
 
-	subscribe(store: Store, id: string, triggerOnStateChange: Function) {
+	subscribe(store: Store, componentId: string, triggerOnStateChange: Function) {
 		store.subscribe(() => {
-			const state = this.getState(store, id);
+			const state = this.getState(store, componentId);
 
-			if (triggerOnStateChange) {
-				triggerOnStateChange(state, this.lastState);
+			if (this.config.triggerOnStateChange) {
+				this.config.triggerOnStateChange(state, this.lastState);
 			}
 		});
+	}
+
+	generateUniqueId(): string {
+		let uniqueId: string;
+
+		do {
+			uniqueId = `uid-${Date.now()}-${Math.floor(Math.random() * 999999999)}`;
+		} while(this.config.store.getState().entries[uniqueId])
+
+		return uniqueId;
+	}
+
+	getComponentId(): string {
+		return this.config.componentId;
 	}
 }

@@ -1,69 +1,52 @@
 import {hyper} from 'hyperhtml/esm';
 import {BiotopeReduxStore} from "../../core/BiotopeReduxStore";
 import {setEntryState} from "../../state/core.redux";
+import { SimpleComponentState } from './SimpleComponentState';
 
 export class SimpleComponent extends HTMLElement {
 	private html: any;
-	private counter: number;
 	private uid: string;
 	private store: any;
 
 	constructor() {
 		super();
 		this.html = hyper.bind(this);
-		this.counter = 666;
-
-		// grab some unique ID from somewhere
-		this.uid = '123';
-		this.store = new BiotopeReduxStore({
-			store: window['biotope'].store,
-			componentId: this.uid,
-			triggerOnStateChange: this.onStateChange
-		});
-
-		// debugging only
-		console.log(this.store.getState());
-
-		this.store.dispatch(setEntryState(this.uid, {
-			'test': true
-		}));
-
-		this.store.dispatch(setEntryState(this.uid, {
-			'test': true
-		}));
-
-		console.log(this.store.getState());
-	}
-
-	onStateChange(state: any, lastState: any) {
-		console.log('onStateChange', state, lastState);
-		// this.render(state);
-	}
-
-	getUid() {
-		return this.uid;
 	}
 
 	connectedCallback() {
-		this.render();
-
-		document.addEventListener('state', (e: any) => {
-			this.counter = e.detail.counter;
-			this.render();
+		this.store = new BiotopeReduxStore({
+			store: window['biotope'].store,
+			componentId: this.uid,
+			triggerOnStateChange: (state: SimpleComponentState, lastState: SimpleComponentState) => this.onStateChange(state, lastState)
 		});
 
-		document.dispatchEvent(new CustomEvent('trigger.state'));
+		this.uid = this.store.getComponentId();
+
+		// TODO add helpers for initial state injection 
+		// JSON-LD
+		// Attributes
+		// Rehydrate
+		
+		this.store.dispatch(setEntryState(this.uid, {
+			counter: 123
+		}));
+		// console.log(this.store.getState());
 	}
 
 	countUp() {
-		console.log('COUNT_UP');
-		document.dispatchEvent(new CustomEvent('action', { detail: { type: 'COUNT_UP' }}));
+		// TODO dispatch COUNT_UP reducer 
+		console.log('dispatch COUNT_UP reducer');
 	}
 
-	render() {
+	onStateChange(state: SimpleComponentState, lastState: SimpleComponentState) {
+		console.log('onStateChange', state, lastState);
+		this.render(state);
+	}
+
+	render(state: SimpleComponentState) {
 		return this.html`
 <button onclick=${this.countUp}>Count Up</button>
-<span>${this.counter}</span>
+<span>${state.counter}</span>
 `;
 	}
 }

@@ -1,5 +1,5 @@
 import {SliderComponent} from './SliderComponent';
-import {registerComponent} from '../../core/registerComponent';
+// import {registerComponent} from '../../core/registerComponent';
 import {Store} from 'redux';
 
-registerComponent((store: Store): any => SliderComponent);
+// registerComponent((store: Store): any => SliderComponent);
