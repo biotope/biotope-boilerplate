@@ -2,7 +2,6 @@ import {Store} from "redux";
 import {SliderState} from "./interfaces/SliderState";
 import {Slider} from "./lib/slider";
 import {hyper} from 'hyperhtml/esm';
-import {setEntryState} from '../../state/core.redux';
 
 export class SliderComponent extends HTMLElement {
 	private html: any;

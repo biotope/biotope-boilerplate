@@ -1,4 +1,3 @@
-
 import configureStore from '../../components/state/configureStore';
 
 (function ($, window, document) {
