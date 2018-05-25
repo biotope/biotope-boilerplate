@@ -5,6 +5,7 @@ import SimpleComponentReducerCreator from './SimpleComponent.reducer';
 import {countUp} from './SimpleComponent.actions';
 
 export class SimpleComponent extends HTMLElement {
+	static componentName: string = 'simple-component';
 	private html: any;
 	private uid: string;
 	private storeConnector: BiotopeReduxStoreConnector<SimpleComponentState>;
@@ -49,6 +50,6 @@ export class SimpleComponent extends HTMLElement {
 	}
 }
 
-if (!customElements.get('simple-component')) {
-	customElements.define('simple-component', SimpleComponent);
+if (!customElements.get(SimpleComponent.componentName)) {
+	customElements.define(SimpleComponent.componentName, SimpleComponent);
 }

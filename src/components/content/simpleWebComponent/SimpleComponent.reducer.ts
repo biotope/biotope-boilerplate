@@ -20,7 +20,7 @@ const reducerCreator: (componentId: string) => Reducer = (componentId: string) =
 				case SIMPLE_COMP_ACTION.COUNT_DOWN:
 					return {
 						...state,
-						counter: state.counter + 1
+						counter: state.counter - 1
 					};
 				default:
 					return state;
