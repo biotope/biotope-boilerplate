@@ -73,16 +73,16 @@ Add file paths of files that are needed for the build package. The path must be 
 
 ## Patterns
 
-We use different boilerplates to keep our coding structure as homogenous as possible. 
+We use different boilerplates to keep our code structure as homogeneous as possible. 
 
 ### JavaScript / TypeScript
 
 #### jQuery TypeScript Plugins - Advanced
 
-The boilerplate contains a local demo integration of the VI jQuery Boilerplate. 
-See `src/resources/ts/jquery.plugin.advanced.ts` for a local demo.
+The boilerplate contains a local demo integration of the Biotope jQuery Boilerplate. 
+See [jquery.plugin.advanced.ts](https://github.com/biotope/biotope/blob/demo-5.x/src/resources/ts/jquery.plugin.advanced.ts) in the demo branch for a local demo.
 
-For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
+For more information have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
 
 If you are going to write generic plugins that might be useful in lots of other projects, 
 please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
@@ -93,12 +93,12 @@ For project-use only you can copy the structure into your local `src/resources/t
 #### jQuery TypeScript Plugins - Simple
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-See `src/resources/ts/jquery.plugin.simple.ts` for a local demo.
+See [jquery.plugin.simple.ts](https://github.com/biotope/biotope/blob/demo-5.x/src/resources/ts/jquery.plugin.simple.ts) in the demo branch for a local demo.
 
 It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
 
-The corresponding pattern file can be found in `patterns/jquery.typescript.boilerplate.ts` 
+The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts` 
 
 
 #### Plain and simple jQuery Plugins (legacy way)
