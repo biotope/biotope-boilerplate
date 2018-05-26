@@ -1,0 +1,29 @@
+import {hyper} from 'hyperhtml/esm';
+import {BiotopeReduxStoreConnector} from "../core/BiotopeReduxStoreConnector";
+import {{properCase name}}ReducerCreator from './{{properCase name}}.reducer';
+import { {{properCase name}}State } from './{{properCase name}}.state';
+
+export class {{properCase name}} extends HTMLElement {
+	static componentName = '{{dashCase name}}-component';
+	private html: any;
+	private uid: string;
+	private storeConnector: BiotopeReduxStoreConnector<{{name}}State>;
+
+	constructor() {
+		super();
+		this.html = hyper.bind(this);
+	}
+
+	connectedCallback() {
+		this.storeConnector = new BiotopeReduxStoreConnector<{{name}}State>({
+			store: window['biotope'].store,
+			componentId: this.uid,
+			reducerCreator: {{properCase name}}ReducerCreator,
+			triggerOnStateChange: (state: {{properCase name}}State, lastState: {{properCase name}}State) => {}
+		});
+		this.uid = this.storeConnector.getComponentId();
+	}
+}
+if (!customElements.get({{properCase name}}.componentName)) {
+	customElements.define({{properCase name}}.componentName, {{properCase name}});
+}

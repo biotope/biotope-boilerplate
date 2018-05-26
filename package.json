@@ -11,6 +11,7 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
+    "generate": "plop",
     "test:travis": "mocha test/travis/build.js",
     "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
@@ -43,7 +44,8 @@
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",
-    "mocha": "5.0.1"
+    "mocha": "5.0.1",
+    "plop": "^2.0.0"
   },
   "engines": {
     "node": ">=8.9.0",

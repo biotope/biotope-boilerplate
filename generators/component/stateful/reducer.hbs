@@ -1,0 +1,17 @@
+import {Reducer} from 'redux';
+import {ComponentAction} from '../state/ComponentAction';
+import {createInitial{{properCase name}}State, {{properCase name}}State} from "./{{properCase name}}.state";
+
+const reducerCreator: (componentId: string) => Reducer = (componentId: string) =>
+	(state: {{properCase name}}State = createInitial{{properCase name}}State(), action: ComponentAction): {{properCase name}}State => {
+		if (action.id == componentId) {
+			switch (action.type) {
+				default:
+				return state;
+			}
+		} else {
+			return state;
+		}
+};
+
+export default reducerCreator;
