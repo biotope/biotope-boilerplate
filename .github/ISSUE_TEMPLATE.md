@@ -1,10 +1,10 @@
-## Expected Behavior
+## Expected behavior
 
 
-## Actual Behavior
+## Actual behavior
 
 
-## Steps to Reproduce the Problem
+## Steps to reproduce
 
   1.
   2.
