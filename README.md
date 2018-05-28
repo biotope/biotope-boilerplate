@@ -105,7 +105,7 @@ The corresponding pattern file can be found in `/patterns/jquery.typescript.boil
 
 That is the plain legacy jQuery Plugin boilerplate.  
 
-The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts`
+The corresponding pattern file can be found in `/patterns/jquery.boilerplate.ts`
 
 
 ### CSS / SASS
