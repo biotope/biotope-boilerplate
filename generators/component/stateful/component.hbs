@@ -7,7 +7,7 @@ export class {{properCase name}} extends HTMLElement {
 	static componentName = '{{dashCase name}}-component';
 	private html: any;
 	private uid: string;
-	private storeConnector: BiotopeReduxStoreConnector<{{name}}State>;
+	private storeConnector: BiotopeReduxStoreConnector<{{properCase name}}State>;
 
 	constructor() {
 		super();
@@ -15,7 +15,7 @@ export class {{properCase name}} extends HTMLElement {
 	}
 
 	connectedCallback() {
-		this.storeConnector = new BiotopeReduxStoreConnector<{{name}}State>({
+		this.storeConnector = new BiotopeReduxStoreConnector<{{properCase name}}State>({
 			store: window['biotope'].store,
 			componentId: this.uid,
 			reducerCreator: {{properCase name}}ReducerCreator,
