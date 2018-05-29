@@ -33,8 +33,7 @@
     "jquery-migrate": "3.0.1",
     "normalize.css": "8.0.0",
     "redux": "^4.0.0",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.3.0",
     "susy": "2.2.12",
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
