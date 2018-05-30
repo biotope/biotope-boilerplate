@@ -12,6 +12,8 @@
 
 ## Specifications
 
-  - Version:
-  - Platform:
-  - Subsystem:
+  - Biotope Version:
+  - Node Version:
+  - Yarn Version:
+  - Operating System:
+  - Browser & Version:
