@@ -1,4 +1,4 @@
-import configureStore from '../../components/state/configureStore';
+import configureStore from './state/configureStore';
 
 (function ($, window, document) {
 	'use strict';

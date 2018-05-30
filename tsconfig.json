@@ -1,16 +1,21 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"lib": ["esnext", "dom"],
+		"jsx": "React",
 		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"noImplicitAny": true,
 		"sourceMap": true,
 		"suppressImplicitAnyIndexErrors": true,
 		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true,
 		"target": "ES5"
 	},
+	"awesomeTypescriptLoaderOptions": {
+		"useCache": true,
+		"reportFiles": [
+			"src/**/*.{ts,tsx}"
+		]
+    },
 	"typeRoots": [
 		"node_modules/@types"
 	],
@@ -20,6 +25,7 @@
 		"jquery"
 	],
 	"exclude": [
+		"node_modules",
 		"patterns",
 		"test",
 		"dist",
