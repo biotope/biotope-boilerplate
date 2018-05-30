@@ -1,4 +1,3 @@
-import {Store} from "redux";
 import {BiotopeStoreConfiguration, BiotopeStoreConnector} from "./BiotopeStoreConnector";
 import {generateUniqueId} from './generateUniqueId';
 import {injectAsyncReducer} from '../state/injectAsyncReducer';
