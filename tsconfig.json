@@ -10,6 +10,12 @@
 		"allowSyntheticDefaultImports": true,
 		"target": "ES5"
 	},
+	"awesomeTypescriptLoaderOptions": {
+		"useCache": true,
+		"reportFiles": [
+			"src/**/*.{ts,tsx}"
+		]
+    },
 	"typeRoots": [
 		"node_modules/@types"
 	],
