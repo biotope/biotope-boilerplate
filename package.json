@@ -21,17 +21,17 @@
     "@types/jquery": "2.0.48",
     "@types/modernizr": "3.5.1",
     "breakpoint-sass": "2.7.1",
-    "enquire": "https://github.com/WickyNilliams/enquire.js.git#v2.1.6",
+    "enquire.js": "git+https://github.com/WickyNilliams/enquire.js.git#v2.1.6",
     "handlebars": "4.0.11",
-    "jQuery.DebouncedResize": "https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2",
     "jquery": "3.3.1",
-    "jquery-base": "https://github.com/vi-plugins/jquery-base.git#1.0.0",
-    "jquery-debouncedwidth": "https://github.com/vi-plugins/jquery-debouncedwidth.git#v1.1.3",
-    "jquery-events": "https://github.com/vi-plugins/jquery-events.git#1.0.0",
+    "jquery-base": "git+https://github.com/vi-plugins/jquery-base.git#1.0.0",
+    "jquery-debouncedwidth": "git+https://github.com/vi-plugins/jquery-debouncedwidth.git#v1.1.3",
+    "jquery-events": "git+https://github.com/vi-plugins/jquery-events.git#1.0.0",
     "jquery-migrate": "3.0.1",
+    "jquery.debouncedresize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2",
     "normalize.css": "8.0.0",
     "susy": "2.2.12",
-    "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
+    "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
     "@biotope/build": "5.3.0",

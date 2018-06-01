@@ -7,7 +7,7 @@ module.exports = {
 			'@biotope/resource-loader': 'src/resourceLoader.js',
 			'jquery': 'dist/jquery.js',
 			'jquery-migrate': 'dist/jquery-migrate.js',
-			'enquire': 'dist/enquire.js',
+			'enquire.js': 'dist/enquire.js',
 			'jquery-debouncedwidth': 'js/jquery.debouncedwidth.js',
 			'normalize.css': 'normalize.css',
 			'handlebars': 'dist/handlebars.runtime.js'
