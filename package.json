@@ -1,7 +1,7 @@
 {
   "name": "biotope",
   "title": "Biotope - The Frontend Ecosystem Framework",
-  "version": "5.3.0",
+  "version": "5.4.0",
   "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@biotope/resource-loader": "^1.3.0",
-    "@types/jquery": "2.0.48",
+    "@biotope/configuration": "^2.0.2",
+    "@types/jquery": "3.3.2",
     "@types/modernizr": "3.5.1",
     "breakpoint-sass": "2.7.1",
     "enquire.js": "git+https://github.com/WickyNilliams/enquire.js.git#v2.1.6",
@@ -30,11 +31,11 @@
     "jquery-migrate": "3.0.1",
     "jquery.debouncedresize": "git+https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2",
     "normalize.css": "8.0.0",
-    "susy": "2.2.12",
+    "susy": "2.2.14",
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "5.3.0",
+    "@biotope/build": "^5.3.0",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",
@@ -43,8 +44,5 @@
   "engines": {
     "node": ">=8.9.0",
     "yarn": ">=1.4.0"
-  },
-  "resolutions": {
-    "@biotope/build/gulp-sass/node-sass": "4.7.2"
   }
 }
