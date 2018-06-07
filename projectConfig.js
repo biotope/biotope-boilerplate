@@ -9,7 +9,7 @@ module.exports = {
 			'jquery-migrate': 'dist/jquery-migrate.js',
 			'enquire': 'dist/enquire.js',
 			'jquery-debouncedwidth': 'js/jquery.debouncedwidth.js',
-			'normalize.css': 'normalize.css',
+			'sanitize.css': 'sanitize.css',
 			'handlebars': 'dist/handlebars.runtime.js'
 		}
 	}
