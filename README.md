@@ -74,16 +74,16 @@ Add file paths of files that are needed for the build package. The path must be 
 
 ## Patterns
 
-We use different boilerplates to keep our coding structure as homogenous as possible. 
+We use different boilerplates to keep our code structure as homogeneous as possible. 
 
 ### JavaScript / TypeScript
 
 #### jQuery TypeScript Plugins - Advanced
 
-The boilerplate contains a local demo integration of the VI jQuery Boilerplate. 
-See `src/resources/ts/jquery.plugin.advanced.ts` for a local demo.
+The boilerplate contains a local demo integration of the Biotope jQuery Boilerplate. 
+See [jquery.plugin.advanced.ts](https://github.com/biotope/biotope/blob/demo-5.x/src/resources/ts/jquery.plugin.advanced.ts) in the demo branch for a local demo.
 
-For more informations have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
+For more information have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
 
 If you are going to write generic plugins that might be useful in lots of other projects, 
 please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
@@ -94,26 +94,25 @@ For project-use only you can copy the structure into your local `src/resources/t
 #### jQuery TypeScript Plugins - Simple
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-See `src/resources/ts/jquery.plugin.simple.ts` for a local demo.
+See [jquery.plugin.simple.ts](https://github.com/biotope/biotope/blob/demo-5.x/src/resources/ts/jquery.plugin.simple.ts) in the demo branch for a local demo.
 
 It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
 
-The corresponding pattern file can be found in `patterns/jquery.typescript.boilerplate.ts` 
+The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts` 
 
 
 #### Plain and simple jQuery Plugins (legacy way)
 
 That is the plain legacy jQuery Plugin boilerplate.  
 
-The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts`
+The corresponding pattern file can be found in `/patterns/jquery.boilerplate.ts`
 
 
 ### CSS / SASS
 
 We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
-see https://github.com/virtualidentityag/vi
-Standards/wiki/vi-BEM  
+see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM
 
 ## Development
 
@@ -124,9 +123,16 @@ run the boilerplate with `yarn start`
 * `{{> partial}}` - include a handlebars partial. Partials are automatically created from components and partial folders. The partials can be *.hbs or *.html. Example: For the file components/foldername/handlebarsfile.html use the partial identifier foldername/handlebarsfile.  
 * `{{bioInclude 'partial'}}` - custom partial helper, allows the use of json data as files or a string 
 * `{{bioDef variable 'default value'}}` - set a default value for a variable 
-* `{{bioText 500}}` - a filler text with 500 chars
+* `{{bioText count max}}` - a filler text with a variable count of letters and an added variance (max)
+* `{{bioImg width height src}}` - creates the image src path for generated assets. This helper only creates the path and the image itself. Example: {{bioImg 300 400 srcName.jpg}} gets to '_assets/generated/srcName_300x400.jpg'
+* `{{#bioCompare left, operator, right, options}}` – block helper to compare two values (left, right) with a variable operator.
+* `{{bioMath left, operator, right, options}}` – allows math operations between two values (left, right) and a variable operator. Example: {{bioMath 10 '+' 15}} returns 25
+* `{{bioCode content}}` – defines a code block to allow curly brackets for other frameworks. Use with {{{{code}}}} {{{{/code}}}} (4 curly brackets for literal string contents)
+* `{{bioStringify object}}` – Convert a JSON/JavaScript Object into a string for debugging
+* `{{bioParseJSON data options}}` – block helper to parse a String to JSON for debugging
 
-@TODO - add all helper functions
+Each intern helper from biotope-build is prefixed with 'bio'.
+Each project specific helper should be prefixed with an abbreviation of the project/client. This leads to a better distinction and prevents from conflicts with variables.
 
 ### 2. Folder structure
 
