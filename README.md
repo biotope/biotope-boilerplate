@@ -1,3 +1,4 @@
+## This is a branch with a few example components to demonstrate the functionality of biotope.
 # biotope
 
 The Frontend Ecosystem Framework
