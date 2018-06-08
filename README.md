@@ -77,41 +77,24 @@ We use different boilerplates to keep our code structure as homogeneous as possi
 
 ### JavaScript / TypeScript
 
-#### jQuery TypeScript Plugins - Advanced
+#### Plain and simple jQuery Plugins
 
-The boilerplate contains a local demo integration of the Biotope jQuery Boilerplate. 
-See [jquery.plugin.advanced.ts](https://github.com/biotope/biotope/blob/demo-5.x/src/resources/ts/jquery.plugin.advanced.ts) in the demo branch for a local demo.
+If you want to write your plugins with plain jQuery you can use the jQuery Plugin boilerplate.  
 
-For more information have a look at the repository: https://github.com/vi-plugins/jquery-boilerplate
+The corresponding pattern file can be found in [/patterns/jquery.boilerplate.js](https://github.com/biotope/biotope-boilerplate/blob/develop/patterns/jquery.boilerplate.js).
 
-If you are going to write generic plugins that might be useful in lots of other projects, 
-please mirror the repository above and add them to our [vi-plugins](https://github.com/vi-plugins) project.
-
-For project-use only you can copy the structure into your local `src/resources/ts/` folder.
-
-
-#### jQuery TypeScript Plugins - Simple
+#### jQuery TypeScript Plugins - Recommended 
 
 The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-See [jquery.plugin.simple.ts](https://github.com/biotope/biotope/blob/demo-5.x/src/resources/ts/jquery.plugin.simple.ts) in the demo branch for a local demo.
+
+The corresponding pattern file can be found in [/patterns/jquery.typescript.boilerplate.ts](https://github.com/biotope/biotope-boilerplate/blob/develop/patterns/jquery.typescript.boilerplate.ts).
 
 It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
 We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
 
-The corresponding pattern file can be found in `/patterns/jquery.typescript.boilerplate.ts` 
-
-
-#### Plain and simple jQuery Plugins (legacy way)
-
-That is the plain legacy jQuery Plugin boilerplate.  
-
-The corresponding pattern file can be found in `/patterns/jquery.boilerplate.ts`
-
-
 ### CSS / SASS
 
-We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the BEM methodology: 
-see https://github.com/virtualidentityag/viFrontendStandards/wiki/vi-BEM
+We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the [BEM](http://getbem.com/naming/) methodology. 
 
 ## Development
 
