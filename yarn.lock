@@ -1293,6 +1293,13 @@ binaryextensions@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-1.0.1.tgz#1e637488b35b58bda5f4774bf96a5212a8c90755"
 
+biotope-world-domination-grid@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/biotope-world-domination-grid/-/biotope-world-domination-grid-1.0.5.tgz#d08a849f1a4191ecb80034f841121a886c78a224"
+  dependencies:
+    breakpoint-sass "2.7.1"
+    susy "2.2.12"
+
 bit-mask@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/bit-mask/-/bit-mask-1.0.1.tgz#d7cf212bde6e2dcc0503faab50941e4eb289a6f5"
@@ -9501,9 +9508,9 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
-susy@2.2.14:
-  version "2.2.14"
-  resolved "https://registry.yarnpkg.com/susy/-/susy-2.2.14.tgz#4551690ff063dd2049197dd8885bae5341a969f8"
+susy@2.2.12:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/susy/-/susy-2.2.12.tgz#644c2441ed00d293287e8d49a016dbf919215953"
 
 svg-pathdata@^1.0.4:
   version "1.0.4"

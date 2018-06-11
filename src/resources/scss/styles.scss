@@ -4,7 +4,7 @@
 @import "settings/settings";
 
 /* functions */
-@import "utilities/functions";
+@import "../../../node_modules/biotope-world-domination-grid/functions";
 
 /* fonts */
 @import "fonts/fonts";
@@ -16,8 +16,8 @@
 
 /* layout */
 @import "layouts/default";
-@import "layouts/section";
-@import "layouts/grid";
+@import "../../../node_modules/biotope-world-domination-grid/sections";
+@import "../../../node_modules/biotope-world-domination-grid/grid";
 
 /* base styles */
 @import "base/margins";
