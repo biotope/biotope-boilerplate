@@ -55,14 +55,6 @@ describe('Expect that', function() {
 		// check existence
 		test.fileExistsAndNotEmpty(config.global.dist+'/index.html');
 		test.fileExistsAndNotEmpty(config.global.dist+'/01layout.01grid.html');
-		test.fileExistsAndNotEmpty(config.global.dist+'/90demo.01icons.html');
-		// test.fileExistsAndNotEmpty(config.global.dist+'/90demo.02handlebars.html');
-
-		// check content
-		// test.fileContentEquals(config.global.dist+'/index.html', './test/travis/fixtures/html/index.html');
-		// test.fileContentEquals(config.global.dist+'/01layout.01default.html', './test/travis/fixtures/html/01layout.01default.html');
-		// test.fileContentEquals(config.global.dist+'/90demo.01icons.html', './test/travis/fixtures/html/90demo.01icons.html');
-		// test.fileContentEquals(config.global.dist+'/90demo.02handlebars.html', './test/travis/fixtures/html/90demo.02handlebars.html');
 
 	});
 
@@ -81,15 +73,6 @@ describe('Expect that', function() {
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/js/scripts.head.all.min.js');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/js/vendor/modernizr.js');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/js/handlebars.helper.js');
-		// test.fileExistsAndNotEmpty(config.global.dist+'/resources/js/handlebars.templates.js');
-		// test.fileExistsAndNotEmpty(config.global.dist+'/resources/react/jsxDemo.js');
-		// test.fileExistsAndNotEmpty(config.global.dist+'/resources/react/tsxDemo.js');
-		// test.fileExistsAndNotEmpty(config.global.dist+'/resources/ts/jquery.plugin.simple.js');
-		// test.fileExistsAndNotEmpty(config.global.dist+'/resources/ts/jquery.plugin.advanced.js');
-
-		// check contents
-		// test.fileContentEquals(config.global.dist+'/resources/js/scripts.all.min.js', './test/travis/fixtures/js/scripts.all.min.js');
-		// test.fileContentEquals(config.global.dist+'/resources/js/scripts.head.all.min.js', './test/travis/fixtures/js/scripts.head.all.min.js');
 
 	});
 
@@ -98,10 +81,6 @@ describe('Expect that', function() {
 		// check existence
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/css/styles.all.min.css');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/css/styles.print.min.css');
-
-		// check contents
-		// test.fileContentEquals(config.global.dist+'/resources/css/styles.all.min.css', './test/travis/fixtures/css/styles.all.min.css');
-		// test.fileContentEquals(config.global.dist+'/resources/css/styles.print.min.css', './test/travis/fixtures/css/styles.print.min.css');
 
 	});
 
