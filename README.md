@@ -77,7 +77,7 @@ We use different boilerplates to keep our code structure as homogeneous as possi
 
 ### JavaScript / TypeScript
 
-#### Plain and simple jQuery Plugins
+#### Plain jQuery Plugins
 
 If you want to write your plugins with plain jQuery you can use the jQuery Plugin boilerplate.  
 
@@ -94,7 +94,7 @@ We also use the possibility to compile to ES5 or ES6. Depending on the projects 
 
 ### CSS / SASS
 
-We compile the CSS stylesheets with a SASS compiler. To organize the code as efficient as possible we use the [BEM](http://getbem.com/naming/) methodology. 
+We compile the CSS stylesheets with a SASS compiler. We use the [BEM](http://getbem.com/naming/) methodology to ensure that the component based approach is also reflected in the css (sass) code we write. 
 
 ## Development
 
