@@ -19,6 +19,10 @@
 
 </details>
 
+## 5.4.0 - 2018-03-08
+### Changed
+- Switched from normalize.css to sanitize.css
+
 ## 5.2.0 - 2018-03-08
 ### Added
 - Added browserSupport page
