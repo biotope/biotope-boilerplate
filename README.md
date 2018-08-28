@@ -1,3 +1,11 @@
+
+![GitHub tag](https://img.shields.io/github/tag/biotope/biotope-boilerplate.svg) ![GitHub issues](https://img.shields.io/github/issues-raw/biotope/biotope-boilerplate.svg) ![GitHub PRs](https://img.shields.io/github/issues-pr-raw/biotope/biotope-boilerplate.svg) 
+![GitHub](https://img.shields.io/github/license/biotope/biotope-boilerplate.svg) 
+![GitHub commit activity the past week, 4 weeks, year](https://img.shields.io/github/commit-activity/y/biotope/biotope-boilerplate.svg)
+
+
+
+
 # Biotope is a framework which enables you to develop scalabale, platform-agnostic frontend component ecosystems
 
 ## Definition Ecosystem vs. Ecosystem Framework:
