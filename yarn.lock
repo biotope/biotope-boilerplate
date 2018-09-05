@@ -2987,10 +2987,6 @@ enhanced-resolve@^4.0.0:
     memory-fs "^0.4.0"
     tapable "^1.0.0"
 
-"enquire.js@git+https://github.com/WickyNilliams/enquire.js.git#v2.1.6":
-  version "2.1.6"
-  resolved "git+https://github.com/WickyNilliams/enquire.js.git#2f339f1e29b2b6676f541e64b770635075af494d"
-
 entities@1.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.0.0.tgz#b2987aa3821347fcde642b24fdfc9e4fb712bf26"
@@ -5743,26 +5739,6 @@ jpegtran-bin@^3.0.0:
     bin-build "^2.0.0"
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
-
-"jquery-base@git+https://github.com/vi-plugins/jquery-base.git#1.0.0":
-  version "1.0.0"
-  resolved "git+https://github.com/vi-plugins/jquery-base.git#f55ed74c60227022b8ec21d1679075d0ef22dd53"
-
-"jquery-debouncedwidth@https://github.com/vi-plugins/jquery-debouncedwidth.git#v1.1.3":
-  version "1.1.3"
-  resolved "https://github.com/vi-plugins/jquery-debouncedwidth.git#5168afa9b16cd66798e44e95dacf6c5ce542ea43"
-
-"jquery-events@git+https://github.com/vi-plugins/jquery-events.git#1.0.0":
-  version "1.0.0"
-  resolved "git+https://github.com/vi-plugins/jquery-events.git#d0d76de55fcf88b89be7d8068670a87c9b0c204c"
-
-jquery-migrate@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-3.0.1.tgz#141de3abfe6d301baaa4130b0ec7b9a839845e72"
-
-"jquery.debouncedresize@https://github.com/virtualidentityag/jQuery.DebouncedResize.git#1.0.2":
-  version "1.0.2"
-  resolved "https://github.com/virtualidentityag/jQuery.DebouncedResize.git#b8afa65a779d5a1eb245c6e21f1768b82e1fe106"
 
 jquery@3.3.1:
   version "3.3.1"
