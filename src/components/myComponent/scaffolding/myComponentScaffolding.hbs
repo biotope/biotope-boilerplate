@@ -1,0 +1,37 @@
+<!--
+    div section
+        section
+            row
+                col 12 wide
+                    -> include myComponent 
+
+            row
+                col 4wide
+                    -> include myComponent 
+                col 4wide
+                    -> include myComponent
+                col 4wide
+                    -> include myComponent
+
+    -->
+<div class="section">
+    <section>
+        <div class="row row--reducedWidth">
+            {{bioInclude 'components/myComponent/myComponent'}}
+        </div>
+        
+        <div class="row row--reducedWidth">
+            <div class="col--medium-4">
+               {{bioInclude 'components/myComponent/myComponent'}}
+            </div>
+            <div class="col--medium-4">
+                I'm Cláudia
+            </div>
+            <div class="col--medium-4">
+                Bye World!!!
+            </div>
+        </div>
+    </section>
+</div>
+
+
