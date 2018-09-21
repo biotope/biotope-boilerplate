@@ -1,0 +1,23 @@
+$font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$primaryColor: orange;
+
+
+body {
+    font-family: $font;
+    font-size: 12px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+.myComponent {
+    &__title{
+        color: $primaryColor;
+    }
+}
