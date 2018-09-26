@@ -17,25 +17,6 @@ $char: "\<%= glyph.codePoint %>";
     @return $char;
 }
 
-@mixin icon-special-treatment($filename) {
-    // add default modifications to specific icons here
-
-    //@if $filename == "chevron-right" {
-    //    font-size: 40%;
-    //}
-}
-
-@mixin icon($filename, $extend: false, $special: true) {
-    @if $extend {
-        @include icon-styles;
-    }
-    content: icon-char($filename);
-
-    @if $special {
-        @include icon-special-treatment($filename);
-    }
-}
-
 [class^="icon-"], [class*=" icon-"] {
     &:before {
         @include icon-styles;
