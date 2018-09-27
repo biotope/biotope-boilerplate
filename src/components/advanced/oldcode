@@ -1,0 +1,21 @@
+				const defaultVar = Array.prototype.slice.call(document.getElementsByClassName('tabMenu__tab')[0].classList).slice(0,1);
+				if (document.getElementById('tabMenu__tab').classList.contains(themes[themes.length-1])){
+					document.getElementById('tabMenu__tab').removeAttribute('class');
+					document.getElementById('tabMenu__tab').classList.add(defaultVar[0]);
+				} else {
+					if (document.getElementById('tabMenu__tab').classList[1] == undefined){
+						document.getElementById('tabMenu__tab').classList.add(themes[0]);
+					} else {
+						const hasClass = document.getElementById('tabMenu__tab').classList[1];
+						const index = themes.indexOf(hasClass);
+						if(themes.includes(hasClass)) {
+							document.getElementById('tabMenu__tab').removeAttribute('class');
+							document.getElementById('tabMenu__tab').classList.add(defaultVar[0]);
+							document.getElementById('tabMenu__tab').classList.add(themes[index+1]);
+						} else {
+							document.getElementById('tabMenu__tab').removeAttribute('class');
+							document.getElementById('tabMenu__tab').classList.add(defaultVar[0]);
+							document.getElementById('tabMenu__tab').classList.add(themes[1])
+						}
+					}
+				}

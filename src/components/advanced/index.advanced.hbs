@@ -1,0 +1,24 @@
+<div 
+  class="tabMenu"
+  data-resources="[{paths:['components/advanced/styles/index.advanced.css', 'components/advanced/ts/index.advanced.js']}]"
+  data-init="(function($elm) { $elm.tabMenuComponent() })"
+>
+
+  <div id="tabMenu__tab" class="tabMenu__tab">
+    {{#each tabs}}
+    <div class="tabMenu__link {{tabClass}}">{{title}}</div>
+    {{/each}}
+  </div>
+
+  <div class="tabMenu__contentWrap">
+  {{#each tabs}}
+  <div class="tabMenu__content {{content.active}}" data-index="{{@index}}">
+    <img src="{{content.src}}" alt="" class="tabMenu__img ">
+    <h2 class="tabMenu__title ">{{content.title}}</h2>
+    <p class="tabMenu__text "> {{content.description}}</p>
+  </div>
+  {{/each}}
+  </div>
+  
+  <button class="themeModifier">Theme</button>
+</div>
