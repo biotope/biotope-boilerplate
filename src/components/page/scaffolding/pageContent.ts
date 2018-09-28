@@ -1,6 +1,8 @@
 export default JSON.parse (`{ 
   "cards": [
     { 
+      "url": "warsaw",
+      "index": "0",
       "imgSrc": "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-10392.jpg",
       "date": "28 September 2019",
       "title": "Warsaw Fog",
@@ -16,6 +18,8 @@ export default JSON.parse (`{
       ]
     },
     {
+      "url": "zenith",
+      "index": "1",
       "imgSrc": "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-406592.jpg",
       "date": "29 September 2019",
       "title": "Zenith Fog",
@@ -31,6 +35,8 @@ export default JSON.parse (`{
       ]
     },
     {
+      "url": "dubai",
+      "index": "2",
       "imgSrc": "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-275217.jpg",
       "date": "31 September 2019",
       "title": "Dubai Fog",

@@ -17,48 +17,64 @@
       {
         this.element = element;
         this.cardsTopic = Array.from(this.element.querySelectorAll(refClasses.cardsTopic));
-
         this.init();
       }
 
       public init() : void {
-        this.cardsTopic.forEach(	
-          (element: HTMLElement, index) => element.addEventListener('click', this.showModal(index).bind(this))
-        );
+
+        this.cardsTopic.forEach(
+          (element: HTMLElement, index) => element.addEventListener('click', () => this.showModal(index)));
+
+          const query = window.location.search.substr(1).split('&').reduce((accumulator: any, item: any) => ({
+            ...accumulator,
+            [item.split('=')[0]]: item.split('=')[1] || '',
+          }), {});
+
+          const backLink = query.city;
+
+          data.cards.forEach((element: any) => {
+            if(element.url == backLink){
+              this.showModal(element.index)
+            } 
+          });
       }
 
       private showModal(index: number) {
-        return ({ target }: Event): void => {
-          document.getElementsByClassName('overlay')[0].innerHTML +=
+        const overlay =  document.getElementsByClassName('overlay')[0];
+        const dataOverlay = data.cards[index];
+         overlay.innerHTML =
           `<div class="overlay__topic">
-            <img class="overlay__img" src="${data.cards[index].imgSrc}" alt="">
+            <img class="overlay__img" src="${dataOverlay.imgSrc}" alt="">
             <img class="overlay__close" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/2000px-VisualEditor_-_Icon_-_Close_-_white.svg.png">
             <div class="overlay__content">
               <div class="overlay__primary">
-                <div class="overlay__title"> ${data.cards[index].title} </div>
-                <div class="overlay__description"> ${data.cards[index].text}</div>
+                <div class="overlay__title"> ${dataOverlay.title} </div>
+                <div class="overlay__description"> ${dataOverlay.text}</div>
               </div>
               <div class="overlay__secondary">
                 <div class="overlay__toVisit">
                   <span class="overlay__toVisitText"> ${data.overlay[0].title} </span> 
-                  <div class="overlay__local"> ${data.cards[index].places[0].place1} </div>
-                  <div class="overlay__local"> ${data.cards[index].places[0].place2} </div>
-                  <div class="overlay__local"> ${data.cards[index].places[0].place3} </div>
-                  <div class="overlay__local"> ${data.cards[index].places[0].place4} </div>
+                  <div class="overlay__local"> ${dataOverlay.places[0].place1} </div>
+                  <div class="overlay__local"> ${dataOverlay.places[0].place2} </div>
+                  <div class="overlay__local"> ${dataOverlay.places[0].place3} </div>
+                  <div class="overlay__local"> ${dataOverlay.places[0].place4} </div>
                 </div>
               </div>
             </div>
           </div>`;
 
-          document.querySelector('.overlay').classList.add('overlay--active');
+          let newUrl = `?city=${data.cards[index].url}`;
+          
+          window.history.pushState('', '', newUrl); 
+
+          overlay.classList.add('overlay--active');
 
           this.closeModal = document.querySelector(refClasses.closeModal);
           this.closeModal.addEventListener('click', 
           () => {
-            document.querySelector('.overlay').classList.remove('overlay--active');
-            document.getElementsByClassName('overlay')[0].innerHTML = '';
+            overlay.classList.remove('overlay--active');
+            overlay.innerHTML = '';
           });
-        }
       }
     }
 
