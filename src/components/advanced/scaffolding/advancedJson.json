@@ -1,0 +1,34 @@
+{
+  "tabs": [
+    {
+      "title": "Menu Porto",
+      "tabClass": "tabMenu__link--1 tabMenu__link--active",
+      "content": {
+        "active": "tabMenu__content--1 tabMenu__content--active",
+        "src": "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-694540.jpg",
+        "title": "Menu 1 Title",
+        "description": "Menu 1 Text"
+      }
+    },
+    {
+      "title": "Menu alaska",
+      "tabClass": "tabMenu__link--2",
+      "content": {
+        "active": "tabMenu__content--2",
+        "src": "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-694541.jpg",
+        "title": "Menu 2 Title",
+        "description": "Menu 2 Text"
+      }
+    },
+    {
+      "title": "Menu Luanda",
+      "tabClass": "tabMenu__link--3",
+      "content": {
+        "active": "tabMenu__content--3",
+        "src": "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-694542.jpg",
+        "title": "Menu 3 Title",
+        "description": "Menu 3 Text"
+      }
+    }
+  ]
+}

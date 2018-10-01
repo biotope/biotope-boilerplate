@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300,500,700');
+
+
+.cards {
+  padding: 2rem;
+  max-width: 64rem;
+  margin: 2rem auto auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,1fr);
+  grid-gap: 2rem;
+  
+  font-family: "Montserrat";
+
+  @media(min-width:767px) {
+    grid-template-columns: repeat(auto-fill,minmax(18rem ,1fr));
+  }
+
+  &__topic {
+    position: relative;
+    height: 20rem;
+    color: #fff;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__date {
+    position: absolute;
+    right: 0;
+
+    padding: 1rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    pointer-events: none;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 1rem;
+
+    pointer-events: none;
+  }
+
+  &__title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+  }
+
+  &__description {
+    font-size:1rem;
+    font-family: "Sunflower";
+    margin:0;
+  }
+}
