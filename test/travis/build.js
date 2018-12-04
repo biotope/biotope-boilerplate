@@ -1,3 +1,4 @@
+/* eslint-disable */
 var config = require('../../node_modules/@biotope/build/config.js');
 var chai = require('chai');
 var expect = chai.expect;
@@ -60,7 +61,6 @@ describe('Expect that', function() {
 
 	describe('fonts', function() {
 
-		test.fileExistsAndNotEmpty(config.global.dist+'/resources/fonts/icons/Icons.eot');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/fonts/icons/Icons.ttf');
 		test.fileExistsAndNotEmpty(config.global.dist+'/resources/fonts/icons/Icons.woff');
 
