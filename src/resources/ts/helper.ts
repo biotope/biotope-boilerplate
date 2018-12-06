@@ -1,4 +1,4 @@
-(function () {
+(() => {
 	'use strict';
 
 	// global user agent vars for ios
@@ -14,12 +14,12 @@
 	// global user agent vars for ie
 	if (window.navigator.userAgent.indexOf('MSIE ') > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 		biotope.configuration.set('biotope.IE', true);
-		$('html').addClass('ie');
+		document.querySelector('html').classList.add('ie');
 	} else {
 		biotope.configuration.set('biotope.IE', false);
 	}
 
 	// better touch detection
-	biotope.configuration.set('biotope.touch', (Modernizr.touch || 'ontouchstart' in window || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0));
+	biotope.configuration.set('biotope.touch', (Modernizr.touchevents || 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0));
 
 })();

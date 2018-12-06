@@ -17,19 +17,16 @@
     "lint": "echo \"Not implemented yet\""
   },
   "dependencies": {
-    "@biotope/configuration": "^2.0.2",
-    "@biotope/resource-loader": "^1.3.0",
-    "@types/jquery": "3.3.2",
-    "@types/modernizr": "3.5.1",
+    "@biotope/resource-loader": "^1.4.0",
     "breakpoint-sass": "2.7.1",
     "handlebars": "4.0.11",
-    "jquery": "3.3.1",
     "sanitize.css": "^7.0.0",
     "susy": "2.2.14",
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "^5.4.0",
+    "@biotope/build": "^5.5.0",
+    "@types/modernizr": "^3.5.1",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",
