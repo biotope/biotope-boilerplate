@@ -14,5 +14,9 @@
 		"dist",
 		".tmp",
 		"**/*.spec.ts"
+	],
+	"typeRoots": [
+		"node_modules/@types",
+		"typings"
 	]
 }
