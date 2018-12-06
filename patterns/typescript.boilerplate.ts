@@ -1,30 +1,28 @@
+interface PluginNameOptions {}
+
 class PluginName {
-  private element: Element;
-  private options: unknown;
-  private defaults: any = {
-    mood: '😆'
-  };
-  constructor(element: Element, options: unknown) {
-    this.element = element;
-    // ⚠️ remove options if you don't use them
-    this.options = Object.assign(this.defaults, options)
-    // init plugin
+	private element: Element;
+	private options: PluginNameOptions;
+	private defaults: PluginNameOptions = {};
+	constructor(element: Element, options: PluginNameOptions) {
+		this.element = element;
+		// ⚠️ remove options if you don't use them
+		this.options = { ...this.defaults, ...options };
+		// init plugin
 		this.init();
-  }
-  private init() {
-    console.log(`we could have some options ${JSON.stringify(this.options)}`)
-    this.element.addEventListener('click', () => {
-      console.log('clicked element');
-    });
-  }
-
+	}
+	private init() {
+		// init plugin here
+	}
 }
-
 
 window['biotope'] = window['biotope'] || {};
 
-window['biotope'].pluginName = (element: HTMLElement) => {
-    (() => {
-      new PluginName(element, {});
-    })()
-}
+window['biotope'].pluginName = (
+	element: HTMLElement,
+	options: PluginNameOptions
+) => {
+	(() => {
+		new PluginName(element, options);
+	})();
+};
