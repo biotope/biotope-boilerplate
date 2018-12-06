@@ -114,20 +114,7 @@ We use different boilerplates to keep our code structure as homogeneous as possi
 
 ### JavaScript / TypeScript
 
-#### Plain jQuery Plugins
-
-If you want to write your plugins with plain jQuery you can use the jQuery Plugin boilerplate.  
-
-The corresponding pattern file can be found in [/patterns/jquery.boilerplate.js](https://github.com/biotope/biotope-boilerplate/blob/develop/patterns/jquery.boilerplate.js).
-
-#### jQuery TypeScript Plugins - Recommended 
-
-The standalone jQuery TypeScript Plugin is a TypeScript port of the legacy jQuery Plugin boilerplate.
-
-The corresponding pattern file can be found in [/patterns/jquery.typescript.boilerplate.ts](https://github.com/biotope/biotope-boilerplate/blob/develop/patterns/jquery.typescript.boilerplate.ts).
-
-It includes the same features as the legacy boilerplate but nicely enriched by lots of TypeScript features like type checking and code completion. 
-We also use the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
+We also provide the possibility to compile to ES5 or ES6. Depending on the projects browser matrix.   
 
 ### CSS / SASS
 
