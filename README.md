@@ -49,23 +49,16 @@
 ### 1. Node.js and NPM
 
 **Node.js** is a JavaScript runtime which will allow us to run a host of tools. In fact node.js even runs a tiny webserver which will enable you to browse the components of the frontend.
-**NPM** is the Node Package Manager and is only used to install yarn.
+**NPM** is the Node Package Manager and is used to install all packages.
 
 1. Install as instructed on <http://nodejs.org>.
 2. (On Windows if asked) choose to also install NPM and add Node.js to your path.
 3. Check the installation of Node.js and NPM by running `node -v` or `npm -v` from your command line.
 
-> IMPORTANT NOTE ON PERMISSIONS: If you experience permission problems while installing Node.js (especially on Mac or Linux machines) never use `sudo` to install packages with `npm` or `yarn`
+> IMPORTANT NOTE ON PERMISSIONS: If you experience permission problems while installing Node.js (especially on Mac or Linux machines) never use `sudo` to install packages with `npm`
 > Please ask your IT Admins to give you proper permissions or let them do the installation. 
 > See <https://docs.npmjs.com/getting-started/fixing-npm-permissions> for instructions. 
-  
 
-### 2. yarn
-**yarn** is a Node Package Manager which will allow us to download and install required components for Node.js with ease
-See <https://yarnpkg.com/> for details of this dependency manager
-
-1. Run `npm install -g yarn` to install yarn dependency manager 
-1a. (On windows) You can also get the installer from <https://yarnpkg.com/en/docs/install>.
 
 ## Starting
 
@@ -73,10 +66,10 @@ After your are finished with the step before and everything runs fine, run these
 
 1. Open your command line / terminal / bash
 2. Navigate to the project folder
-3. Run `yarn install`
+3. Run `npm install`
 4. To
-	* **start** the development environment run `yarn start`
-	* **build** the code for production use run `yarn build`
+	* **start** the development environment run `npm start`
+	* **build** the code for production use run `npm run build`
 
 ## Custom Configuration
 
@@ -135,7 +128,7 @@ We compile the CSS stylesheets with a SASS compiler. We use the [BEM](http://get
 
 ## Development
 
-run the boilerplate with `yarn start`
+run the boilerplate with `npm start`
 
 ### 1. Our helpers
 
@@ -170,7 +163,7 @@ Each project specific helper should be prefixed with an abbreviation of the proj
 
 ## Build
 
-run the boilerplate with `yarn build`
+run the boilerplate with `npm run build`
 If everything is correct, you will find a build version of your code in the **dist** directory.
 This contains among others a min and concat version of your js and css files
 
@@ -193,5 +186,5 @@ To prevent this check the git config "core.autocrlf".
 
 ************** gulp(975,0x104c15000) malloc: *** error for object 0x10164201c: pointer being freed was not allocated *** set a breakpoint in malloc_error_break to debug **************
 
-This is caused by missing sass files. Be sure you've done a bower install before `yarn start`.
+This is caused by missing sass files. Be sure you've done a bower install before `npm start`.
 
