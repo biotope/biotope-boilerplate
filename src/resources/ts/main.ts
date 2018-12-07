@@ -48,4 +48,6 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
         });
     }
 
+    setupResourceLoader();
+
 })(window, document);
