@@ -1,12 +1,28 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"jsx": "react",
-		"module": "CommonJS",
+		"jsx": "React",
+		"module": "es2015",
 		"moduleResolution": "Node",
+		"noImplicitAny": false,
 		"sourceMap": true,
-		"target": "ES5"
+		"suppressImplicitAnyIndexErrors": true,
+		"allowSyntheticDefaultImports": true,
+		"target": "ES5",
+		"lib": [
+			"es2017",
+			"dom"
+		]
 	},
+	"awesomeTypescriptLoaderOptions": {
+		"useCache": true,
+		"reportFiles": [
+			"src/**/*.{ts,tsx}"
+		]
+	},
+	"typeRoots": [
+		"node_modules/@types"
+	],
 	"exclude": [
 		"node_modules",
 		"patterns",
