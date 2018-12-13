@@ -1,11 +1,10 @@
 import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
 
-((window: Window, document: Document) => {
-    'use strict';
-
+{
     const init = () => {
         const elementsWithDataInit: HTMLElement[] = [].slice.call(document.querySelectorAll('[data-init]'));
         elementsWithDataInit.forEach((element: HTMLElement) => {
+            // ⚠️ thats evil
             const initFunction = eval(element.dataset.init);
             initFunction(element);
         });
@@ -29,6 +28,7 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
         const jsHandler = {
             match: (options) => options.resource.path.indexOf('.js') > -1,
             handle: (options) => {
+                console.log(options)
                 const script = document.createElement('script');
                 script.src = options.resource.path;
                 script.async = true;
@@ -36,7 +36,7 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
             }
         }
 
-        const resourceLoader = new ResourceLoader({
+        return new ResourceLoader({
             base: biotope.configuration.get('data.staticResourcesBase'),
             baseMap: {
                 '##content': biotope.configuration.get('data.staticResourcesContentRepoBase')
@@ -47,5 +47,6 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
             ]
         });
     }
+    const resourceLoader = setupResourceLoader();
+}
 
-})(window, document);
