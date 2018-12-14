@@ -28,7 +28,6 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
         const jsHandler = {
             match: (options) => options.resource.path.indexOf('.js') > -1,
             handle: (options) => {
-                console.log(options)
                 const script = document.createElement('script');
                 script.src = options.resource.path;
                 script.async = true;
