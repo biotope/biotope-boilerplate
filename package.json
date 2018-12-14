@@ -17,8 +17,9 @@
     "lint": "echo \"Not implemented yet\""
   },
   "dependencies": {
-    "@biotope/element": "^2.0.1",
+    "@biotope/element": "^2.0.2",
     "@biotope/resource-loader": "^1.4.0",
+    "@webcomponents/webcomponentsjs": "^2.2.1",
     "breakpoint-sass": "2.7.1",
     "handlebars": "4.0.11",
     "sanitize.css": "^7.0.0",
@@ -26,7 +27,7 @@
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "git+https://github.com/biotope/biotope-build.git#experimental-upgrade-deps",
+    "@biotope/build": "^5.5.0-beta.1",
     "@types/modernizr": "^3.5.1",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
