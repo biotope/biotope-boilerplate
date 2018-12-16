@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "8"
   - "9"
-install: npm install -g yarn && yarn install
-before_script: yarn run build
-script: yarn run test:travis
+install: npm install
+before_script: npm run build
+script: npm run test:travis
