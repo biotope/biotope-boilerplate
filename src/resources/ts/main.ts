@@ -1,8 +1,6 @@
 import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
 
-((window: Window, document: Document) => {
-    'use strict';
-
+{
     const init = () => {
         const elementsWithDataInit: HTMLElement[] = [].slice.call(document.querySelectorAll('[data-init]'));
         elementsWithDataInit.forEach((element: HTMLElement) => {
@@ -10,10 +8,6 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
             initFunction(element);
         });
     }
-
-    window.addEventListener('resourcesReady', () => {
-        init();
-    });
 
     const setupResourceLoader = () => {
         const cssHandler = {
@@ -48,4 +42,8 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
         });
     }
 
-})(window, document);
+    window.addEventListener('resourcesReady', () => {
+        init();
+    });
+    setupResourceLoader();
+};

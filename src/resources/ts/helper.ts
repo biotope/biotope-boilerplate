@@ -1,6 +1,4 @@
-(() => {
-	'use strict';
-
+{
 	// global user agent vars for ios
 	biotope.configuration.set('biotope.iOS', navigator.userAgent.match(/(iPad|iPhone|iPod)/g) && !navigator.userAgent.match(/(Windows Phone)/g));
 	biotope.configuration.set('biotope.iOS7', / os 7_/.test(navigator.userAgent.toLowerCase()));
@@ -22,4 +20,4 @@
 	// better touch detection
 	biotope.configuration.set('biotope.touch', (Modernizr.touchevents || 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0));
 
-})();
+}
