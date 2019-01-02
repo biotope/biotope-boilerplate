@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"jsx": "react",
-		"module": "es6",
+		"module": "commonjs",
 		"moduleResolution": "Node",
 		"sourceMap": true,
 		"target": "ES5"
@@ -17,6 +17,6 @@
 	],
 	"typeRoots": [
 		"node_modules/@types",
-		"typings"
+		"types"
 	]
 }
