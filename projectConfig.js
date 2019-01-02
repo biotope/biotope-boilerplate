@@ -3,10 +3,12 @@ module.exports = {
 	global: {
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
-			'@biotope/resource-loader': 'src/resourceLoader.js',
-			'jquery': 'dist/jquery.js',
 			'sanitize.css': 'sanitize.css',
 			'handlebars': 'dist/handlebars.runtime.js'
-		}
+		},
+		tsEntryPoints: [
+			'resources/ts/**/*.ts',
+			'components/**/*.ts'
+		]
 	}
 };

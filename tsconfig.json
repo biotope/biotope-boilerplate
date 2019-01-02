@@ -1,23 +1,12 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"jsx": "React",
-		"module": "CommonJS",
+		"jsx": "react",
+		"module": "commonjs",
 		"moduleResolution": "Node",
-		"noImplicitAny": true,
 		"sourceMap": true,
-		"suppressImplicitAnyIndexErrors": true,
-		"allowSyntheticDefaultImports": true,
 		"target": "ES5"
 	},
-	"typeRoots": [
-		"node_modules/@types"
-	],
-	"types": [
-		"react",
-		"react-dom",
-		"jquery"
-	],
 	"exclude": [
 		"node_modules",
 		"patterns",
@@ -25,5 +14,9 @@
 		"dist",
 		".tmp",
 		"**/*.spec.ts"
+	],
+	"typeRoots": [
+		"node_modules/@types",
+		"types"
 	]
 }
