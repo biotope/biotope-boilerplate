@@ -1,0 +1,22 @@
+
+@mixin __host-base {
+  box-sizing: border-box;
+  overflow: auto;
+  display: block;
+}
+
+@mixin host($componentName) {
+  .host {
+    @include __host-base;
+    @content;
+  }
+}
+
+@mixin reset {
+  html,
+  body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+}

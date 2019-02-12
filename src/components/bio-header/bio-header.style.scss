@@ -1,0 +1,10 @@
+@import 'theme';
+
+@include host('bio-header') {
+  background-color: rgba(black, .1);
+}
+
+.header,
+.paragraph {
+  text-align: center;
+}

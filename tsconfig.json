@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@biotope/build/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "components": ["./src/components"],
+      "services": ["./src/services"]
+    }
+  }
+}

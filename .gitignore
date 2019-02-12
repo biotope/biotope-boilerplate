@@ -1,0 +1,21 @@
+# Generated Files
+/coverage
+/dist
+/watch
+/*.js
+*.log
+
+# Dependencies
+node_modules/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDEs and Development
+.idea
+.vscode
+.editorconfig
+/.env
+/docker-compose.yml
+!/biotope-quality-gate.config.js
