@@ -5,7 +5,7 @@ const getVariables = (environment: string) => ({
 });
 
 const options: Options = {
-  webpack: {
+  compilation: {
     alias: {
       '^components$': './src/components',
       '^services$': './src/services',

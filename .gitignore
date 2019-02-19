@@ -18,4 +18,3 @@ Thumbs.db
 .editorconfig
 /.env
 /docker-compose.yml
-!/biotope-quality-gate.config.js
