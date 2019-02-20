@@ -1,7 +1,7 @@
 {
-  "name": "biotope",
+  "name": "biotope-boilerplate",
   "title": "Biotope - The Frontend Ecosystem Framework",
-  "version": "7.0.0-alpha5",
+  "version": "7.0.0-alpha6",
   "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
@@ -13,8 +13,8 @@
     "build:dev": "biotope-build compile --environment dev",
     "build:prod": "biotope-build compile --environment prod",
     "lint": "npm run lint:code && npm run lint:style",
-    "lint:code": "biotope-quality-gate lint --config ./biotope-quality-gate.ts --pattern src,typings",
-    "lint:style": "biotope-quality-gate lint --config ./biotope-quality-gate.ts --sass --pattern src",
+    "lint:code": "biotope-quality-gate lint --config biotope-quality-gate.ts --pattern src,typings",
+    "lint:style": "biotope-quality-gate lint --config biotope-quality-gate.ts --sass --pattern src",
     "serve": "biotope-build serve",
     "serve:open": "biotope-build serve --open",
     "serve:prod": "biotope-build serve --production",
