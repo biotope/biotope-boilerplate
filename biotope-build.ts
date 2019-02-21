@@ -1,6 +1,6 @@
 import { Options } from '@biotope/build';
 
-const getVariables = (environment: string) => ({
+const getVariables = (environment: string): IndexObjectAny => ({
   [environment]: { ENVIRONMENT: environment },
 });
 

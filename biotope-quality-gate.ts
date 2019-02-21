@@ -1,9 +1,12 @@
-const biotopeQualityGate = require('@biotope/quality-gate');
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as biotopeQualityGate from '@biotope/quality-gate';
 
-module.exports = {
+const options = {
   ...biotopeQualityGate,
   globals: {
     ENVIRONMENT: true,
     ROOTID: true,
   },
 };
+
+export = options;
