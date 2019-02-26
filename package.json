@@ -12,8 +12,9 @@
     "start": "gulp serve",
     "build": "gulp build",
     "test:travis": "mocha test/travis/build.js",
-    "test:ci": "echo \"Not implemented yet\"",
+    "test:ci": "npm run test:travis && npm run test:regression",
     "test:e2e": "echo \"Not implemented yet\"",
+    "test:regression": "medusa",
     "lint": "echo \"Not implemented yet\""
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "@biotope/build": "^5.5.0-beta.2",
     "@types/modernizr": "^3.5.1",
     "@types/node": "^10.12.18",
+    "@virtualidentity/medusa": "^0.5.1",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",

@@ -4,4 +4,4 @@ node_js:
   - "9"
 install: npm install
 before_script: npm run build
-script: npm run test:travis
+script: npm run test:ci
