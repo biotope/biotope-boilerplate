@@ -1,5 +1,21 @@
 # Migration Checklists
 
+## Migration Checklist 5.6.x to 6.0.x
+* remove `awesome-typescript-loader` specific configuration from `tsconfig.json`
+* update ts files as needed, if any compilation error occurs.
+
+## Migration Checklist 5.5.x to 5.6.x
+* no changes needed, recheck ts files in legacy browsers due to update of babel version
+
+## Migration Checklist 5.4.x to 5.5.x
+* no changes needed, keep your eye on ts files as we introduced ts entrypoints
+
+## Migration Checklist 5.3.x to 5.4.x
+* rename resources/scss/fonts/iconfont/_icons.scss → src/resources/scss/fonts/iconfont/_icons.tpl
+* remove eot font from iconfont scss
+* tsconfig add lib to compiler options `"lib": ["es2017","dom"]`
+* tsconfig add in exlude `"src/resources/js"`
+
 ## Migration Checklist 5.2.x to 5.3.x
 
 ### HBS / JS File Changes
