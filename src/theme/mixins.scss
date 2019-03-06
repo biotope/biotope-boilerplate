@@ -6,7 +6,12 @@
 }
 
 @mixin host($componentName) {
-  .host {
+  #{$componentName} {
+    @include __host-base;
+    @content;
+  }
+
+  :host {
     @include __host-base;
     @content;
   }

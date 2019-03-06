@@ -1,7 +1,7 @@
 {
   "name": "biotope-boilerplate",
   "title": "Biotope - The Frontend Ecosystem Framework",
-  "version": "7.0.0-alpha7",
+  "version": "7.0.0-alpha9",
   "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
@@ -13,8 +13,8 @@
     "build:dev": "biotope-build compile --environment dev",
     "build:prod": "biotope-build compile --environment prod",
     "lint": "npm run lint:code && npm run lint:style",
-    "lint:code": "biotope-quality-gate lint --config biotope-quality-gate.ts --pattern src,typings,./*.ts",
-    "lint:style": "biotope-quality-gate lint --config biotope-quality-gate.ts --sass --pattern src",
+    "lint:code": "biotope-quality-gate lint -c biotope-quality-gate.ts -t -j -p src,typings,./*.ts",
+    "lint:style": "biotope-quality-gate lint -c biotope-quality-gate.ts -s -p src",
     "serve": "biotope-build serve",
     "serve:open": "biotope-build serve --open",
     "serve:prod": "biotope-build serve --production",
@@ -22,12 +22,13 @@
     "start": "npm run watch",
     "watch": "biotope-build compile --watch"
   },
-  "dependencies": {
-    "@biotope/build": "github:biotope/biotope-build#vNext",
-    "load-entry": "~1.1",
-    "whatwg-fetch": "~3.0"
-  },
   "devDependencies": {
-    "@biotope/quality-gate": "^1.0.0-beta.1"
+    "@biotope/build": "github:biotope/biotope-build#next",
+    "@biotope/element": "~2.2",
+    "@biotope/quality-gate": "^1.0.0-beta.1",
+    "@webcomponents/webcomponentsjs": "~2.2",
+    "load-entry": "~1.1",
+    "merge-deep": "~3.0",
+    "whatwg-fetch": "~3.0"
   }
 }
