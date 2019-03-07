@@ -25,9 +25,9 @@ const options: Options = {
         flatten: true,
       })),
     ],
-    entryPoints: {
-      'bio-header': 'bio-header.ts',
-    },
+    entryPoints: [
+      'bio-header.ts',
+    ],
   },
   runtime: {
     ENVIRONMENT: 'local',
