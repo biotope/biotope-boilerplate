@@ -1,7 +1,7 @@
 {
   "name": "biotope-boilerplate",
   "title": "Biotope - The Frontend Ecosystem Framework",
-  "version": "7.0.0-alpha10",
+  "version": "7.0.0-alpha11",
   "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@biotope/build": "github:biotope/biotope-build#next",
     "@biotope/element": "~2.2",
-    "@biotope/quality-gate": "^1.0.0-beta.1",
+    "@biotope/quality-gate": "^1.0.0-beta.2",
     "@webcomponents/webcomponentsjs": "~2.2",
     "load-entry": "~1.1",
     "merge-deep": "~3.0",

@@ -1,14 +1,8 @@
-import { Options } from '@biotope/build';
+import { Options, defaultOptions } from '@biotope/build';
 
-const getVariables = (environment: string): IndexObjectAny => ({
-  [environment]: { ENVIRONMENT: environment },
+const getVariables = (env: string): IndexObjectAny => ({
+  [env]: { ENVIRONMENT: env },
 });
-
-const defaultExternalFiles = [{
-  from: './src/resources',
-  to: 'resources',
-  ignore: ['*.md'],
-}];
 
 const options: Options = {
   compilation: {
@@ -17,16 +11,16 @@ const options: Options = {
       '^services$': './src/services',
       '^theme$': './src/theme/index.scss',
     },
+    entryPoints: [
+      'bio-header.ts',
+    ],
     externalFiles: [
-      ...defaultExternalFiles,
+      ...defaultOptions.compilation.externalFiles,
       ...['', 'bundles/'].map(folder => ({
         from: `./node_modules/@webcomponents/webcomponentsjs/${folder}*.js`,
         to: `polyfills/${folder}`,
         flatten: true,
       })),
-    ],
-    entryPoints: [
-      'bio-header.ts',
     ],
   },
   runtime: {
