@@ -1,8 +1,9 @@
+import { sync as glob } from 'glob';
 import { Options, defaultOptions } from '@biotope/build';
 
-const getVariables = (env: string): IndexObjectAny => ({
-  [env]: { ENVIRONMENT: env },
-});
+const entryPoints = glob('./src/bundles/*.ts')
+  .map(file => file.split('/').pop() || '')
+  .filter(file => file);
 
 const options: Options = {
   compilation: {
@@ -11,9 +12,7 @@ const options: Options = {
       '^services$': './src/services',
       '^theme$': './src/theme/index.scss',
     },
-    entryPoints: [
-      'bio-header.ts',
-    ],
+    entryPoints,
     externalFiles: [
       ...defaultOptions.compilation.externalFiles,
       ...['', 'bundles/'].map(folder => ({
@@ -24,10 +23,21 @@ const options: Options = {
     ],
   },
   runtime: {
+    BREAKPOINTS: {
+      SMALL_MIN: '600px',
+      MEDIUM_MIN: '800px',
+      LARGE_MIN: '1200px',
+      EXTRA_LARGE_MIN: '1800px',
+    },
     ENVIRONMENT: 'local',
 
-    ...getVariables('development'),
-    ...getVariables('production'),
+    development: {
+      ENVIRONMENT: 'development',
+    },
+
+    production: {
+      ENVIRONMENT: 'production',
+    },
   },
 };
 

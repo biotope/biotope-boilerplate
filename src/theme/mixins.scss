@@ -16,12 +16,3 @@
     @content;
   }
 }
-
-@mixin reset {
-  html,
-  body {
-    margin: 0;
-    border: 0;
-    padding: 0;
-  }
-}

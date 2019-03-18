@@ -6,8 +6,9 @@ const options = mergeDeep(biotopeQualityGate, {
     'import/no-extraneous-dependencies': 'off',
   },
   globals: {
+    biotope: true,
+    BREAKPOINTS: true,
     ENVIRONMENT: true,
-    ROOTID: true,
   },
 });
 

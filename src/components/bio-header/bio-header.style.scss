@@ -6,5 +6,7 @@
 
 .header,
 .paragraph {
-  text-align: center;
+  @include media-medium-up {
+    text-align: center;
+  }
 }
