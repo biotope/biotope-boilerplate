@@ -4,6 +4,7 @@
 /watch
 /*.js
 *.log
+/config/*.js
 
 # Dependencies
 node_modules/

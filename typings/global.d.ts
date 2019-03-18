@@ -1,6 +1,9 @@
+// eslint-disable-next-line @typescript-eslint/no-triple-slash-reference,spaced-comment
+/// <reference path="./elements.d.ts" />
 
 declare interface BiotopeObject {
-  components: IndexObject<typeof import('@biotope/element').default>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  components: IndexObject<any>;
   events: IndexObject<boolean>;
 }
 
@@ -16,4 +19,9 @@ declare const BREAKPOINTS: {
   LARGE_MIN: string;
   EXTRA_LARGE_MIN: string;
 };
+declare const COMPONENTS: {
+  BASE_URL: string;
+  CORE_MODULE_NAME: string;
+};
 declare const ENVIRONMENT: string;
+declare const ROOTID: string;

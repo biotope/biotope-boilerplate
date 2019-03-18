@@ -1,18 +1,13 @@
 
-@mixin __host-base {
-  box-sizing: border-box;
-  overflow: auto;
-  display: block;
-}
-
-@mixin host($componentName) {
-  #{$componentName} {
-    @include __host-base;
-    @content;
+@mixin reset {
+  * {
+    box-sizing: border-box;
   }
 
-  :host {
-    @include __host-base;
-    @content;
+  html,
+  body {
+    margin: 0;
+    border: 0;
+    padding: 0;
   }
 }
