@@ -12,9 +12,8 @@
     "start": "gulp serve",
     "build": "gulp build",
     "test:travis": "mocha test/travis/build.js",
-    "test:ci": "npm run test:travis && npm run test:regression",
+    "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
-    "test:regression": "medusa",
     "lint": "echo \"Not implemented yet\""
   },
   "dependencies": {
@@ -27,10 +26,9 @@
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "^5.7.0-beta.1",
+    "@biotope/build": "6.0.0",
     "@types/modernizr": "^3.5.1",
     "@types/node": "^10.12.18",
-    "@virtualidentity/medusa": "^0.5.1",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",

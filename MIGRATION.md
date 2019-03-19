@@ -1,5 +1,21 @@
 # Migration Checklists
 
+## Migration Checklist 5.6.x to 6.0.x
+* remove `awesome-typescript-loader` specific configuration from `tsconfig.json`
+* update ts files as needed, if any compilation error occurs.
+
+## Migration Checklist 5.5.x to 5.6.x
+* no changes needed, recheck ts files in legacy browsers due to update of babel version
+
+## Migration Checklist 5.4.x to 5.5.x
+* no changes needed, keep your eye on ts files as we introduced ts entrypoints
+
+## Migration Checklist 5.3.x to 5.4.x
+* rename resources/scss/fonts/iconfont/_icons.scss → src/resources/scss/fonts/iconfont/_icons.tpl
+* remove eot font from iconfont scss
+* tsconfig add lib to compiler options `"lib": ["es2017","dom"]`
+* tsconfig add in exlude `"src/resources/js"`
+
 ## Migration Checklist 5.2.x to 5.3.x
 
 ### HBS / JS File Changes
@@ -20,7 +36,7 @@
 * projectConfig.js change all /app/** paths to use /src
 * edit /gulpfile.js (according to https://github.com/frontend-framework/frontend-framework/blob/master/gulpfile.js)
 * package.json "gulp-build-framework"-Pfad anpassen (aktuellste Version setzen!): "build-framework": "https://github.com/frontend-framework/build-framework.git#5.x.x",
-=> /node_modules löschen und `yarn install` ausführen 
+=> /node_modules löschen und `yarn install` ausführen
 
 ### Folders
 * /app nach /src umbenennen
@@ -31,8 +47,8 @@
 * delete gulp folder
 
 ### Files
-* change all *.html extensions to *.hbs in /src, /pages, /components, /layouts, /layouts/includes, /pages 
-(Mac Renamer: https://mrrsoftware.com/namechanger/) 
+* change all *.html extensions to *.hbs in /src, /pages, /components, /layouts, /layouts/includes, /pages
+(Mac Renamer: https://mrrsoftware.com/namechanger/)
 (Windows Renamer: https://gist.github.com/alxbenz/b302fa6cb74d241bdf151a1ea091eebc)
 
 ### Template Engine
@@ -40,7 +56,7 @@
 * rename all /pages to *.hbs and refactor content to match YAML structure and change partial include to HBS, see https://github.com/frontend-framework/frontend-framework/blob/master/src/pages/01layout.01grid.hbs for a demo
 * rename all HTML files from /layouts, /pages, /components into *.hbs
 
-### Search & Replace 
+### Search & Replace
 
 Order of execution is critical!!!!! But should be able to be used globally (strg+shift+R on src folder [windows]).
 
@@ -111,12 +127,12 @@ INTO: {{ $1 }}
 ### Handcraft
 !!! USE THIS ONLY ON FILE LEVEL, LOCALLY !!!
 
-* /pages/*.hbs rewrite from Zetzer/JSON to Handlebars/FrontMatter(YAML). See example: https://github.com/frontend-framework/frontend-framework/blob/demo-5.x/src/pages/01layout.01default.hbs 
+* /pages/*.hbs rewrite from Zetzer/JSON to Handlebars/FrontMatter(YAML). See example: https://github.com/frontend-framework/frontend-framework/blob/demo-5.x/src/pages/01layout.01default.hbs
 * Rewrite partial context expressions like `{{# partial.conditionalResources || ''}}` to `{{conditionalResources}}` (empty default `|| ''` not necessary anymore)
 * Rewrite dynamic includes like `{{= ftf.include(partial.contentMain) }}` to lookup partial `{{> (lookup . 'contentMain') }}`
 * search for "{{?" and rewite to handleabrs {{#if ...}} {{else}} {{/if}}
 
-* Simple conditionals 
+* Simple conditionals
 Only {{?ftf.something }} not complex ones like {{? ftf.something || ftf.somethingElse }}
 ```
 REPLACE: \{\{\?\s*?(!|)ftf\.(\S*?)\s*?\}\}
@@ -130,7 +146,7 @@ INTO: {{else}}
 ```
 
 * resolve frontendFrameworkMigration variables
-Use this regex multiple times until there are no more findings. 
+Use this regex multiple times until there are no more findings.
 !!! Careful with commas inside arrays !!!
 ```
 frontendFrameworkMigration=["']\{\s*(.*?):\s*(.*?),[\s\r]*(.*?)\}['"]
@@ -153,7 +169,7 @@ $1 = $2
 
 ### Noticable differences between 4.x and 5.x
 #### passing variables
-BS Templates pass variables automatically downwards. This may lead to some unwanted behaviour. When nesting components like accordions / tabs the variables must be unique. 
+BS Templates pass variables automatically downwards. This may lead to some unwanted behaviour. When nesting components like accordions / tabs the variables must be unique.
 
 
 
@@ -167,7 +183,7 @@ BS Templates pass variables automatically downwards. This may lead to some unwan
 
 4. Migrate bower.json to NPM
 
-   Use [Bower package search](https://bower.io/search/) to search for the repositories behind the bower keys listed in your local `bower.json`. Double check if npm package name equals bower package name!!!!! 
+   Use [Bower package search](https://bower.io/search/) to search for the repositories behind the bower keys listed in your local `bower.json`. Double check if npm package name equals bower package name!!!!!
 
    Install repository with Yarn `yarn add [repo-found-at-bower-search]#[version-number] --save`.
    For example: `yarn install https://github.com/janrembold/jquery-debouncedwidth#1.1.3`
@@ -189,7 +205,7 @@ BS Templates pass variables automatically downwards. This may lead to some unwan
 
 9. Rename folder `app/resources/jsx` to `app/resources/react` (fix script paths accordingly)
 
-10. Rename folder `app/resources/css` to `app/resources/sass` 
+10. Rename folder `app/resources/css` to `app/resources/sass`
 
 11. Check global variable naming for handlebars namespace, default is `global.configuration.data.tpl`. Some older projects use customer name instead of `global`. Change namespace in project config.
 
