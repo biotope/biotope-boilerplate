@@ -15,6 +15,10 @@ const options: Options = {
     entryPoints,
     externalFiles: [
       ...defaultOptions.compilation.externalFiles,
+      {
+        from: './node_modules/mdn-polyfills/array.prototype.find.js',
+        to: 'polyfills/array.prototype.find.js',
+      },
       ...['', 'bundles/'].map(folder => ({
         from: `./node_modules/@webcomponents/webcomponentsjs/${folder}*.js`,
         to: `polyfills/${folder}`,

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../polyfills/array.prototype.find.js"></script>
+  <script src="../polyfills/webcomponents-loader.js"></script>
+  <title>Biotope Boilerplate</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .container > * {
+      width: 49%;
+    }
+  </style>
+</head>
+<body>
+  <bio-header></bio-header>
+
+  <bio-header>Hello World</bio-header>
+
+  <div class="container">
+    <bio-header color="pink">
+      Hello World, with color!
+    </bio-header>
+
+    <bio-header base-path=".." color="lightblue">
+      Hello World, with a fetch!
+    </bio-header>
+  </div>
+
+  <bio-header base-path="../WRONG-PATH" style="color: darkred; font-size: large; font-weight: bold;">
+    <div style="color: darkgreen">
+      Hello World, with the wrong path!
+      <br />
+      (and some custom styles...)
+    </div>
+  </bio-header>
+
+  <script src="../build/biotope-boilerplate.js"></script>
+  <script src="../build/bio-header.js"></script>
+</body>
+</html>

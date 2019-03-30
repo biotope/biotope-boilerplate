@@ -1,8 +1,6 @@
 @import 'theme';
 
-@include host('bio-header') {
-  background-color: rgba(black, .1);
-}
+@include host('bio-header');
 
 .header,
 .paragraph {
