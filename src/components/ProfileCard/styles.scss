@@ -1,0 +1,145 @@
+@import "node_modules/@biotope/element/lib/host.mixin";
+
+$primary: rgb(190, 11, 80);
+$default: #555;
+$element: 'profile-card';
+
+@include host($element) {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    border-radius: 1em;
+    color: $default;
+    max-width: 300px;
+    display: block;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    
+    overflow: hidden;
+    margin: 0 auto;
+    
+
+    
+    
+    > div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .#{$element}__cover {
+        flex: 1;
+        min-height: 200px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .#{$element}__image {
+        height: 0;
+        position: relative;
+        z-index: 10;
+        figure {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            box-shadow: 0 0 1em rgba(0,0,0,0.45);
+            img {
+                display: block;
+                max-width: 100%;
+                transition: transform 500ms ease;
+                transform: scale(1);
+                &:hover {
+                    transform: scale(2.1);
+                }
+            }
+        }
+    }
+
+    .#{$element}__content {
+        
+    }
+
+    .#{$element}__description {
+        flex: 1;
+        padding: 1em;
+        overflow: hidden;
+        max-height: 125px;
+        position: relative;
+        box-sizing: border-box;
+        margin-top: 50px;
+        transition: max-height 500ms ease;
+
+        &:after {
+            content: '';
+            background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            top: 0;
+            transition: opacity 500ms ease;
+        }
+
+        &:before {
+            content: 'Read More';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            z-index: 10;
+            padding: 0.25em 0;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 1.8em;
+        }
+    }
+
+    .#{$element}__bottomLine {
+       flex: 1; 
+
+       ul {
+           display: flex;
+           list-style: none;
+           padding: 0;
+           margin: 0;
+           height: 75px;
+           align-items: center;
+           justify-content: center;
+           background: #f2f2f2;
+           li {
+                text-align: center;
+                flex: 1;
+                border-right: 1px solid #aaa;
+                &:last-of-type {
+                    border-right: none;
+                }
+                strong {
+                    display: block;
+                    font-size: 25px;
+                    color: $primary;
+                }
+           }
+       }
+    }
+
+    .#{$element}--open {
+        .#{$element}__description {
+            height: auto;
+            max-height: 1000px;
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}
