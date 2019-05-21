@@ -1,5 +1,5 @@
 module.exports = {
-	project: 'VI Frontend Framework 5',
+	project: 'Biotope - The Frontend Ecosystem Framework',
 	global: {
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
