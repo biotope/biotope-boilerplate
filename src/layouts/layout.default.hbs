@@ -14,18 +14,14 @@
 	<!-- DEV-note: include page specific styles and scripts after this comment -->
 </head>
 <body role="document" class="{{bodyClass}}">
-    {{bioInclude 'components/framework/header/header' }}
+    <!-- {{bioInclude 'components/header/header' }} -->
 
-    <main class="content">
-        <article>
-            {{bioInclude (lookup . 'contentMain') }}
-        </article>
-    </main>
+    {{bioInclude (lookup . 'contentMain') }}
 
-    {{bioInclude 'components/framework/footer/footer' }}
+
+    <!-- {{bioInclude 'components/framework/footer/footer' }} -->
 
 	{{bioInclude 'layouts/includes/scripts' }}
-	{{bioInclude 'layouts/includes/tracking' }}
 
 	<!-- DEV-note: include page specific scrips after this comment -->
 </body>
