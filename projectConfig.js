@@ -1,6 +1,9 @@
 module.exports = {
 	project: 'Biotope - The Frontend Ecosystem Framework',
 	global: {
+		tasks: {
+			htmlhint: false
+		},
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
 			'sanitize.css': 'sanitize.css',

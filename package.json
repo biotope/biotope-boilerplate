@@ -26,7 +26,7 @@
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "6.0.0",
+    "@biotope/build": "next",
     "@types/modernizr": "^3.5.1",
     "@types/node": "^10.12.18",
     "chai": "4.1.2",
