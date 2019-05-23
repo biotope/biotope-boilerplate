@@ -27,7 +27,7 @@ Usage: `npm run cli <command>`
 ## Init new Project
 Using this command will clone the latest version of `biotope/biotope-boilerplate` and remove the git folder.
 ```
-npx @biotope/cli init
+npx @biotope/cli init <your-project-name>
 ```
 
 ## Generate new component
