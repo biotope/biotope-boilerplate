@@ -8,9 +8,9 @@ export const DomService = {
     return element;
   },
 
-  createStyleElement: (style: HTMLElementContent) => DomService.createElement('style', style),
+  createStyleElement: (style: HTMLElementContent): HTMLStyleElement => DomService.createElement('style', style) as HTMLStyleElement,
 
-  createSvgElement: (content: HTMLElementContent) => DomService.createElement('div', content).children[0] as HTMLElement,
+  createSvgElement: (content: HTMLElementContent): HTMLElement => DomService.createElement('div', content).children[0] as HTMLElement,
 
   supportsVideo: (): boolean => !!document.createElement('video').canPlayType,
 };

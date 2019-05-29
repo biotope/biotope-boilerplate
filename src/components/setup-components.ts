@@ -7,7 +7,8 @@ const registerComponent = (component: typeof Component, componentName: string): 
 };
 
 export const setupComponents = (components: IndexObject<typeof Component>): void => loadEntry(
-  () => Object.keys(components)
-    .forEach(key => registerComponent(components[key], key || components[key].componentName)),
+  (): void => Object.keys(components).forEach((key): void => registerComponent(
+    components[key], key || components[key].componentName,
+  )),
   { event: !biotope.events.WebComponentsReady ? 'WebComponentsReady' : undefined },
 );

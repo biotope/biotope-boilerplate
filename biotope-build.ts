@@ -1,9 +1,9 @@
 import { sync as glob } from 'glob';
-import { Options, defaultOptions } from '@biotope/build';
+import { Options, defaultOptions, ExternalFile } from '@biotope/build';
 
 const entryPoints = glob('./src/bundles/*.ts')
-  .map(file => file.split('/').pop() || '')
-  .filter(file => file);
+  .map((file): string => file.split('/').pop() || '')
+  .filter((file): boolean => !!file);
 
 const options: Options = {
   compilation: {
@@ -19,7 +19,7 @@ const options: Options = {
         from: './node_modules/mdn-polyfills/array.prototype.find.js',
         to: 'polyfills/array.prototype.find.js',
       },
-      ...['', 'bundles/'].map(folder => ({
+      ...['', 'bundles/'].map((folder): ExternalFile => ({
         from: `./node_modules/@webcomponents/webcomponentsjs/${folder}*.js`,
         to: `polyfills/${folder}`,
         flatten: true,

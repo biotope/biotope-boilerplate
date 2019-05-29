@@ -26,7 +26,7 @@ export class BioHeader extends Component<BioHeaderProps, BioHeaderState> {
     'base-path',
     {
       name: 'color',
-      converter: (prop: string) => prop || DEFAULT_COLOR,
+      converter: (prop: string): string => prop || DEFAULT_COLOR,
     },
   ];
 
@@ -79,8 +79,8 @@ export class BioHeader extends Component<BioHeaderProps, BioHeaderState> {
 
     if (basePath !== undefined) {
       fetch(`${basePath}/resources/example.json`)
-        .then(response => (response.ok && response.json()) || { text: 'Oops…' })
-        .then(({ text }: SampleData) => this.setState({ text }))
+        .then((response): Promise<SampleData> => (response.ok && response.json()) || Promise.resolve({ text: 'Oops…' }))
+        .then(({ text }): void => this.setState({ text }))
         // eslint-disable-next-line no-console
         .catch(console.error);
     }
