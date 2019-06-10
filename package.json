@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@biotope/build": "beta",
-    "@types/modernizr": "^3.5.1",
+    "@types/modernizr": "^3.5.3",
     "@types/node": "^10.12.18",
     "chai": "4.1.2",
     "chai-fs": "2.0.0",
