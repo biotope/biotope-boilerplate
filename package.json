@@ -22,7 +22,7 @@
     "breakpoint-sass": "2.7.1",
     "handlebars": "4.0.14",
     "sanitize.css": "^7.0.0",
-    "susy": "2.2.14",
+    "susy": "3.0.5",
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
