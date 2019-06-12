@@ -1,4 +1,5 @@
 {{bioInclude 'layouts/includes/htmltag' }}
+
 <head>
 	{{bioInclude 'layouts/includes/htmlhead.meta' }}
 
@@ -13,15 +14,17 @@
 
 	<!-- DEV-note: include page specific styles and scripts after this comment -->
 </head>
+
 <body role="document" class="{{bodyClass}}">
-    {{!-- {{bioInclude 'components/XHeader/scaffolding/demo' }} --}}
-    {{bioInclude (lookup . 'contentMain') }}
+	{{!-- {{bioInclude 'components/XHeader/scaffolding/demo' }} --}}
+	{{bioInclude (lookup . 'contentMain') }}
 
 
-    {{!-- {{bioInclude 'components/XFooter/scaffolding/demo' }} --}}
+	{{!-- {{bioInclude 'components/XFooter/scaffolding/demo' }} --}}
 
 	{{bioInclude 'layouts/includes/scripts' }}
 
 	<!-- DEV-note: include page specific scrips after this comment -->
 </body>
+
 </html>

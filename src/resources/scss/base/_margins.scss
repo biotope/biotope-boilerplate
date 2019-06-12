@@ -4,3 +4,21 @@
  * Use margin-top wherever possible.
  * The usage of margin-bottom is only allowed for critical workarounds, e.g. lists inside multi-column layouts
  */
+
+.component {
+  margin-top: 40px;
+}
+
+.col {
+  > .component:first-child {
+    margin-top: 0;
+  }
+}
+
+x-content-box.component + x-content-box.component {
+  margin-top: 10px;
+}
+
+h4 + .component {
+  margin-top: 30px;
+}

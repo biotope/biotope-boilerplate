@@ -1,48 +1,57 @@
 /* Global heading styles */
-h1, h2, h3, h4 ,h5 {
-	font-weight: $font-weight-bold;
-	margin: 0;
-	padding: 0;
+@import '../utilities/functions';
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
 }
 
 h1 {
-	font-size: 40px;
-	line-height: (45/40);
+  @extend %h1;
 }
 
 h2 {
-	font-size: 22px;
-	line-height: (28/22);
+  @extend %h2;
 }
 
 h3 {
-	font-size: 20px;
-	line-height: (27/20);
+  @extend %h3;
 }
 
 h4 {
-	font-size: 17px;
-	line-height: (25/17);
+  @extend %highlight;
 }
 
-
-/* Global link styles */
-a {
+/* Global text styles */
+p {
+  margin: 20px 0;
+  @extend %text;
 }
 
 /* Global sup element */
 sup {
-	font-size: 75%;
+  font-size: 75%;
 }
 
 /* Screen reader only */
 .sr-only {
-	border: 0 none;
-	clip: rect(0px, 0px, 0px, 0px);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  border: 0 none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*reporting btn */
+#atlwdg-trigger {
+  bottom: 50px;
+  border: none;
+  box-shadow: -4px 5px 11px -4px rgba(0, 0, 0, 0.75);
 }

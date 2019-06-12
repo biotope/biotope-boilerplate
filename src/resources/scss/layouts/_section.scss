@@ -1,87 +1,99 @@
 .section {
-	$half-grid-gutter: $grid-gutter / 2;
+  $half-grid-gutter: $grid-gutter / 2;
 
-	margin-top: $section_margin_top_small;
+  &--reducedWidth {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-	@media (min-width: $medium) {
-		margin-top: $section_margin_top_medium;
-	}
+  &:not([class*='section--colorTheme']) {
+    + [class*='section--colorTheme'] {
+      margin-top: $section_margin_top_small;
 
-	@media (min-width: $xlarge) {
-		margin-top: $section_margin_top_xlarge;
-	}
+      @media (min-width: $medium) {
+        margin-top: $section_margin_top_medium;
+      }
 
-	&--reducedWidth {
-		max-width: $content-max-width;
-		margin-left: auto;
-		margin-right: auto;
-	}
+      @media (min-width: $xlarge) {
+        margin-top: $section_margin_top_xlarge;
+      }
+    }
+  }
 
-	&:not([class*="section--colorTheme"]) {
-		+ [class*="section--colorTheme"] {
-			margin-top: $section_margin_top_small;
+  &[class*='section--colorTheme'] {
+    margin-top: 0;
+    padding: 0 6.75% $section_margin_top_small 6.25%;
 
-			@media (min-width: $medium) {
-				margin-top: $section_margin_top_medium;
-			}
+    @include breakpoint($medium) {
+      padding-top: $section_margin_top_medium;
+      padding-bottom: $section_margin_top_medium;
+      padding-left: 1.96%;
+      padding-right: 4.3%;
+    }
 
-			@media (min-width: $xlarge) {
-				margin-top: $section_margin_top_xlarge;
-			}
-		}
-	}
+    @include breakpoint($xlarge) {
+      padding: $section_margin_top_xlarge 30px;
+    }
 
-	&[class*="section--colorTheme"] {
-		margin-top: 0;
-		padding: 0 6.75% $section_margin_top_small 6.25%;
+    > .row {
+      &:first-of-type {
+        @include breakpoint(max-width $medium - 1) {
+          margin-top: 0;
+        }
+      }
+    }
 
-		@include breakpoint($medium) {
-			padding-top: $section_margin_top_medium;
-			padding-bottom: $section_margin_top_medium;
-			padding-left: 1.96%;
-			padding-right: 4.3%;
-		}
+    > .row--reducedWidth {
+      margin-left: -$half-grid-gutter;
+      margin-right: -$half-grid-gutter;
 
-		@include breakpoint($xlarge) {
-			padding: $section_margin_top_xlarge 30px;
-		}
+      @include breakpoint(1500px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
 
-		> .row {
-			&:first-of-type {
-				@include breakpoint(max-width $medium - 1) {
-					margin-top: 0;
-				}
-			}
-		}
+    &.section--removeSidePaddings {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 
-		> .row--reducedWidth {
-			margin-left: -$half-grid-gutter;
-			margin-right: -$half-grid-gutter;
-
-			@include breakpoint(1500px) {
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-
-		&.section--removeSidePaddings {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
-
-	&--colorTheme {
-		&1  { background: rgba(51, 51, 51, 0.85); }
-		&2  { background: rgba(102, 102, 102, 0.85); }
-		&3  { background: rgba(153, 153, 153, 0.85); }
-		&4  { background: rgba(204, 204, 204, 0.85); }
-		&5  { background: rgba(229, 229, 229, 0.85);}
-		//&6  { background: rgba(102, 102, 102, 0.85); }
-		&7  { background: rgba(127, 178, 229, 0.85);}
-		&8  { background: rgba(229, 239, 250, 0.85);}
-		&9  { background: rgba(204, 0, 51, 0.85);}
-		&10 { background: rgba(116, 116, 186, 0.85);}
-		&11 { background: rgba(0, 153, 102, 0.85);}
-		&12 { background: rgba(255, 196, 20, 0.85);}
-	}
+  &--colorTheme {
+    &1 {
+      background: rgba(51, 51, 51, 0.85);
+    }
+    &2 {
+      background: rgba(102, 102, 102, 0.85);
+    }
+    &3 {
+      background: rgba(153, 153, 153, 0.85);
+    }
+    &4 {
+      background: rgba(204, 204, 204, 0.85);
+    }
+    &5 {
+      background: rgba(229, 229, 229, 0.85);
+    }
+    //&6  { background: rgba(102, 102, 102, 0.85); }
+    &7 {
+      background: rgba(127, 178, 229, 0.85);
+    }
+    &8 {
+      background: rgba(229, 239, 250, 0.85);
+    }
+    &9 {
+      background: rgba(204, 0, 51, 0.85);
+    }
+    &10 {
+      background: rgba(116, 116, 186, 0.85);
+    }
+    &11 {
+      background: rgba(0, 153, 102, 0.85);
+    }
+    &12 {
+      background: rgba(255, 196, 20, 0.85);
+    }
+  }
 }

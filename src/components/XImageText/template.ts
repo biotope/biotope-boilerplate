@@ -1,5 +1,5 @@
 import * as styles from "./styles.scss";
-import { create } from "domain";
+import { wire } from "hyperhtml";
 
 interface XImageTextTemplateData {
 	image: {
@@ -9,6 +9,12 @@ interface XImageTextTemplateData {
 	text: string;
 }
 
+const renderRichtext = text => {
+	var htmlObject = document.createElement("div");
+	htmlObject.innerHTML = text;
+	return htmlObject;
+};
+
 export default (
 	render: Function,
 	{ image, text }: XImageTextTemplateData,
@@ -17,6 +23,6 @@ export default (
 	return render`
         ${createStyle(styles)}
         <img src="${image.url}" alt="${image.alt}" />
-        <p>${text}
+		<p>${renderRichtext(text)}
     `;
 };

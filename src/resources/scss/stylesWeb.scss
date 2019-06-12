@@ -7,9 +7,9 @@
 
 /* layout */
 @import 'layouts/default';
-@import 'layouts/section';
 
 /* base styles */
 @import 'base/margins';
 @import 'base/types';
-@import 'layouts/grid';
+@import 'layouts/gridWeb';
+@import 'layouts/component';
