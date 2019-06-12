@@ -29,7 +29,7 @@ export default (
                 <div class="primary-cta__text">${text}</div>
                 ${
 					link
-						? wire()`<x-button data-resources="[{paths : ['components/XButton/index.js']}]" conversion btnHref="${link}" btnText="${linkLabel}" target="${linkTarget}" type="link"></x-button>`
+						? wire()`<x-button data-resources="[{paths : ['components/XButton/XButton.js']}]" conversion btnHref="${link}" btnText="${linkLabel}" target="${linkTarget}" type="link"></x-button>`
 						: null
 				}
             </div>

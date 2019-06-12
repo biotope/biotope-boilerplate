@@ -1,17 +1,5 @@
 @import '../../resources/scss/defaultImport';
 
-$grid-gutter: percentage(47/1);
-
-$breakpoint-grid-max-width: 1400px;
-$content-max-width: 1320px;
-$grid-gutter-max: 20px;
-$black: #000000;
-$white: #ffffff;
-$medium: 768px;
-$large: 992px;
-$xlarge: 1200px;
-
-
 $half-grid-gutter: $grid-gutter / 2 !default;
 
 @include host('x-primary-cta') {
