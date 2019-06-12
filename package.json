@@ -20,6 +20,7 @@
     "@biotope/element": "v3.2.0-0",
     "@biotope/resource-loader": "^1.4.1",
     "breakpoint-sass": "2.7.1",
+    "classnames": "^2.2.6",
     "handlebars": "4.0.14",
     "sanitize.css": "^7.0.0",
     "susy": "2.2.14",

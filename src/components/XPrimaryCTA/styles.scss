@@ -1,0 +1,123 @@
+@import "node_modules/@biotope/element/lib/host.mixin";
+
+$grid-gutter: percentage(47/1);
+
+$breakpoint-grid-max-width: 1400px;
+$content-max-width: 1320px;
+$grid-gutter-max: 20px;
+$black: #000000;
+$white: #ffffff;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+
+
+$half-grid-gutter: $grid-gutter / 2 !default;
+
+@include host('x-primary-cta') {
+	background-color: $black;
+	text-align: center;
+
+	.primary-cta {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		padding-left: calc(5% - #{$half-grid-gutter});
+		padding-right: calc(5% - #{$half-grid-gutter});
+
+		&__icon {
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 50px;
+
+			svg {
+				width: 50px;
+			}
+		}
+
+		&__text {
+			font-size: 24px;
+			line-height: 30px;
+			margin-top: 25px;
+			margin-bottom: 30px;
+			color: $white;
+		}
+	}
+
+	@media (min-width: $medium) {
+		.primary-cta {
+			padding-top: 60px;
+			padding-bottom: 60px;
+			padding-left: calc(2.5% - #{$half-grid-gutter});
+			padding-right: calc(2.5% - #{$half-grid-gutter});
+
+			&__text {
+				font-size: 26px;
+				line-height: 33px;
+			}
+
+			&__icon {
+				height: 55px;
+
+				svg {
+					width: 55px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $large) {
+		.primary-cta {
+			&__content {
+				padding-left: $grid-gutter * 9;
+				padding-right: $grid-gutter * 9;
+			}
+
+			&__text {
+				margin-top: 36.25px;
+				margin-bottom: 30px;
+			}
+
+			&__icon {
+				height: 60px;
+
+				svg {
+					width: 60px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $xlarge) {
+		.primary-cta {
+			&__content {
+				padding-left: $grid-gutter * 8;
+				padding-right: $grid-gutter * 8;
+			}
+
+			&__text {
+				font-size: 30px;
+				line-height: 40px;
+				margin-top: 26.25px;
+			}
+		}
+	}
+
+	@media (min-width: $breakpoint-grid-max-width) {
+		padding-left: 0;
+		padding-right: 0;
+
+		.primary-cta {
+			max-width: $content-max-width;
+			padding: 60px ($content-max-width + $grid-gutter-max) / 94;
+			margin-left: auto;
+			margin-right: auto;
+
+			&__content {
+				padding-left: $grid-gutter * 8;
+				padding-right: $grid-gutter * 8;
+			}
+		}
+	}
+}
