@@ -1,5 +1,5 @@
 import Component from "@biotope/element";
-import XButton from "../XButton/index";
+import XButton from "../XButton/XButton";
 import { PrimaryCTAOptions } from "./interfaces/PrimaryCTAOptions";
 import template from "./template";
 
@@ -27,5 +27,4 @@ class XPrimaryCTA extends Component<PrimaryCTAOptions, {}> {
 	}
 }
 
-XPrimaryCTA.register();
 export default XPrimaryCTA;

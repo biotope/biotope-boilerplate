@@ -1,8 +1,7 @@
-import classNames from "classnames";
-import { wire } from "hyperhtml";
-import * as styles from "./styles.scss";
+import Component from "@biotope/element";
+import template from "./template";
 
-interface XButtonTemplateData {
+interface XButtonProps {
 	primary: boolean;
 	secondary: boolean;
 	tertiary: boolean;
@@ -15,37 +14,76 @@ interface XButtonTemplateData {
 	target?: string;
 }
 
-export default (
-	render: Function,
-	{
-		primary,
-		secondary,
-		tertiary,
-		text,
-		disabled,
-		conversion,
-		btnText,
-		btnHref,
-		type,
-		target
-	}: XButtonTemplateData,
-	createStyles: Function
-) => {
-	const btnClass = classNames("x-button__btn", {
-		["x-button__btn--primary"]: primary,
-		["x-button__btn--secondary"]: secondary,
-		["x-button__btn--tertiary"]: tertiary,
-		["x-button__btn--text"]: text,
-		["x-button__btn--conversion"]: conversion
-	});
+interface XButtonState {}
 
-	const renderButton = () =>
-		type === "link"
-			? wire()`<a href="${btnHref}" class="${btnClass}" target=${target}>${btnText}</a>`
-			: wire()`<button class="${btnClass}" disabled="${disabled}">${btnText}</button>`;
+class XButton extends Component<XButtonProps, XButtonState> {
+	protected get defaultProps(): XButtonProps {
+		return {
+			primary: false,
+			secondary: false,
+			tertiary: false,
+			text: false,
+			disabled: false,
+			conversion: false,
+			btnText: "Button Text",
+			type: "btn",
+			target: ""
+		};
+	}
 
-	return render`
-    ${createStyles(styles)}
-    ${renderButton()}
-  `;
-};
+	private get button(): HTMLElement {
+		return this.shadowRoot.querySelector(".x-button__btn");
+	}
+	public static componentName = "x-button";
+
+	protected static attributes = [
+		{ name: "primary", converter: value => value != null },
+		{ name: "secondary", converter: value => value != null },
+		{ name: "tertiary", converter: value => value != null },
+		{ name: "text", converter: value => value != null },
+		{ name: "disabled", converter: value => value != null },
+		{ name: "conversion", converter: value => value != null },
+		"type",
+		"target",
+		"btn-href",
+		"btn-text"
+	];
+
+	constructor() {
+		super();
+		this.onClick = this.onClick.bind(this);
+	}
+
+	public connectedCallback() {
+		this.button.addEventListener("click", this.onClick);
+	}
+
+	public disconnectedCallback() {
+		this.button.removeEventListener("click", this.onClick);
+	}
+
+	public render() {
+		return template(
+			this.html,
+			{
+				primary: this.props.primary,
+				secondary: this.props.secondary,
+				tertiary: this.props.tertiary,
+				text: this.props.text,
+				disabled: this.props.disabled,
+				conversion: this.props.conversion,
+				btnText: this.props.btnText,
+				btnHref: this.props.btnHref,
+				type: this.props.type,
+				target: this.props.target
+			},
+			this.createStyle
+		);
+	}
+
+	private onClick() {
+		this.emit("click", null, true);
+	}
+}
+
+export default XButton;
