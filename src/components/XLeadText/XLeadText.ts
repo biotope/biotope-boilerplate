@@ -21,7 +21,7 @@ class XLeadText extends Component<XLeadTextProps, XLeadTextState> {
 	}
 
 	render() {
-		return template(this.html, this.props);
+		return template(this.html, this.props, this.createStyle);
 	}
 }
 

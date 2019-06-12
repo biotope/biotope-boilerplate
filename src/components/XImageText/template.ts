@@ -15,9 +15,13 @@ const renderRichtext = text => {
 	return htmlObject;
 };
 
-export default (render: Function, { image, text }: XImageTextTemplateData) => {
+export default (
+	render: Function,
+	{ image, text }: XImageTextTemplateData,
+	createStyle: Function
+) => {
 	return render`
-        <style>${styles.toString()}</style>
+        ${createStyle(styles)}
         <img src="${image.url}" alt="${image.alt}" />
 		<p>${renderRichtext(text)}
     `;

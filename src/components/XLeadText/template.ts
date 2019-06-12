@@ -6,9 +6,13 @@ interface XLeadTextTemplateData {
 	text: string;
 }
 
-export default (render: Function, { heading, text }: XLeadTextTemplateData) => {
+export default (
+	render: Function,
+	{ heading, text }: XLeadTextTemplateData,
+	createStyle: Function
+) => {
 	return render`
-        <style>${styles.toString()}</style>
+        ${createStyle(styles)}
         ${
 			heading
 				? wire()`<h1 class= "lead-text__headline">${heading}</h1>`
