@@ -1,29 +1,92 @@
+@import './baseClasses';
+
 /* clearfix */
 @mixin clearfix() {
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 // Grid mixins
-@mixin make-grid-columns($class, $breakpoint, $grid-columns: 12){
-	@include breakpoint($breakpoint){
-		@for $i from 1 through $grid-columns {
-			.#{$class}-#{$i} {
-				@include span($i);
-			}
-			.#{$class}-offset-#{$i} {
-				@include push($i);
-			}
-		}
+@mixin make-grid-columns($class, $breakpoint, $grid-columns: 12) {
+  @include breakpoint($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .#{$class}-#{$i} {
+        @include span($i);
+      }
+      .#{$class}-offset-#{$i} {
+        @include push($i);
+      }
+    }
 
-		.hidden-#{$class} {
-			display: none;
-		}
-	}
+    .hidden-#{$class} {
+      display: none;
+    }
+  }
+}
+
+//shadow root mixins
+@mixin _host-rules {
+  overflow: auto;
+  display: block;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@mixin host($componentName) {
+  #{$componentName} {
+    @include _host-rules;
+    @content;
+  }
+
+  :host {
+    @include _host-rules;
+    @content;
+  }
+}
+
+@mixin set-outer-grid-margins {
+  margin-left: $content-margin-side;
+  margin-right: $content-margin-side;
+
+  @include susy-clearfix();
+
+  // breakpoint: content-max-width + margin-left + margin-right
+  @include breakpoint($breakpoint-grid-max-width) {
+    max-width: $content-max-width + $grid-gutter-max;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-gutter-max / 2;
+    padding-right: $grid-gutter-max / 2;
+  }
+}
+
+@mixin setFullWidthComponentParameter {
+  padding-left: $content-margin-side-mobile;
+  padding-right: $content-margin-side-mobile;
+
+  @include breakpoint($small) {
+    padding-left: $content-margin-side;
+    padding-right: $content-margin-side;
+  }
+
+  @include breakpoint($xxlarge) {
+    padding-left: $content-margin-side - $half-grid-gutter + 0.79787%;
+    padding-right: $content-margin-side - $half-grid-gutter + 0.79787%;
+  }
+
+  @include breakpoint(1400px) {
+    max-width: $content-max-width + $grid-gutter-max;
+    padding-left: 0.79787%;
+    padding-right: 0.79787%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

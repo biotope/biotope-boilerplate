@@ -1,5 +1,44 @@
-@import "node_modules/@biotope/element/lib/host.mixin";
+@import '../../resources/scss/defaultImport';
 
 @include host('x-lead-text') {
+	.lead-text {
+		&__headline {
+			color: $black-90;
+			font-size: 36px;
+			font-weight: 300;
+			line-height: 1.25;
+			margin: 0;
 
+			@include breakpoint($medium) {
+				font-size: 45px;
+			}
+
+			@include breakpoint($xxlarge) {
+				font-size: 60px;
+			}
+		}
+
+		&__content {
+			color: $black-90;
+			font-size: 18px;
+			line-height: 1.4;
+			margin: 0;
+
+			@include breakpoint($medium) {
+				font-size: 20px;
+			}
+
+			@include breakpoint($xxlarge) {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.lead-text__headline+.lead-text__content {
+		margin-top: 20px;
+
+		@include breakpoint($xxlarge) {
+			margin-top: 40px;
+		}
+	}
 }

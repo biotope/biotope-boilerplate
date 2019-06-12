@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 /* global settings */
-@import "settings/settings";
+@import 'settings/settings';
 
 /* functions */
-@import "utilities/functions";
+@import 'utilities/functions';
 
 /* print styles */
-@import "layouts/print";
+@import 'layouts/print';

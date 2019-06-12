@@ -2,6 +2,15 @@
 @import '../../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import '../../../../node_modules/susy/sass/susy';
 
+.section {
+  $half-grid-gutter: $grid-gutter / 2;
+  &--reducedWidth {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 $grid-columns: 12 !default;
 $grid-gutter: percentage(1/47) !default;
 $half-grid-gutter: $grid-gutter / 2 !default;
@@ -30,14 +39,13 @@ $susy: (
     clear: both;
   }
 
-  + .row,
-  .row {
-    margin-top: 0;
-  }
-
   &--reducedWidth {
-    margin-left: calc(2.5% - #{$half-grid-gutter});
-    margin-right: calc(2.5% - #{$half-grid-gutter});
+    margin-left: calc(5% - #{$half-grid-gutter});
+    margin-right: calc(5% - #{$half-grid-gutter});
+    @include breakpoint($small) {
+      margin-left: calc(2.5% - #{$half-grid-gutter});
+      margin-right: calc(2.5% - #{$half-grid-gutter});
+    }
 
     @include breakpoint(1400px) {
       max-width: $content-max-width + $grid-gutter-max;
@@ -49,23 +57,6 @@ $susy: (
 
 .col {
   @include span(12);
-  margin-top: $section_margin_top_small;
-
-  @media (min-width: $medium) {
-    margin-top: $section_margin_top_medium;
-  }
-
-  @media (min-width: $xlarge) {
-    margin-top: $section_margin_top_xlarge;
-  }
-
-  &--noMargin {
-    margin-top: 0;
-  }
-
-  &--marginTopSmall {
-    margin-top: 40px;
-  }
 }
 
 // grid columns

@@ -1,47 +1,95 @@
 // GLOBAL SASS SETTINGS
 
 // FONTS
-$font-family-sans-serif: Arial, sans-serif;
-$font-weight-normal:     400;
-$font-weight-bold:       600;
+$font-family-sans-serif: 'Montserrat';
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
 
 // Z-INDEXES
 //$z-index-component-xyz: 1;
 
-// COLORS
+// Brand colors
 $white: #fff;
 $black: #000;
+$red: #ff2941;
+$red-70: #ff697a;
+$red-40: #ffa9b3;
+
+//Primary colors
+$warmSteel: #babdbe;
+$coolSteel: #f2f2f2;
+
+//Secondary colors
+$skyBlue: #3798f5;
+$skyBlue-70: #73b7f8;
+$skyBlue-40: #afd6fb;
+$eclecticBlue: #37329b;
+$eclecticBlue-70: #736fb9;
+$eclecticBlue-40: #afadd7;
+
+//Status colors
+$statusGreen: #04de71;
+$statusGreen-70: #4fe89c;
+$statusGreen-40: #9bf2c6;
+$statusYellow: #fff458;
+$statusYellow-70: #fff78a;
+$statusYellow-40: #fffbbc;
+$statusRed: $red;
+
+//Grey Scale
+$black-90: #191919;
+$black-80: #333333;
+$black-70: #4c4c4c;
+$black-60: #666666;
+$black-50: #808080;
+$black-40: #999999;
+$black-30: #b2b2b2;
+$black-20: #cccccc;
+$black-10: #e5e5e5;
+$black-4: #f5f5f5;
 
 // BODY STYLES
 $body-bg: $white;
-$body-font-color:   $black;
-$body-font-family:  $font-family-sans-serif;
-$body-font-weight:  $font-weight-normal;
-$body-font-style:   normal;
-$body-font-size:    17px;
-$body-line-height:  25px;
-$body-min-width:    300px;
+$body-font-color: $black-90;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-font-style: normal;
+$body-font-size: 17px;
+$body-line-height: 25px;
+$body-min-width: 300px;
 
 // COMPONENT STYLES
-$content-max-width: 1280px;
+$content-max-width: 1320px;
 $component-max-width: 1200px;
 
 // breakpoint definitions
-$xsmall:  300px;
-$small:   600px;
-$medium:  768px;
-$large:   992px;
-$xlarge:  1200px;
+$xsmall: 300px;
+$small: 600px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+$xxlarge: 1320px;
 
 // MaxValues
 $xsmallMax: $small - 1;
-$smallMax:  $medium - 1;
+$smallMax: $medium - 1;
 $mediumMax: $large - 1;
-$largeMax:  $xlarge - 1;
+$largeMax: $xlarge - 1;
 $xlargeMax: 10000px;
 
 // Grid
-$grid-gutter: 30px;
+$grid-subdivision: 47;
+$grid-gutter: percentage(1 / $grid-subdivision);
+$half-grid-gutter: $grid-gutter/2 !default;
+$grid-gutter-max: 20px;
+
+//Layout
+$content-margin-side-mobile: 5%;
+$content-margin-side: 2.5%;
+$content-margin-side-max: 40px;
+$breakpoint-grid-max-width: 1400px;
+$content-max-width-with-margin: $breakpoint-grid-max-width+2 * ($content-margin-side-max);
 
 // margins for content and sections
 $section_content_top: 33px;
