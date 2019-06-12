@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@biotope/element": "^3",
-    "@biotope/resource-loader": "^1.4.1",
+    "@biotope/resource-loader": "^2.1.0",
     "breakpoint-sass": "2.7.1",
     "handlebars": "4.1.2",
     "sanitize.css": "^10.0.0",
