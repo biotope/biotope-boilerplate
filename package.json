@@ -21,7 +21,7 @@
     "@biotope/resource-loader": "^1.4.1",
     "breakpoint-sass": "2.7.1",
     "handlebars": "4.0.14",
-    "sanitize.css": "^7.0.0",
+    "sanitize.css": "^10.0.0",
     "susy": "2.2.14",
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
