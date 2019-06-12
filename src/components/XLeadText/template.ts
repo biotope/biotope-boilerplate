@@ -5,9 +5,13 @@ interface XLeadTextTemplateData {
 	text: string;
 }
 
-export default (render: Function, { heading, text }: XLeadTextTemplateData) => {
+export default (
+	render: Function,
+	{ heading, text }: XLeadTextTemplateData,
+	createStyle: Function
+) => {
 	return render`
-        <style>${styles.toString()}</style>
+        ${createStyle(styles)}
         <div>${heading}</div>
         <div>${text}</div>
     `;

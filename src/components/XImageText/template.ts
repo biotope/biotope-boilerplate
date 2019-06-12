@@ -1,4 +1,5 @@
 import * as styles from "./styles.scss";
+import { create } from "domain";
 
 interface XImageTextTemplateData {
 	image: {
@@ -8,9 +9,13 @@ interface XImageTextTemplateData {
 	text: string;
 }
 
-export default (render: Function, { image, text }: XImageTextTemplateData) => {
+export default (
+	render: Function,
+	{ image, text }: XImageTextTemplateData,
+	createStyle: Function
+) => {
 	return render`
-        <style>${styles.toString()}</style>
+        ${createStyle(styles)}
         <img src="${image.url}" alt="${image.alt}" />
         <p>${text}
     `;

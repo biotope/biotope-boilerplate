@@ -30,7 +30,7 @@ class XImageText extends Component<XImageTextProps, XImageTextState> {
 	}
 
 	render() {
-		return template(this.html, this.props);
+		return template(this.html, this.props, this.createStyle);
 	}
 }
 
