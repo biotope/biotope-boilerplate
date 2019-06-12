@@ -1,5 +1,169 @@
-@import "node_modules/@biotope/element/lib/host.mixin";
+@import '../../resources/scss/defaultImport';
 
 @include host('x-button') {
+	display: inline-flex;
 
+	.x-button {
+		&__btn {
+			padding: 7px 26px;
+			border-radius: 20px;
+			background-color: $black-90;
+			font-size: 14px;
+			line-height: 25px;
+			text-decoration: none;
+			text-transform: uppercase;
+			border: 1px solid $black-90;
+			cursor: pointer;
+
+			&--primary {
+				color: $white;
+
+				&:hover {
+					background-color: $black-70;
+					border-color: $black-70;
+				}
+
+				&:active {
+					background-color: $black-50;
+					border-color: $black-50;
+				}
+
+				&:focus {
+					outline: 0;
+				}
+
+				&:disabled {
+					border: 1px solid $black-20;
+					background-color: $black-20;
+					color: $white;
+					cursor: default;
+				}
+			}
+
+			&--secondary {
+				border: 1px solid $black-90;
+				background-color: transparent;
+				color: $black-90;
+
+				&:hover {
+					border-color: $black-70;
+					color: $black-70;
+				}
+
+				&:active {
+					border-color: $black-50;
+					color: $black-50;
+				}
+
+				&:focus {
+					outline: 0;
+				}
+
+				&:disabled {
+					border: 1px solid $black-20;
+					background-color: transparent;
+					color: $black-20;
+					cursor: default;
+				}
+			}
+
+			&--tertiary {
+				padding: 0;
+				border: none;
+				border-bottom: 1px solid $black-90;
+				border-radius: 0;
+				background-color: transparent;
+				color: $black-90;
+				font-size: 14px;
+				line-height: 21px;
+				text-transform: none;
+
+				&:hover {
+					border-color: $black-70;
+					color: $black-70;
+				}
+
+				&:active {
+					border-color: $black-50;
+					color: $black-50;
+				}
+
+				&:focus {
+					outline: 0;
+				}
+
+				&:disabled {
+					color: $black-20;
+					border-color: $black-20;
+					cursor: auto;
+				}
+			}
+
+			&--text {
+				padding: 0;
+				border: none;
+				border-radius: 0;
+				background-color: transparent;
+				color: $black-90;
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 21px;
+				text-transform: none;
+
+				&:hover {
+					border-color: $black-70;
+					color: $black-70;
+				}
+
+				&:active {
+					border-color: $black-50;
+					color: $black-50;
+				}
+
+				&:focus {
+					outline: 0;
+				}
+
+				&:disabled {
+					color: $black-20;
+					border-color: $black-20;
+					cursor: auto;
+					padding-right: 0px;
+
+					&:after {
+						display: none;
+					}
+				}
+
+				&:after {
+					display: inline-block;
+					content: '';
+					width: 20px;
+					height: 10px;
+					margin: 6px 0px 0px 10px;
+					background-size: 100%;
+					background-image: url('../../resources/img/ic_arrow_link.svg');
+				}
+			}
+
+			&--conversion {
+				color: $white;
+				background-color: $skyBlue;
+				border: 0px;
+
+				&:hover {
+					background-color: $skyBlue-70;
+				}
+
+				&:active {
+					background-color: $skyBlue-40;
+				}
+
+				&:disabled {
+					background-color: $skyBlue-40;
+					cursor: default;
+				}
+			}
+		}
+	}
 }
