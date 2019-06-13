@@ -1,0 +1,203 @@
+<script src="resources/components/XAccordion/index.js"></script>
+<script src="resources/components/XAccordion/XAccordionItem/index.js"></script>
+<script src="resources/components/XDownloadList/index.js"></script>
+<script src="resources/components/XTextMediaInline/index.js"></script>
+<script src="resources/components/XList/index.js"></script>
+
+<div class="section">
+    <section>
+        <div class="row row--reducedWidth">
+            <div class="col">
+                <x-accordion class="component" heading="Dynamic accordion headline" text="Dynamic accordion text" link='{
+                        "label": "Dynamic Link Text",
+                        "url": "https://siedle.de",
+                        "alt": "Dynamic Alt Text"
+                        "target": "_blank"
+                    }' default="true" data-resources="[{paths: ['components/XAccordion/index.js']}]">
+                    <x-accordion-item heading="testItemHeadline" opened
+                        data-resources="[{paths: ['components/XAccordion/XAccordionItem/index.js']}]">
+                        <x-download-list
+                            data-resources="[{paths: ['components/XIcon/index.js','components/XArrowLink/index.js','components/XDownloadList/index.js']}]"
+                            heading="Inside another component - without top margin - using h3"
+                            text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                            items='[{
+                            "heading": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                            "type": "PDF",
+                            "fileSize": "1,6 TB",
+                            "link": "https://google.com",
+                            "linkLabel": "Awesome stuff"
+                            },{
+                            "heading": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                            "type": "PDF",
+                            "fileSize": "1,6 TB",
+                            "link": "https://google.com",
+                            "linkLabel": "Awesome stuff"
+                            }]' link="https://siedle.de" link-label="view all" link-alt="Awesome stuff" is-child>
+                        </x-download-list>
+
+                    </x-accordion-item>
+                    <x-accordion-item heading="testItemHeadline"
+                        data-resources="[{paths: ['components/XAccordion/XAccordionItem/index.js']}]">
+                        <x-text-media-inline class="component" date="01.05.2019" heading="Dynamic TMI Heading"
+                            headline-level="H2" image='{
+                        "url": "../../_assets/XStage/test1600x1200.png",
+                        "alternativeText": "Dynamic Image Alt Text",
+                        "alignment": "left",
+                        "caption": "Dynamic Image Caption" 
+                    }' rich-text='[
+                        {
+                            "type": "element",
+                            "tagName": "p",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "element",
+                            "tagName": "ul",
+                            "children": [
+                                {
+                                    "type": "element",
+                                    "tagName": "li",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "element",
+                                    "tagName": "li",
+                                    "children": [
+                                        {
+                                            "type": "element",
+                                            "tagName": "pre",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "content": "Highlight text"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "text",
+                                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                                        },
+                                        {
+                                            "type": "element",
+                                            "tagName": "strong",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "content": "Bold Lorem"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]' data-resources="[{paths: ['components/XTextMediaInline/index.js']}]">
+                        </x-text-media-inline>
+
+                    </x-accordion-item>
+                    <x-accordion-item heading="testItemHeadline" add-bottom-line
+                        data-resources="[{paths: ['components/XAccordion/XAccordionItem/index.js']}]">
+
+                        <x-list class="component" heading="dynamic Headline" text="dynamic Text" items='[
+                        {
+                            "heading": "dynamic headline",
+                            "text": "dynamic listitem text",
+                            "date": "02.02.0002",
+                            "link": {
+                                "label": "dynamic link title",
+                                "url": "https://google.com",
+                                "target": "_blank"
+                            },
+                            "image": {
+                                "url": "dynamic url",
+                                "alt": "dynamic alt text"
+                            },
+                            "downloadList": {
+                                "heading":"Dynamic Download List",
+                                "text":"Dynamic Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                                "isChild": true,
+                                "items":[{
+                                    "heading": "Dynamic Download",
+                                    "type": "Dynamic PDF",
+                                    "fileSize": "Dynamic 1,6 TB",
+                                    "link": "https://google.com",
+                                    "linkLabel": "Dynamic link title",
+                                    "linkTarget": "_blank"
+                                },{
+                                    "heading": "Dynamic Download",
+                                    "type": "Dynamic PDF",
+                                    "fileSize": "Dynamic 1,6 TB",
+                                    "link": "https://google.com",
+                                    "linkLabel": "Dynamic link title",
+                                    "linkTarget": "_blank"
+                                }]
+                            }
+                        },
+                        {
+                            "heading": "dynamic headline",
+                            "text": "dynamic listitem text"
+                        }
+                    ]' data-resources="[{paths: ['components/XList/index.js']}]">
+                            <x-list-item heading="dynamic headline" text="dynamic listitem text" date="02.02.0002"
+                                linkLabel="dynamic link title" linkUrl="https://google.com" linkTarget="_blank"
+                                imageUrl="dynamic url" imageAlt="dynamic alt text"
+                                data-resources="[{paths: ['components/XList/XListItem/index.js']}]">
+                                <x-download-list
+                                    data-resources="[{paths: ['components/XIcon/index.js','components/XArrowLink/index.js','components/XDownloadList/index.js']}]"
+                                    heading="First - no top margin - using h2"
+                                    text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                                    items='[{
+                                    "heading": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                                    "type": "PDF",
+                                    "fileSize": "1,6 TB",
+                                    "link": "https://google.com",
+                                    "linkLabel": "Awesome stuff"
+                                },{
+                                    "heading": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                                    "type": "PDF",
+                                    "fileSize": "1,6 TB",
+                                    "link": "https://google.com",
+                                    "linkLabel": "Awesome stuff"
+                                }]' link="https://siedle.de" link-label="view all" link-alt="Awesome stuff">
+                                </x-download-list>
+                            </x-list-item>
+                            <x-list-item heading="dynamic headline" text="dynamic listitem text" date="02.02.0002"
+                                linkLabel="dynamic link title" linkUrl="https://google.com" linkTarget="_blank"
+                                imageUrl="dynamic url" imageAlt="dynamic alt text"
+                                data-resources="[{paths: ['components/XList/XListItem/index.js']}]">
+                                <x-download-list
+                                    data-resources="[{paths: ['components/XIcon/index.js','components/XArrowLink/index.js','components/XDownloadList/index.js']}]"
+                                    heading="First - no top margin - using h2"
+                                    text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                                    items='[{
+                                    "heading": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                                    "type": "PDF",
+                                    "fileSize": "1,6 TB",
+                                    "link": "https://google.com",
+                                    "linkLabel": "Awesome stuff"
+                                },{
+                                    "heading": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                                    "type": "PDF",
+                                    "fileSize": "1,6 TB",
+                                    "link": "https://google.com",
+                                    "linkLabel": "Awesome stuff"
+                                }]' link="https://siedle.de" link-label="view all" link-alt="Awesome stuff">
+                                </x-download-list>
+                            </x-list-item>
+                        </x-list>
+                    </x-accordion-item>
+                </x-accordion>
+            </div>
+        </div>
+    </section>
+</div>

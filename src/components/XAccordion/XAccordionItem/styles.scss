@@ -1,0 +1,133 @@
+@import '../../../resources/scss/defaultImport';
+
+$fontColor: $black-90;
+$fontWeight: 300;
+
+$panelPaddingXSmall: 19px $grid-gutter * 6 19px 0;
+$panelPaddingSmall: 19px $grid-gutter * 3 19px 0;
+$panelPaddingMedium: 18px $grid-gutter * 3 18px 0;
+$panelPaddingLarge: 14px $grid-gutter * 3 14px 0;
+$panelPaddingXLarge: 11px $grid-gutter * 3 11px 0;
+
+$fontSizeXSmall: 18px;
+$fontSizeSmall: 18px;
+$fontSizeMedium: 20px;
+$fontSizeLarge: 24px;
+$fontSizeXLarge: 24px;
+
+$lineHeightXSmall: 25px;
+$lineHeightSmall: 25px;
+$lineHeightMedium: 28px;
+$lineHeightLarge: 30px;
+$lineHeightXLarge: 35px;
+
+@include host('x-accordion-item') {
+  .accordionItem {
+    &__panel {
+      width: 100%;
+      border-top: 1px solid $black-10;
+      &--open {
+        height: auto;
+        .accordionItem__titleLink {
+          white-space: normal;
+          // IE11 as default https://caniuse.com/#search=%40supports
+          word-break: break-all;
+          @supports (display: grid) {
+            word-break: break-word;
+          }
+
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+        .accordionItem__content {
+          height: auto;
+          pointer-events: auto;
+        }
+      }
+
+      &--lastItem {
+        border-bottom: 1px solid $black-10;
+      }
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__titleLink {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      text-decoration: none;
+      color: $fontColor;
+      font-weight: $fontWeight;
+      font-size: $fontSizeXSmall;
+      line-height: $lineHeightXSmall;
+      padding: $panelPaddingXSmall;
+      cursor: pointer;
+
+      &:before {
+        display: block;
+        position: relative;
+        float: right;
+        margin-right: -$grid-gutter * 6;
+        top: 9px;
+        content: '';
+        height: 12px;
+        width: 20px;
+        background-size: 100% 100%;
+        background-image: url(../../../resources/img/chevron_down.svg);
+      }
+
+      @include breakpoint($small) {
+        padding: $panelPaddingSmall;
+        font-size: $fontSizeSmall;
+        line-height: $lineHeightSmall;
+
+        &:before {
+          margin-right: -$grid-gutter * 3;
+        }
+      }
+
+      @include breakpoint($medium) {
+        padding: $panelPaddingMedium;
+        font-size: $fontSizeMedium;
+        line-height: $lineHeightMedium;
+      }
+
+      @include breakpoint($large) {
+        padding: $panelPaddingLarge;
+        font-size: $fontSizeLarge;
+        line-height: $lineHeightLarge;
+
+        &:before {
+          top: 12px;
+        }
+      }
+
+      @include breakpoint($xlarge) {
+        padding: $panelPaddingXLarge;
+        font-size: $fontSizeXLarge;
+        line-height: $lineHeightXLarge;
+
+        &:before {
+          top: 13px;
+        }
+      }
+    }
+
+    &__content {
+      overflow: hidden;
+      height: 0;
+      transition: height 300ms;
+      border-top: none;
+      pointer-events: none;
+    }
+
+    &__contentPadding {
+      height: 50px;
+    }
+  }
+}
