@@ -74,11 +74,11 @@ $lineHeightXLarge: 35px;
         float: right;
         margin-right: -$grid-gutter * 6;
         top: 9px;
-        content: '';
+        content: '+';
         height: 12px;
         width: 20px;
         background-size: 100% 100%;
-        background-image: url(../../../resources/img/chevron_down.svg);
+        
       }
 
       @include breakpoint($small) {
