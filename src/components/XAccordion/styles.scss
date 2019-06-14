@@ -5,34 +5,34 @@ $linkLineHeight: 18px;
 $linkTopMargin: 20px;
 
 @include host(x-accordion) {
-  .accordion {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
+	.accordion {
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
 
-    &__link {
-      text-align: right;
-      justify-self: end;
-      display: block;
-      width: auto;
-      color: $black-60;
-      font-size: $linkColor;
-      line-height: $linkLineHeight;
-      margin-top: $linkTopMargin;
-      text-decoration: none;
+		&__link {
+			text-align: right;
+			justify-self: end;
+			display: block;
+			width: auto;
+			color: $black-60;
+			font-size: $linkColor;
+			line-height: $linkLineHeight;
+			margin-top: $linkTopMargin;
+			text-decoration: none;
 
-      &:after {
-        display: block;
-        position: relative;
-        float: right;
-        content: '';
-        height: 10px;
-        width: 20px;
-        margin: 5px 0 0 10px;
-        background-size: 100% 100%;
-        background-image: url("data:image/svg+xml,%3Csvg width='20px' height='11px' viewBox='0 0 20 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='SSS-Akkordeon' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='SSS-Akkordeon-320-S-opened' transform='translate(-281.000000, -1031.000000)' fill='%23999999'%3E%3Cg id='SSS-Akkordeon' transform='translate(19.000000, 40.000000)'%3E%3Cg id='Link' transform='translate(134.000000, 987.000000)'%3E%3Cg id='icon/siedle_icon_arrow_right_long' transform='translate(128.000000, 5.000000)'%3E%3Cpath d='M19.8282798,4.12685316 C19.9335001,4.21851734 20,4.35349273 20,4.504 C20,4.65450727 19.9335001,4.78948266 19.8282798,4.88114684 L14.6748876,9.41613199 C14.4675837,9.59855934 14.1516442,9.57839299 13.9692168,9.37108917 C13.7867895,9.16378536 13.8069558,8.84784582 14.0142597,8.66541847 L18.1749625,5.004 L0.5,5.004 C0.223857625,5.004 -1.03028697e-13,4.78014237 -1.03028697e-13,4.504 C-1.03028697e-13,4.22785763 0.223857625,4.004 0.5,4.004 L18.1749625,4.004 L14.1416278,0.454665477 C13.934324,0.272238121 13.9141576,-0.0437014152 14.096585,-0.251005229 C14.2790123,-0.458309042 14.5949519,-0.478475396 14.8022557,-0.29604804 L19.8282798,4.12685316 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      }
-    }
-  }
+			&:after {
+				display: block;
+				position: relative;
+				float: right;
+				content: '';
+				height: 10px;
+				width: 20px;
+				margin: 5px 0 0 10px;
+				background-size: 100% 100%;
+				background-image: url("data:image/svg+xml,%3Csvg width='20px' height='11px' viewBox='0 0 20 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='SSS-Akkordeon' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='SSS-Akkordeon-320-S-opened' transform='translate(-281.000000, -1031.000000)' fill='%23999999'%3E%3Cg id='SSS-Akkordeon' transform='translate(19.000000, 40.000000)'%3E%3Cg id='Link' transform='translate(134.000000, 987.000000)'%3E%3Cg id='icon/siedle_icon_arrow_right_long' transform='translate(128.000000, 5.000000)'%3E%3Cpath d='M19.8282798,4.12685316 C19.9335001,4.21851734 20,4.35349273 20,4.504 C20,4.65450727 19.9335001,4.78948266 19.8282798,4.88114684 L14.6748876,9.41613199 C14.4675837,9.59855934 14.1516442,9.57839299 13.9692168,9.37108917 C13.7867895,9.16378536 13.8069558,8.84784582 14.0142597,8.66541847 L18.1749625,5.004 L0.5,5.004 C0.223857625,5.004 -1.03028697e-13,4.78014237 -1.03028697e-13,4.504 C-1.03028697e-13,4.22785763 0.223857625,4.004 0.5,4.004 L18.1749625,4.004 L14.1416278,0.454665477 C13.934324,0.272238121 13.9141576,-0.0437014152 14.096585,-0.251005229 C14.2790123,-0.458309042 14.5949519,-0.478475396 14.8022557,-0.29604804 L19.8282798,4.12685316 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			}
+		}
+	}
 }

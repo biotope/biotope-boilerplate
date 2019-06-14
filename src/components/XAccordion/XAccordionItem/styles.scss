@@ -22,112 +22,117 @@ $lineHeightLarge: 30px;
 $lineHeightXLarge: 35px;
 
 @include host('x-accordion-item') {
-  .accordionItem {
-    &__panel {
-      width: 100%;
-      border-top: 1px solid $black-10;
-      &--open {
-        height: auto;
-        .accordionItem__titleLink {
-          white-space: normal;
-          // IE11 as default https://caniuse.com/#search=%40supports
-          word-break: break-all;
-          @supports (display: grid) {
-            word-break: break-word;
-          }
+	.accordionItem {
+		&__panel {
+			width: 100%;
+			border-top: 1px solid $black-10;
 
-          &:before {
-            transform: rotate(180deg);
-          }
-        }
-        .accordionItem__content {
-          height: auto;
-          pointer-events: auto;
-        }
-      }
+			&--open {
+				height: auto;
 
-      &--lastItem {
-        border-bottom: 1px solid $black-10;
-      }
-    }
+				.accordionItem__titleLink {
+					white-space: normal;
+					// IE11 as default https://caniuse.com/#search=%40supports
+					word-break: break-all;
 
-    &__title {
-      margin: 0;
-    }
+					@supports (display: grid) {
+						word-break: break-word;
+					}
 
-    &__titleLink {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: block;
-      text-decoration: none;
-      color: $fontColor;
-      font-weight: $fontWeight;
-      font-size: $fontSizeXSmall;
-      line-height: $lineHeightXSmall;
-      padding: $panelPaddingXSmall;
-      cursor: pointer;
+					&:before {
+						transform: rotate(180deg);
+						line-height: 22px;
+					}
+				}
 
-      &:before {
-        display: block;
-        position: relative;
-        float: right;
-        margin-right: -$grid-gutter * 6;
-        top: 9px;
-        content: '+';
-        height: 12px;
-        width: 20px;
-        background-size: 100% 100%;
-        
-      }
+				.accordionItem__content {
+					height: auto;
+					pointer-events: auto;
+				}
+			}
 
-      @include breakpoint($small) {
-        padding: $panelPaddingSmall;
-        font-size: $fontSizeSmall;
-        line-height: $lineHeightSmall;
+			&--lastItem {
+				border-bottom: 1px solid $black-10;
+			}
+		}
 
-        &:before {
-          margin-right: -$grid-gutter * 3;
-        }
-      }
+		&__title {
+			margin: 0;
+		}
 
-      @include breakpoint($medium) {
-        padding: $panelPaddingMedium;
-        font-size: $fontSizeMedium;
-        line-height: $lineHeightMedium;
-      }
+		&__titleLink {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: block;
+			text-decoration: none;
+			color: $fontColor;
+			font-weight: $fontWeight;
+			font-size: $fontSizeXSmall;
+			line-height: $lineHeightXSmall;
+			padding: $panelPaddingXSmall;
+			cursor: pointer;
 
-      @include breakpoint($large) {
-        padding: $panelPaddingLarge;
-        font-size: $fontSizeLarge;
-        line-height: $lineHeightLarge;
+			&:before {
+				display: block;
+				position: relative;
+				float: right;
+				margin-right: -$grid-gutter * 6;
+				top: 9px;
+				content: '⬇';
+				height: 12px;
+				width: 20px;
+				background-size: 100% 100%;
+				line-height: 10px;
+			}
 
-        &:before {
-          top: 12px;
-        }
-      }
+			@include breakpoint($small) {
+				padding: $panelPaddingSmall;
+				font-size: $fontSizeSmall;
+				line-height: $lineHeightSmall;
 
-      @include breakpoint($xlarge) {
-        padding: $panelPaddingXLarge;
-        font-size: $fontSizeXLarge;
-        line-height: $lineHeightXLarge;
+				&:before {
+					margin-right: -$grid-gutter * 3;
+				}
+			}
 
-        &:before {
-          top: 13px;
-        }
-      }
-    }
+			@include breakpoint($medium) {
+				padding: $panelPaddingMedium;
+				font-size: $fontSizeMedium;
+				line-height: $lineHeightMedium;
+			}
 
-    &__content {
-      overflow: hidden;
-      height: 0;
-      transition: height 300ms;
-      border-top: none;
-      pointer-events: none;
-    }
+			@include breakpoint($large) {
+				padding: $panelPaddingLarge;
+				font-size: $fontSizeLarge;
+				line-height: $lineHeightLarge;
 
-    &__contentPadding {
-      height: 50px;
-    }
-  }
+				&:before {
+					top: 12px;
+				}
+			}
+
+			@include breakpoint($xlarge) {
+				padding: $panelPaddingXLarge;
+				font-size: $fontSizeXLarge;
+				line-height: $lineHeightXLarge;
+
+				&:before {
+					top: 13px;
+				}
+			}
+		}
+
+		&__content {
+			overflow: hidden;
+			height: 0;
+			transition: height 300ms;
+			border-top: none;
+			pointer-events: none;
+		}
+
+		&__contentPadding {
+			height: 50px;
+		}
+	}
 }
