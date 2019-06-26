@@ -1,7 +1,7 @@
 import { sync as glob } from 'glob';
 import { Options, defaultOptions, ExternalFile } from '@biotope/build';
 
-const entryPoints = glob('./src/bundles/*.ts')
+const entryPoints = glob('./src/components/**/index.ts')
   .map((file): string => file.split('/').pop() || '')
   .filter((file): boolean => !!file);
 
@@ -25,6 +25,7 @@ const options: Options = {
         flatten: true,
       })),
     ],
+    htmlTemplate: './resources/index.html'
   },
   runtime: {
     BREAKPOINTS: {

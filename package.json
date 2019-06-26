@@ -23,7 +23,7 @@
     "watch": "biotope-build compile --watch --open"
   },
   "devDependencies": {
-    "@biotope/build": "github:biotope/biotope-build#next",
+    "@biotope/build": "github:biotope/biotope-build#vNext-html",
     "@biotope/element": "~3.0",
     "@biotope/quality-gate": "^1.0.0-beta.5",
     "@webcomponents/webcomponentsjs": "~2.2",
