@@ -6,11 +6,12 @@
 <script nomodule src="https://unpkg.com/whatwg-fetch"></script>
 <script nomodule src="https://unpkg.com/promise-polyfill"></script>
 <script nomodule src="https://unpkg.com/object-assign-polyfill"></script>
-<script src="resources/js/head.configuration.js"></script>
+<script src="resources/ts/biotope.js"></script>
 <!-- endbuild -->
 
 <!-- Site-specific configurations like CDN resource folder or current page ID -->
 <script type="text/javascript">
 	biotope.configuration.set('data.staticResourcesBase', 'resources/');
+	console.log('TEST', biotope.configuration.get('data.staticResourcesBase'));
 	biotope.configuration.set('data.staticResourcesContentRepoBase', 'resources-content/');
 </script>
