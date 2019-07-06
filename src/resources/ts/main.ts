@@ -1,15 +1,17 @@
 import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
+const vm = require('vm');
 
 {
     const init = () => {
         const elementsWithDataInit: HTMLElement[] = [].slice.call(document.querySelectorAll('[data-init]'));
         elementsWithDataInit.forEach((element: HTMLElement) => {
-            const initFunction = eval(element.dataset.init);
+            const initFunction = vm.runInThisContext(element.dataset.init);
             initFunction(element);
         });
     }
 
-    const setupResourceLoader = () => {
+    const setupResourceLoader = (callback: Function) => {
+
         const cssHandler = {
             match: (options) => options.resource.path.indexOf('.css') > -1,
             handle: (options) => {
@@ -27,6 +29,7 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
                 script.src = options.resource.path;
                 script.async = true;
                 document.body.appendChild(script);
+                script.onload = () => callback();
             }
         }
 
@@ -40,10 +43,8 @@ import ResourceLoader from '@biotope/resource-loader/lib/index.esm';
                 jsHandler
             ]
         });
+
     }
 
-    window.addEventListener('resourcesReady', () => {
-        init();
-    });
-    setupResourceLoader();
+    setupResourceLoader(init); 
 };

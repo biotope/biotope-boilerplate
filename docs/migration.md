@@ -35,12 +35,12 @@
 * projectConfig.js unnecessary remove " around properties and rename all remaining from double to single quotation
 * projectConfig.js change all /app/** paths to use /src
 * edit /gulpfile.js (according to https://github.com/frontend-framework/frontend-framework/blob/master/gulpfile.js)
-* package.json "gulp-build-framework"-Pfad anpassen (aktuellste Version setzen!): "build-framework": "https://github.com/frontend-framework/build-framework.git#5.x.x",
-=> /node_modules löschen und `yarn install` ausführen
+* package.json adapt path from "gulp-build-framework" (set newest version): "build-framework": "https://github.com/frontend-framework/build-framework.git#5.x.x",
+=> delete /node_modules and run `yarn install`
 
 ### Folders
-* /app nach /src umbenennen
-* /layout in /layouts umbenennen, /includes nach /layouts kopieren
+* rename /app to /src
+* rename /layout to /layouts, copy /includes to /layouts
 * create /src/pages and move all pages (except index.html) there
 * move /components, /layouts, /scaffolding to /src
 * move _icons to /resources and rename it to icons

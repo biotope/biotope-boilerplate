@@ -1,6 +1,9 @@
 module.exports = {
-	project: 'VI Frontend Framework 5',
+	project: 'Biotope - The Frontend Ecosystem Framework',
 	global: {
+		tasks: {
+			htmlhint: false
+		},
 		externalResources: {
 			'vi-css-helper': ['helper.css', 'print.css'],
 			'sanitize.css': 'sanitize.css',
@@ -10,5 +13,8 @@ module.exports = {
 			'resources/ts/**/*.ts',
 			'components/**/*.ts'
 		]
+	},
+	webpack: {
+		watchScss: true
 	}
 };
