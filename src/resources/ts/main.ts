@@ -15,7 +15,7 @@ const vm = require('vm');
         return new ResourceLoader({
             base: biotope.configuration.get('data.staticResourcesBase'),
             baseMap: {
-                '##microfrontends': biotope.configuration.get('data.staticResourcesMicroFrontends')
+                '##microfrontend': biotope.configuration.get('data.staticResourcesMicroFrontends')
             }
         });
 
