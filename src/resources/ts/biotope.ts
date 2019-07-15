@@ -1,5 +1,5 @@
 
-interface biotopeConfigurationBiotopeInterface {
+interface BiotopeConfigurationBiotopeInterface {
 	iOS: string;
 	safari: string;
 	iOS7: string;
@@ -8,18 +8,18 @@ interface biotopeConfigurationBiotopeInterface {
 	touch: boolean;
 }
 
-interface biotopeConfigurationDataInterface {
+interface BiotopeConfigurationDataInterface {
 	staticResourcesBase: string;
 	staticResourcesContentRepoBase: string;
 }
 
-interface biotopeConfigurationInterface {
-	biotope?: biotopeConfigurationBiotopeInterface;
-	data?: biotopeConfigurationDataInterface;
+interface BiotopeConfigurationInterface {
+	biotope?: BiotopeConfigurationBiotopeInterface;
+	data?: BiotopeConfigurationDataInterface;
 }
 
-class biotopeConfiguration {
-	public static _data: biotopeConfigurationInterface = {};
+class BiotopeConfiguration {
+	public static _data: BiotopeConfigurationInterface = {};
 
 	public static set(key: string, value: string & boolean) : void {
 		this.setAux(key, value, this._data);
@@ -41,11 +41,11 @@ class biotopeConfiguration {
 	}
 }
 
-class biotope {
-	public configuration : biotopeConfiguration;
+class Biotope {
+	public configuration : BiotopeConfiguration;
 	constructor () {
-		this.configuration = biotopeConfiguration;
+		this.configuration = BiotopeConfiguration;
 	}
 }
 
-(<any>window).biotope = new biotope;
+(<any>window).biotope = new Biotope;
