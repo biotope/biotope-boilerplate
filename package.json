@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "gulp serve",
-    "build": "gulp build",
+    "start": "node build.js",
+    "build": "node start.js",
     "test:travis": "mocha test/travis/build.js",
     "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
@@ -26,13 +26,14 @@
     "vi-css-helper": "git+https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/cli": "^1.1.5",
     "@biotope/build": "^6.2.0",
+    "@biotope/cli": "^1.1.5",
     "@types/modernizr": "^3.5.3",
     "@types/node": "^10.12.18",
     "chai": "4.2.0",
     "chai-fs": "2.0.0",
-    "gulp": "3.9.1",
+    "gulp": "^4.0.2",
+    "live-server": "^1.2.1",
     "mocha": "6.1.4"
   },
   "engines": {
