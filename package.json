@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node build.js",
-    "build": "node start.js",
+    "start": "node start.js",
+    "build": "node build.js",
     "test:travis": "mocha test/travis/build.js",
     "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
