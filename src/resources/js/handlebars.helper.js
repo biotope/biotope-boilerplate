@@ -140,7 +140,7 @@
 			} else {
 				return options.inverse(this);
 			}
-		},
+		}
 	};
 
 	for (var helper in helpers) {
