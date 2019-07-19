@@ -13,9 +13,9 @@
 	'use strict';
 
 	var helpers = {
-	
-	// Add helpers
-		
+
+		// Add helpers
+
 	};
 
 	for (var helper in helpers) {
@@ -24,5 +24,3 @@
 		}
 	}
 }));
-
-
