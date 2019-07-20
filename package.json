@@ -29,7 +29,7 @@
     "@biotope/cli": "^1.1.5",
     "@biotope/build": "next",
     "@types/modernizr": "^3.5.3",
-    "@types/node": "^10.14.13",
+    "@types/node": "^12.0.8",
     "chai": "4.2.0",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",
