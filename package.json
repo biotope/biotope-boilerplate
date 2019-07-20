@@ -1,7 +1,7 @@
 {
   "name": "biotope",
   "title": "Biotope - The Frontend Ecosystem Framework",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Modern HTML5 UI Framework",
   "repository": {
     "type": "git",
@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "@biotope/cli": "^1.1.5",
-    "@biotope/build": "^6.2.0",
+    "@biotope/build": "next",
     "@types/modernizr": "^3.5.3",
-    "@types/node": "^10.12.18",
+    "@types/node": "^10.14.13",
     "chai": "4.2.0",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",
