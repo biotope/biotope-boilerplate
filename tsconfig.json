@@ -1,22 +1,14 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"jsx": "react",
-		"module": "commonjs",
-		"moduleResolution": "Node",
-		"sourceMap": true,
-		"target": "ES5"
-	},
-	"exclude": [
-		"node_modules",
-		"patterns",
-		"test",
-		"dist",
-		".tmp",
-		"**/*.spec.ts"
-	],
-	"typeRoots": [
-		"node_modules/@types",
-		"types"
-	]
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "target": "ES5"
+  },
+  "include": [
+    "types/global.d.ts",
+    "src/**/*.ts"
+  ]
 }

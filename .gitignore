@@ -13,5 +13,4 @@ app/resources/bower_components
 /node_modules
 /npm-debug.log
 .DS_Store
-/typings
 yarn-error.log
