@@ -5,102 +5,103 @@ title: index
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{data.package.title}} | {{data.package.version}}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{data.package.title}} | {{data.package.version}}</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <style>
-        body {
-            min-height: 2000px;
-            padding: 70px 0;
-        }
-        .capitalize {
-            text-transform: capitalize;
-        }
-        .anchor {
-            padding-top: 65px;
-            margin-top: -15px;
-        }
-        p {
-            margin: 0;
-        }
-        .panel {
-            margin-bottom: 0;
-        }
-    </style>
+  <style>
+    body {
+      min-height: 2000px;
+      padding: 70px 0;
+    }
+    .capitalize {
+      text-transform: capitalize;
+    }
+    .anchor {
+      padding-top: 65px;
+      margin-top: -15px;
+    }
+    p {
+      margin: 0;
+    }
+    .panel {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">{{data.package.title}} {{data.package.version}}</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{data.package.title}} {{data.package.version}}</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
         {{#each data.indexr}}
           {{#if this.newSection}}
             <li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
           {{/if}}
         {{/each}}
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
 </nav>
 
 <div class="container">
 
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{package.title}} {{package.version}}</h3>
-        </div>
-        <div class="panel-body">
-            Biotope is an ecosystem to build state of the art websites with an approved UI look and feel. It provides ready-to-use layouts, design and functionaliy and incorporates many proven practices used to build excellent websites. It has an adaptive / responsive design, is build mobile first and while it makes use of modern browser's capabilities, it also works on browsers such as Internet Explorer 11.
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{package.title}} {{package.version}}</h3>
+    </div>
+    <div class="panel-body">
+      Biotope is an ecosystem to build state of the art websites with an approved UI look and feel. It provides ready-to-use layouts, design and functionaliy and incorporates many proven practices used to build excellent websites. It has an adaptive / responsive design, is build mobile first and while it makes use of modern browser's capabilities, it also works on browsers such as Internet Explorer 11.
       {{#if data.browserSupport}}
         <p>{{{data.browserSupport.message}}}</p>
       {{/if}}
     </div>
-    </div>
+  </div>
 
-    <div class="row">
-        <div class="col-sm-8">
-      {{#each data.indexr}}
-        {{#if this.newSection}}
-          <h2 class="anchor capitalize" id="category{{this.priority}}">{{this.currentCategory}}</h2>
+  <div class="row">
+    <div class="col-sm-8">
+    {{#each data.indexr}}
+      {{#if this.newSection}}
+        <h2 class="anchor capitalize" id="category{{this.priority}}">{{this.currentCategory}}</h2>
+      {{/if}}
+      <h4>
+        <a href="{{this.parsedFile.name}}.html">{{bioDef this.attributes.title this.parsedFile.name}}</a>
+        {{#if this.attributes.deprecated}}
+          <mark><em>deprecated</em></mark>
         {{/if}}
-        <h4><a href="{{this.parsedFile.name}}.html">{{bioDef this.attributes.title this.parsedFile.name}}</a>
-          {{#if this.attributes.deprecated}}
-            <mark><em>deprecated</em></mark>
-          {{/if}}
-        </h4>
-        {{#if this.attributes.description}}
-          <p>{{this.attributes.description}}</p>
-        {{/if}}
-      {{/each}}
-        </div>
-        <div class="col-sm-4">
-            <h2 class="anchor">Categories</h2>
-            <ul>
+      </h4>
+      {{#if this.attributes.description}}
+        <p>{{this.attributes.description}}</p>
+      {{/if}}
+    {{/each}}
+  </div>
+  <div class="col-sm-4">
+    <h2 class="anchor">Categories</h2>
+      <ul>
         {{#each data.indexr}}
           {{#if this.newSection}}
             <li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
           {{/if}}
         {{/each}}
-            </ul>
-        </div>
+      </ul>
     </div>
+  </div>
 
 </div> <!-- /container -->
 
