@@ -1,51 +1,22 @@
 
-interface BiotopeConfigurationBiotopeInterface {
-	iOS: string;
-	safari: string;
-	iOS7: string;
-	IEMobile: string;
-	IE: boolean;
-	touch: boolean;
-}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const biotopeSet = (key: string, value: string | boolean, dataValue: IndexObjectAny = {}): any => {
+  const [first, ...rest] = key.split('.');
+  // eslint-disable-next-line no-param-reassign
+  dataValue[first] = rest.length ? biotopeSet(rest.join('.'), value, dataValue[first]) : value;
+  return dataValue;
+};
 
-interface BiotopeConfigurationDataInterface {
-	staticResourcesBase: string;
-	staticResourcesContentRepoBase: string;
-}
-
-interface BiotopeConfigurationInterface {
-	biotope?: BiotopeConfigurationBiotopeInterface;
-	data?: BiotopeConfigurationDataInterface;
-}
-
-class BiotopeConfiguration {
-	public static _data: BiotopeConfigurationInterface = {};
-
-	public static set(key: string, value: string & boolean) : void {
-		this.setAux(key, value, this._data);
-	}
-
-	public static get(key: string) {
-		return key.split('.').reduce((o, i) => o[i], this._data);
-	}
-
-	private static setAux(key: string, value: string & boolean, dataValue: object = {}) : object {
-		const [ first, ...rest ] = key.split('.');
-		if (rest.length) {
-			dataValue[first] = this.setAux(rest.join('.'), value, dataValue[first]);
-		}
-		else {
-			dataValue[first] = value;
-		}
-		return dataValue;
-	}
-}
-
-class Biotope {
-	public configuration : BiotopeConfiguration;
-	constructor () {
-		this.configuration = BiotopeConfiguration;
-	}
-}
-
-(<any>window).biotope = new Biotope;
+(window as WindowWithBiotope).biotope = {
+  configuration: {
+    data: {},
+    get: (keys: string): string | boolean => keys.split('.')
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .reduce((accumulator, key): any => accumulator[key] || {}, biotope.configuration.data),
+    set: (key: string, value: string | boolean): void => biotopeSet(
+      key,
+      value,
+      biotope.configuration.data,
+    ),
+  },
+};

@@ -1,6 +1,6 @@
 {
-    "ignoreFiles": [
-        "index.html",
-        "browserSupport.html"
-    ]
+  "ignoreFiles": [
+    "index.html",
+    "browserSupport.html"
+  ]
 }

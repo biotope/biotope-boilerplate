@@ -10,69 +10,69 @@ $grid-max-width: $content-max-width !default;
 
 // set susy defaults
 $susy: (
-	math: fluid,
-	columns: $grid-columns,
-	column-width: $grid-column-width,
-	container: $grid-max-width,
-	gutter: $grid-gutter/$grid-column-width,
-	gutter-position: inside-static,
-	global-box-sizing: border-box
+  math: fluid,
+  columns: $grid-columns,
+  column-width: $grid-column-width,
+  container: $grid-max-width,
+  gutter: $grid-gutter/$grid-column-width,
+  gutter-position: inside-static,
+  global-box-sizing: border-box
 );
 
-
 .row {
-	margin-top: -$section_margin_top_small;
-	margin-left: -$half-grid-gutter;
-	margin-right: -$half-grid-gutter;
-	max-width: none;
+  margin-top: -$section_margin_top_small;
+  margin-left: -$half-grid-gutter;
+  margin-right: -$half-grid-gutter;
+  max-width: none;
 
-	@media (min-width: $medium) {
-		margin-top: -$section_margin_top_medium;
-	}
+  @media (min-width: $medium) {
+    margin-top: -$section_margin_top_medium;
+  }
 
-	@media (min-width: $xlarge) {
-		margin-top: -$section_margin_top_xlarge;
-	}
+  @media (min-width: $xlarge) {
+    margin-top: -$section_margin_top_xlarge;
+  }
 
-	&:after {
-		content: " ";
-		display: block;
-		clear: both;
-	}
+  &::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 
-	+ .row,
-	.row {
-		margin-top: 0;
-	}
+  + .row,
+  .row {
+    margin-top: 0;
+  }
 
-	&--reducedWidth {
-		margin-left: calc(6.25% - #{$half-grid-gutter});
-		margin-right: calc(6.75% - #{$half-grid-gutter});
+  &--reducedWidth {
+    margin-left: calc(6.25% - #{$half-grid-gutter});
+    margin-right: calc(6.75% - #{$half-grid-gutter});
 
-		@include breakpoint($medium) {
-			margin-left: calc(1.96% - #{$half-grid-gutter});
-			margin-right: calc(4.3% - #{$half-grid-gutter});
-		}
+    @include breakpoint($medium) {
+      margin-left: calc(1.96% - #{$half-grid-gutter});
+      margin-right: calc(4.3% - #{$half-grid-gutter});
+    }
 
-		@include breakpoint(1520px) {
-			max-width: $content-max-width + $grid-gutter;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
+    @include breakpoint(1520px) {
+      max-width: $content-max-width + $grid-gutter;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .col {
-	@include span(12);
-	margin-top: $section_margin_top_small;
+  @include span(12);
 
-	@media (min-width: $medium) {
-		margin-top: $section_margin_top_medium;
-	}
+  margin-top: $section_margin_top_small;
 
-	@media (min-width: $xlarge) {
-		margin-top: $section_margin_top_xlarge;
-	}
+  @media (min-width: $medium) {
+    margin-top: $section_margin_top_medium;
+  }
+
+  @media (min-width: $xlarge) {
+    margin-top: $section_margin_top_xlarge;
+  }
 }
 
 // grid columns

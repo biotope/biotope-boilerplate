@@ -1,14 +1,14 @@
 @page {
-    margin: 2cm 1cm;
+  margin: 2cm 1cm;
 }
 
 *,
-*:before,
-*:after {
-    box-shadow: none !important;
-    text-shadow: none !important;
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 body {
-    background-color: #fff;
+  background-color: #fff;
 }

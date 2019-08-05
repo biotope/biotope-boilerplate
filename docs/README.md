@@ -26,7 +26,7 @@
 - Versioning enables you to use all ui-components independently in different projects.
 - Ensure a consistent UI across all your projects.
 - Let multiple partners contribute to the ui library without compatiblity & quality issues. Bring their design system to live. Real usable code, no dummy html components in a seperate styleguide tool.
--	Doesnt matter how big the component library gets. Projects only use components they need. So performance stays high.
+- Doesnt matter how big the component library gets. Projects only use components they need. So performance stays high.
 - Maintain and extend the ui library over years to avoid getting out-of-date and having to start from scratch again.
 
 

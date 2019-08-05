@@ -2,8 +2,8 @@
 
 // FONTS
 $font-family-sans-serif: Arial, sans-serif;
-$font-weight-normal:     400;
-$font-weight-bold:       600;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
 
 // Z-INDEXES
 //$z-index-component-xyz: 1;
@@ -14,30 +14,30 @@ $black: #000;
 
 // BODY STYLES
 $body-bg: $white;
-$body-font-color:   $black;
-$body-font-family:  $font-family-sans-serif;
-$body-font-weight:  $font-weight-normal;
-$body-font-style:   normal;
-$body-font-size:    17px;
-$body-line-height:  25px;
-$body-min-width:    300px;
+$body-font-color: $black;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-font-style: normal;
+$body-font-size: 17px;
+$body-line-height: 25px;
+$body-min-width: 300px;
 
 // COMPONENT STYLES
 $content-max-width: 1280px;
 $component-max-width: 1200px;
 
 // breakpoint definitions
-$xsmall:  300px;
-$small:   600px;
-$medium:  768px;
-$large:   992px;
-$xlarge:  1200px;
+$xsmall: 300px;
+$small: 600px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
 
 // MaxValues
 $xsmallMax: $small - 1;
-$smallMax:  $medium - 1;
+$smallMax: $medium - 1;
 $mediumMax: $large - 1;
-$largeMax:  $xlarge - 1;
+$largeMax: $xlarge - 1;
 $xlargeMax: 10000px;
 
 // Grid

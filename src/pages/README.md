@@ -35,7 +35,7 @@ It is a good practice to set the path to a components scaffolding partial that i
 
 ```html
 {{> layouts/layout.default
-	contentMain="components/framework/grid/grid"
-	variableX="something custom for the component"
+  contentMain="components/framework/grid/grid"
+  variableX="something custom for the component"
 }}
 ```

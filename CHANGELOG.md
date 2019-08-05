@@ -2,7 +2,7 @@
 
 <details>
   <summary>
-	Placeholder section to be used for future releases. Make no changes here.
+  Placeholder section to be used for future releases. Make no changes here.
   </summary>
 
 ## [Unreleased] - YYYY-MM-DD

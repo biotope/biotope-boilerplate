@@ -23,8 +23,8 @@ After your are finished with the step before and everything runs fine, run these
 2. Navigate to the project folder
 3. Run `npm install`
 4. To
-	* **start** the development environment run `npm start`
-	* **build** the code for production use run `npm run build`
+    * **start** the development environment run `npm start`
+    * **build** the code for production use run `npm run build`
 
 ## Build
 

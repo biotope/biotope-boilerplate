@@ -47,96 +47,96 @@
             <a class="navbar-brand" href="#">{{data.package.title}} {{data.package.version}}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				{{#each data.indexr}}
-					{{#if this.newSection}}
-						<li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
-					{{/if}}
-				{{/each}}
-			</ul>
+      <ul class="nav navbar-nav">
+        {{#each data.indexr}}
+          {{#if this.newSection}}
+            <li><a href="#category{{this.priority}}" class="capitalize">{{this.currentCategory}}</a></li>
+          {{/if}}
+        {{/each}}
+      </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<a href="index.html"><span class="glyphicon glyphicon-chevron-left"></span>Back to overview</a>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<h1>Browsermatrix of {{data.package.title}}</h1>
-			{{#if data.browserSupport.lastUpdate}}
-			<p>Our browser matrix recommendation is based on the browser usage statistics of {{data.browserSupport.clientName}} from {{data.browserSupport.lastUpdate}}</p>
-			{{/if}}
-			<p>In general: A distinction is made between a test browser matrix and the matrix of supported browsers.
-				The test browser matrix defines the browsers in which each new component is tested. Each additional browser increases the testing effort for each new component.
-				The matrix of supported browsers defines those browsers, which are supported in general by the frontend, but are not tested explicitly.</p><br>
-			<p>Example: Firefox and Chrome release new browser versions every 6 weeks. The latest Chrome/Firefox version will be included in the test matrix. In the matrix of supported browsers are all Firefox versions of the past 1.5 years.
-				This ensures that these browser versions are supported, with a lower test effort</p><br>
-			<p>Following recommendation can be derived from the following parameters:</p><br>
-			<ul>
-				<li>Use of the browser in the global statistics or from "high priority" countries.</li>
-				<li>Threshold test effort for additional browsers.</li>
-				<li>Standard conformability of the respective browser in order to be able to classify additional efforts required to support this browser.</li>
-			</ul>
-			<br>
-			<p>There is also a distinction between "fully supported browsers" and "functionally supported browsers".
-				Full supported browsers are browsers in which both, functionality and visuality must completely be in line according to the specification.
-				Functional supported means that within these browsers, the basic functionality of the page must be accessible for the user, ie all information is available/accessible. But there may be reductions in design and user experience. This may vary depending on browser, browser version and features used.</p><br>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<h2>Matrix of Supported Browsers</h2>
-			<table class="table">
-				<thead>
-					<tr>
-						<th><strong>Browser version</strong></th>
-						<th><strong>Operating system</strong></th>
-						<th><strong>Type of support</strong></th>
-						<th><strong>Input methods</strong></th>
-					</tr>
-				</thead>
-				<tbody>
-				{{#each data.browserSupport.supportedBrowserMatrix }}
-					<tr>
-						<td>{{version}}</td>
-						<td>{{os}}</td>
-						<td>{{support}}</td>
-						<td>{{inputMethods}}</td>
-					</tr>
-				{{/each}}
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<h2>Test Browser Matrix</h2>
-			<table class="table">
-				<thead>
-				<tr>
-					<th><strong>Browser version</strong></th>
-					<th><strong>Operating system</strong></th>
-					<th><strong>Type of support</strong></th>
-					<th><strong>Input methods</strong></th>
-				</tr>
-				</thead>
-				<tbody>
-				{{#each data.browserSupport.testBrowserMatrix }}
-					<tr>
-						<td>{{version}}</td>
-						<td>{{os}}</td>
-						<td>{{support}}</td>
-						<td>{{inputMethods}}</td>
-					</tr>
-				{{/each}}
-				</tbody>
-			</table>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <a href="index.html"><span class="glyphicon glyphicon-chevron-left"></span>Back to overview</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Browsermatrix of {{data.package.title}}</h1>
+      {{#if data.browserSupport.lastUpdate}}
+      <p>Our browser matrix recommendation is based on the browser usage statistics of {{data.browserSupport.clientName}} from {{data.browserSupport.lastUpdate}}</p>
+      {{/if}}
+      <p>In general: A distinction is made between a test browser matrix and the matrix of supported browsers.
+        The test browser matrix defines the browsers in which each new component is tested. Each additional browser increases the testing effort for each new component.
+        The matrix of supported browsers defines those browsers, which are supported in general by the frontend, but are not tested explicitly.</p><br>
+      <p>Example: Firefox and Chrome release new browser versions every 6 weeks. The latest Chrome/Firefox version will be included in the test matrix. In the matrix of supported browsers are all Firefox versions of the past 1.5 years.
+        This ensures that these browser versions are supported, with a lower test effort</p><br>
+      <p>Following recommendation can be derived from the following parameters:</p><br>
+      <ul>
+        <li>Use of the browser in the global statistics or from "high priority" countries.</li>
+        <li>Threshold test effort for additional browsers.</li>
+        <li>Standard conformability of the respective browser in order to be able to classify additional efforts required to support this browser.</li>
+      </ul>
+      <br>
+      <p>There is also a distinction between "fully supported browsers" and "functionally supported browsers".
+        Full supported browsers are browsers in which both, functionality and visuality must completely be in line according to the specification.
+        Functional supported means that within these browsers, the basic functionality of the page must be accessible for the user, ie all information is available/accessible. But there may be reductions in design and user experience. This may vary depending on browser, browser version and features used.</p><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Matrix of Supported Browsers</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><strong>Browser version</strong></th>
+            <th><strong>Operating system</strong></th>
+            <th><strong>Type of support</strong></th>
+            <th><strong>Input methods</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each data.browserSupport.supportedBrowserMatrix }}
+          <tr>
+            <td>{{version}}</td>
+            <td>{{os}}</td>
+            <td>{{support}}</td>
+            <td>{{inputMethods}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Test Browser Matrix</h2>
+      <table class="table">
+        <thead>
+        <tr>
+          <th><strong>Browser version</strong></th>
+          <th><strong>Operating system</strong></th>
+          <th><strong>Type of support</strong></th>
+          <th><strong>Input methods</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each data.browserSupport.testBrowserMatrix }}
+          <tr>
+            <td>{{version}}</td>
+            <td>{{os}}</td>
+            <td>{{support}}</td>
+            <td>{{inputMethods}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 </div> <!-- /container -->
 

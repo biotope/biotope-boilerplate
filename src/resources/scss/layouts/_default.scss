@@ -1,36 +1,38 @@
-html, body {
-    height: 100%;
-    min-width: $body-min-width;
+html,
+body {
+  height: 100%;
+  min-width: $body-min-width;
 }
 
 html {
-	box-sizing: border-box;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-*, *:before, *:after {
-	box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-    font-family: $body-font-family;
-    background-color: $body-bg;
-    font-size: $body-font-size;
-    line-height: $body-line-height;
-    color: $black;
-    min-width: $body-min-width;
-
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  font-family: $body-font-family;
+  background-color: $body-bg;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  color: $black;
+  min-width: $body-min-width;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .layout {
-    &--default {
-        margin: 0;
-    }
+  &--default {
+    margin: 0;
+  }
 }
 
 .content {
-    @include clearfix();
+  @include clearfix();
 }
