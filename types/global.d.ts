@@ -66,23 +66,3 @@ declare const biotope: {
 declare interface WindowWithBiotope extends Window {
   biotope: typeof biotope;
 }
-
-// interface ProjectEnvironmentVariables {
-//   VERSION: string;
-//   ROOTID: string;
-//   TITLE: string;
-// }
-
-// interface DefaultsEnvironmentVariables {
-//   LOCALE: string;
-//   LOCALE_SHORT: string;
-// }
-
-// interface ServicesEnvironmentVariables {
-//   ASSETS: string;
-// }
-
-// declare const ENVIRONMENT: string;
-// declare const PROJECT: ProjectEnvironmentVariables;
-// declare const DEFAULTS: DefaultsEnvironmentVariables;
-// declare const SERVICES: ServicesEnvironmentVariables;
