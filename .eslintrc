@@ -1,61 +1,7 @@
 {
-	"globals": {
-		"ffglobal": true
-	},
-	"rules": {
-		"block-scoped-var": 1,
-		"brace-style": [
-			2,
-			"1tbs"
-		],
-		"comma-dangle": [
-			2,
-			"never"
-		],
-		"curly": [
-			2,
-			"all"
-		],
-		"default-case": 1,
-		"dot-location": [
-			2,
-			"property"
-		],
-		"indent": [
-			2,
-			"tab"
-		],
-		"linebreak-style": 0,
-		"no-cond-assign": [
-			2,
-			"except-parens"
-		],
-		"no-floating-decimal": 1,
-		"radix": 1,
-		"quotes": [
-			2,
-			"single"
-		],
-		"semi": [
-			2,
-			"always"
-		],
-		"strict": [
-			2,
-			"function"
-		],
-		"valid-jsdoc": 0,
-		"eol-last": [
-			"warn",
-			"unix"
-		],
-		"no-trailing-spaces": [
-			"warn"
-		]
-	},
-	"env": {
-		"es6": true,
-		"browser": true,
-		"jquery": true
-	}
+  "extends": "./node_modules/@biotope/quality-gate/config/logic/recommended.js",
+  "globals": {
+    "biotope": true,
+    "Modernizr": true
+  }
 }
