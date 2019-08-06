@@ -1,4 +1,6 @@
 
+const biotopeData: BiotopeConfigurationInterface = {};
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const biotopeSet = (key: string, value: string | boolean, dataValue: IndexObjectAny = {}): any => {
   const [first, ...rest] = key.split('.');
@@ -9,14 +11,13 @@ const biotopeSet = (key: string, value: string | boolean, dataValue: IndexObject
 
 (window as WindowWithBiotope).biotope = {
   configuration: {
-    data: {},
-    get: (keys: string): string | boolean => keys.split('.')
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .reduce((accumulator, key): any => accumulator[key] || {}, biotope.configuration.data),
-    set: (key: string, value: string | boolean): void => biotopeSet(
-      key,
-      value,
-      biotope.configuration.data,
-    ),
+    get data(): BiotopeConfigurationInterface {
+      return biotopeData;
+    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    get: (keys: string): string | boolean => keys.split('.').reduce((accumulator, key): any => (
+      accumulator[key] === undefined ? {} : accumulator[key]
+    ), biotopeData),
+    set: (key: string, value: string | boolean): void => biotopeSet(key, value, biotopeData),
   },
 };
