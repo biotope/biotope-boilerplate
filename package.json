@@ -18,7 +18,7 @@
     "test:travis": "mocha test/travis/build.js",
     "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
-    "lint": "biotope-quality-gate -p src",
+    "lint": "biotope-quality-gate -p src -w",
     "lint:fix": "biotope-quality-gate -p src --fix"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@biotope/cli": "^1.1.5",
     "@biotope/build": "^7.0.0",
-    "@biotope/quality-gate": "1.0.0-beta.10",
+    "@biotope/quality-gate": "1.0.0-beta.11",
     "@types/modernizr": "^3.5.3",
     "@types/node": "^10.14.13",
     "chai": "4.2.0",
