@@ -45,8 +45,8 @@ There is a gulp task for doing releases. Use gulp release --type=[major,minor,pa
 How to set up your personal boilerplate, with dependencies you really need.
 
 ### projectConfig.json
-
-This file lets you enable and disable certain tasks as well as specify additional resource folders.
+This file lets you override any settings of biotope-build that are exposed in its `config.js` file such as enabling or disabling of certain tasks as well as specifying additional resource folders. 
+Find biotope-build's `config.js` file here: https://github.com/biotope/biotope-build/blob/master/config.js
 
 __resource folders__
 To add additional resource folders, create the folders and add the paths to the global.resources array.
