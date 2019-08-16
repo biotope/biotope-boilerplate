@@ -15,5 +15,8 @@ module.exports = {
 	},
 	webpack: {
 		watchScss: true
+	},
+	connect: {
+		port: 9000
 	}
 };
