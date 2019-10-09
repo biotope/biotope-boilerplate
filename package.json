@@ -20,7 +20,7 @@
     "@biotope/element": "^3",
     "@biotope/resource-loader": "^1.4.2",
     "breakpoint-sass": "2.7.1",
-    "handlebars": "4.2.0",
+    "handlebars": "4.4.3",
     "sanitize.css": "^11.0.0",
     "susy": "2.2.14",
     "@virtualidentity/css-helper": "^2.0"
