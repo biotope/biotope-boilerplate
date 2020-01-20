@@ -9,7 +9,7 @@ To achieve this grade of flexibility we need to agree on some conventions that a
 
     .
     ├── componentName
-    │   └── /includes  # All handlebars partials used by the component
+    │   └── /hbs  # All handlebars partials used by the component
     │   └── /js  # JavaScript Plugins (deprecated, better use TS)
     │   └── /scaffolding  # Variations of the component and structure for demo pages
     │   └── /scss  # Stylesheet with BEM structure
