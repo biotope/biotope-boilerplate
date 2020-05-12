@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@biotope/cli": "^1.1.5",
-    "@biotope/build": "^7.1.1",
+    "@biotope/build": "^7.3.0",
     "@types/modernizr": "^3.5.3",
     "@types/node": "^10.14.15",
     "chai": "4.2.0",
