@@ -17,7 +17,7 @@
     "lint": "echo \"Not implemented yet\""
   },
   "dependencies": {
-    "@biotope/element": "^3",
+    "@biotope/element": "^4",
     "@biotope/resource-loader": "^1.4.2",
     "@virtualidentity/css-helper": "^2.0",
     "breakpoint-sass": "2.7.1",
