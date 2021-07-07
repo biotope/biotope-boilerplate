@@ -1,12 +1,56 @@
 {
 	"clientName": "default",
-	"lastUpdate": "2017-12-18",
+	"lastUpdate": "2019-08-16",
 	"message": "<a href=\"browserSupport.html\"><span class=\"glyphicon glyphicon-chevron-right\"></span> Browser Matrix</a>",
 
 	"supportedBrowserMatrix": [
 		{
+			"version":"Internet Explorer 11",
+			"os": "Win 7 (latest) / Win 10 (all versions of the past 2 years)",
+			"support": "functionally supported",
+			"inputMethods": "Mouse"
+		},
+		{
+			"version":"Microsoft Edge (all versions of the past 1.5 years)",
+			"os": "Win 10 (all versions of the past 2 years)",
+			"support": "fully supported",
+			"inputMethods": "Mouse / Touch"
+		},
+		{
+			"version":"Mozilla Firefox (all versions of the past 1.5 years + latest ESR)",
+			"os": "Win 10 (latest) / OS X (latest)",
+			"support": "fully supported",
+			"inputMethods": "Mouse"
+		},
+		{
+			"version":"Google Chrome (all versions of the past 1.5 years)",
+			"os": "Win 10 / OS X (all versions of the past 2 years)",
+			"support": "fully supported",
+			"inputMethods": "Mouse"
+		},
+		{
+			"version":"Safari Desktop (all versions of the past 1.5 years)",
+			"os": "OS X (all versions of the past 2 years)",
+			"support": "fully supported",
+			"inputMethods": "Mouse"
+		},
+		{
+			"version":"Safari Mobile (all versions of the past 1.5 years)",
+			"os": "iOS (all versions of the past 2 years)",
+			"support": "fully supported",
+			"inputMethods": "Touch"
+		},
+		{
+			"version":"Chrome Mobile (all versions of the past 1.5 years)",
+			"os": "Android (all versions of the past 2 years)",
+			"support": "fully supported",
+			"inputMethods": "Touch"
+		}
+	],
+	"testBrowserMatrix": [
+		{
 			"version":"Internet Explorer 11 (latest)",
-			"os": "Win 7 / Win 10 (latest)",
+			"os": "Win 10 (latest)",
 			"support": "fully supported",
 			"inputMethods": "Mouse"
 		},
@@ -17,51 +61,7 @@
 			"inputMethods": "Mouse / Touch"
 		},
 		{
-			"version":"Mozilla Firefox (all versions of the past 1.5 years)",
-			"os": "Win 10 (latest) / OS X (latest)",
-			"support": "fully supported",
-			"inputMethods": "Mouse"
-		},
-		{
-			"version":"Google Chrome (all versions of the past 1.5 years)",
-			"os": "Win 10 (latest) / OS X (latest)",
-			"support": "fully supported",
-			"inputMethods": "Mouse"
-		},
-		{
-			"version":"Safari Desktop (all versions of the past 1.5 years)",
-			"os": "OS X (latest)",
-			"support": "fully supported",
-			"inputMethods": "Mouse"
-		},
-		{
-			"version":"Safari Mobile (latest 2 major)",
-			"os": "iOS",
-			"support": "fully supported",
-			"inputMethods": "Touch"
-		},
-		{
-			"version":"Chrome Mobile (latest 3 major)",
-			"os": "Android",
-			"support": "fully supported",
-			"inputMethods": "Touch"
-		}
-	],
-	"testBrowserMatrix": [
-		{
-			"version":"Internet Explorer 11 (latest)",
-			"os": "Win 7 (latest) / Win 10 (latest)",
-			"support": "fully supported",
-			"inputMethods": "Mouse"
-		},
-		{
-			"version":"Microsoft Edge (latest)",
-			"os": "Win 10 (latest)",
-			"support": "fully supported",
-			"inputMethods": "Mouse"
-		},
-		{
-			"version":"Mozilla Firefox (latest)",
+			"version":"Mozilla Firefox (latest + latest ESR)",
 			"os": "Win 10 (latest) / OS X (latest)",
 			"support": "fully supported",
 			"inputMethods": "Mouse"
@@ -80,13 +80,13 @@
 		},
 		{
 			"version":"Safari Mobile (latest)",
-			"os": "iOS",
+			"os": "iOS (latest)",
 			"support": "fully supported",
 			"inputMethods": "Touch"
 		},
 		{
 			"version":"Chrome Mobile (latest)",
-			"os": "Android",
+			"os": "Android (latest)",
 			"support": "fully supported",
 			"inputMethods": "Touch"
 		}
