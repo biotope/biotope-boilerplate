@@ -33,7 +33,7 @@
     "chai": "4.2.0",
     "chai-fs": "2.0.0",
     "gulp": "3.9.1",
-    "mocha": "6.2.0",
+    "mocha": "10.2.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "stylelint-config-recommended-scss": "^3.3.0"
   },
